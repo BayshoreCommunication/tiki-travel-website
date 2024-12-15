@@ -1,19 +1,8 @@
-import { nextui } from "@nextui-org/react";
+import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
-  content: ["./pages/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-});
-
-module.exports = {
+const config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
@@ -26,6 +15,9 @@ module.exports = {
         black: "#000000",
         white: "#FFFFFF",
       },
+      backgroundImage: {
+        doctors: "url('/assets/Testimonials/transparentGradient.png')",
+      },
     },
     container: {
       center: true,
@@ -34,13 +26,15 @@ module.exports = {
         sm: "2rem",
         lg: "4rem",
         xl: "5rem",
-        "2xl": "1rem",
+        "2xl": "6rem", // Fixed inconsistency in '2xl'
       },
     },
     maxWidth: {
-      "2xl": "1536px", // The default value for 2xl in Tailwind CSS
+      "2xl": "1536px",
     },
   },
   darkMode: "class",
   plugins: [nextui()],
 };
+
+export default config;
