@@ -26,12 +26,12 @@ const config = {
         sm: "2rem",
         lg: "4rem",
         xl: "5rem",
-        "2xl": "6rem", // Fixed inconsistency in '2xl'
+        "2xl": "1rem",
       },
     },
-    // maxWidth: {
-    //   "2xl": "1536px",
-    // },
+    maxWidth: {
+      "2xl": "1536px", // The default value for 2xl in Tailwind CSS
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

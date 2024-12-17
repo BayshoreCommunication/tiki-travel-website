@@ -31,8 +31,8 @@ const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
             x: -100,
           }}
         >
-          <SectionLayout>
-            <div className="relative z-10 gap-10 py-20 mt-[50px]">
+          <div>
+            <div className="relative z-10 gap-10 py-20 ">
               <h1 className={`text-white font-bold text-5xl text-center mb-6 `}>
                 {title}
               </h1>
@@ -76,7 +76,7 @@ const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
                 </ol>
               </nav>
             </div>
-          </SectionLayout>
+          </div>
         </CardMotion>
       </div>
     </>
