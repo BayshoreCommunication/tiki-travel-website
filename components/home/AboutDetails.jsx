@@ -3,6 +3,7 @@ import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import RippleButton from "../shared/RippleButton";
 import Image from "next/image";
 import { Link } from "@nextui-org/react";
+import { FaPlay } from "react-icons/fa6";
 
 const AboutDetails = () => {
   return (
@@ -10,7 +11,7 @@ const AboutDetails = () => {
       <div className="container py-10 md:pb-24">
         <div className=" flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-14">
           <div className="w-full lg:w-[50%] shrink-0">
-            <div>
+            <div className="relative">
               <ScrollMotionEffect effect="fade-left" duration="2000">
                 <Image
                   src="/assets/homepage/about.png"
@@ -19,6 +20,18 @@ const AboutDetails = () => {
                   height={770}
                 ></Image>
               </ScrollMotionEffect>
+              <div className="absolute left-8 bottom-8 z-10">
+                <ScrollMotionEffect effect="fade-left" duration="2000">
+                  <Link href="#" className="group relative w-[100px] h-[100px]">
+                    {" "}
+                    {/* Parent container */}
+                    <div className="p-1 border-3 border-primary rounded-full border-dotted animate-spin  duration-[10s]  absolute inset-0 m-auto w-[100px] h-[100px]"></div>
+                    <div className="absolute inset-0 m-auto w-[90px] h-[90px] bg-primary group-hover:bg-secondary group-hover:!bg-opacity-100 flex items-center justify-center rounded-full">
+                      <FaPlay className="text-white text-3xl" />
+                    </div>
+                  </Link>
+                </ScrollMotionEffect>
+              </div>
             </div>
           </div>
           <div>

@@ -16,7 +16,7 @@ const WhatPeopleSay = () => {
         alt="Header background"
       />
 
-      <div className="container py-10 md:py-20 ">
+      <div className="container pt-10 md:py-20 ">
         <div className="relative flex flex-col items-center justify-center w-full h-full z-40">
           <ScrollMotionEffect effect="fade-right" duration="2000">
             <h1 className="font-semibold text-3xl md:text-5xl text-white text-center md:text-left">
@@ -38,7 +38,7 @@ const WhatPeopleSay = () => {
             </div>
           </ScrollMotionEffect>
 
-          <ScrollMotionEffect effect="fade-up" duration="2000">
+          {/* <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="mt-px lg:mt-3">
               <Link
                 href="#"
@@ -47,14 +47,14 @@ const WhatPeopleSay = () => {
                 View All Reviews
               </Link>
             </div>
-            {/* <div className="mt-5">
+            <div className="mt-5">
               <RippleButton
                 buttonText=" View All Reviews"
                 rippleDuration={2000}
                 href="#"
               />
-            </div> */}
-          </ScrollMotionEffect>
+            </div>
+          </ScrollMotionEffect> */}
           <Image
             src="/assets/homepage/paper-plane-2.png"
             alt="paper plane"

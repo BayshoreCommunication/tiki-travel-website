@@ -52,7 +52,7 @@ const AboutUsSection = () => {
                     buttonText="More About Us"
                     rippleDuration={2000}
                     href="/"
-                    className="mt-5"
+                    className="mt-5 "
                   />
                 </div>
               </div>
