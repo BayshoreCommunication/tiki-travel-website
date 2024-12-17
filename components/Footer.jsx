@@ -70,7 +70,7 @@ const Footer = () => {
                   Quick Links
                 </h2>
                 <hr className="mt-2 mb-6 w-28  border-primary" />
-                <ul className="ml-0 text-white list-none text-[18px] font-medium">
+                <ul className="ml-0 text-white list-none text-[18px] font-normal">
                   {SITECONFIG?.footer?.quick_links?.map((el, index) => (
                     <li className="mb-4" key={index}>
                       <Link href={el.slug} className="hover:underline">
@@ -85,7 +85,7 @@ const Footer = () => {
                   Legal Areas
                 </h2>
                 <hr className="w-32 mt-2 mb-6 border-primary" />
-                <ul className="ml-0 text-[18px] font-medium text-white list-none">
+                <ul className="ml-0 text-[18px] font-normal text-white list-none">
                   {SITECONFIG?.footer?.company?.map((el, index) => (
                     <li className="mb-4" key={index}>
                       <Link href={el.slug} className="hover:underline">
@@ -104,10 +104,10 @@ const Footer = () => {
                   Contact us
                 </h2>
                 <hr className="w-24 mt-2 mb-6 border-primary" />
-                <ul className="ml-0 text-[18px] font-medium text-white list-none">
+                <ul className="ml-0 text-[18px] font-normal text-white list-none">
                   <li className="mb-4">
                     <div className="flex items-center gap-x-1">
-                      <IoLocationSharp className="size-6 text-primary" />
+                      <IoLocationSharp className="size-6 text-white" />
 
                       <h3 className="font-semibold text-white text-[20px]">
                         Location
@@ -125,7 +125,7 @@ const Footer = () => {
                   </li>
                   <li className="mb-4">
                     <div className="flex items-center gap-x-1">
-                      <RiPhoneFill className="size-6 text-primary" />
+                      <RiPhoneFill className="size-6 text-white" />
 
                       <h3 className="font-semibold text-white text-[20px]">
                         Contact
@@ -143,7 +143,7 @@ const Footer = () => {
 
                   <li className="mb-4">
                     <div className="flex items-center gap-x-1">
-                      <MdMarkEmailUnread className="size-6 text-primary" />
+                      <MdMarkEmailUnread className="size-6 text-white" />
 
                       <h3 className="font-semibold text-white text-[20px]">
                         Email

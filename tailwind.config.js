@@ -29,9 +29,9 @@ const config = {
         "2xl": "6rem", // Fixed inconsistency in '2xl'
       },
     },
-    maxWidth: {
-      "2xl": "1536px",
-    },
+    // maxWidth: {
+    //   "2xl": "1536px",
+    // },
   },
   darkMode: "class",
   plugins: [nextui()],

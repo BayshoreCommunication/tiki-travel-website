@@ -15,7 +15,7 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <h2></h2>
+      <BreadcrumbSection />
     </>
   );
 };

@@ -100,7 +100,7 @@ const MainNavbar = () => {
             </div>
 
             <div className="px-12 py-4 border rounded-full">
-              <div className="flex items-center justify-stretch gap-y-10  xl:gap-x-8">
+              <div className="flex items-center justify-stretch gap-y-10 gap-x-8  xl:gap-x-8">
                 {menuItems.map((el) => (
                   <Link
                     key={el.slug}

@@ -129,122 +129,114 @@ export const blogsData = [
   },
 ];
 
-export const areaspracticeData = [
+export const vacationPackagesData = [
   {
-    url: "/assets/areaspractice/hurricane-damage.jpg",
-    title: "Hurricane Damage",
-    slug: "hurricane-damage",
-    shortTitle:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
-    description:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
+    image: "/assets/vacation-destinations/cherry-blossoms-japan.png",
+    location: "Kyoto, Japan",
+    locationLink: "https://maps.google.com/?q=Kyoto,Japan",
+    title: "Cherry Blossoms in Japan",
+    slug: "cherry-blossoms-japan",
+    shortDesc:
+      "Experience Kyoto’s iconic cherry blossoms during springtime, surrounded by ancient temples and serene gardens.",
   },
   {
-    url: "/assets/areaspractice/windstorm-damage.jpg",
-    title: "Windstorm Damage",
-    slug: "windstorm-damage",
-    shortTitle:
-      "Is your claim being denied after a hurricane damaged your property? Obtain a free case review with us today!",
-    description:
-      "Is your claim being denied after a hurricane damaged your property? Obtain a free case review with us today!",
-  },
-
-  {
-    url: "/assets/areaspractice/roof-damage.jpg",
-    title: "Roof Damage",
-    slug: "roof-damage",
-    shortTitle:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
-    description:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
+    image: "/assets/vacation-destinations/visit-thailand.png",
+    location: "Bangkok, Thailand",
+    locationLink: "https://maps.google.com/?q=Bangkok,Thailand",
+    title: "Visit Thailand",
+    slug: "visit-thailand",
+    shortDesc:
+      "Explore Thailand’s vibrant culture, golden temples, bustling markets, and pristine beaches on this unforgettable adventure.",
   },
   {
-    url: "/assets/areaspractice/strom-damage.jpg",
-    title: "Storm Damage",
-    slug: "storm-damage",
-    shortTitle:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
-    description:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
+    image: "/assets/vacation-destinations/honeymoons-hawaii.png",
+    location: "Maui, Hawaii",
+    locationLink: "https://maps.google.com/?q=Maui,Hawaii",
+    title: "Honeymoons in Hawaii",
+    slug: "honeymoons-hawaii",
+    shortDesc:
+      "Celebrate your love with a luxurious Hawaiian honeymoon featuring stunning beaches, waterfalls, and tropical sunsets.",
   },
   {
-    url: "/assets/areaspractice/water-damage.jpg",
-    title: "Water Damage",
-    slug: "water-damage",
-    shortTitle:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
-    description:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
+    image: "/assets/vacation-destinations/island-hopping-hawaii.png",
+    location: "Hawaii, USA",
+    locationLink: "https://maps.google.com/?q=Hawaii,USA",
+    title: "Island Hopping Hawaii",
+    slug: "island-hopping-hawaii",
+    shortDesc:
+      "Discover the magic of Hawaii by island-hopping across Oahu, Maui, Kauai, and the Big Island for diverse experiences.",
   },
-
   {
-    url: "/assets/areaspractice/fire-damage.jpg",
-    title: "Fire Damage",
-    slug: "fire-damage",
-    shortTitle:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
-    description:
-      "Did you have a recent storm leave wind damage to your property or home? Is your claim being denied?",
+    image: "/assets/vacation-destinations/maldives.png",
+    location: "Malé, Maldives",
+    locationLink: "https://maps.google.com/?q=Male,Maldives",
+    title: "Luxury Escape to the Maldives",
+    slug: "luxury-escape-maldives",
+    shortDesc:
+      "Relax in stunning overwater villas surrounded by crystal-clear waters, coral reefs, and endless island luxury in the Maldives.",
   },
-
   {
-    url: "/assets/areaspractice/mold-damage.jpg",
-    title: "Mold Damage",
-    slug: "mold-damage",
-    shortTitle:
-      "Is your claim being denied after an hurricane damaged your property? Obtain a free case review with us today!",
-    description:
-      "Is your claim being denied after an hurricane damaged your property? Obtain a free case review with us today!",
+    image: "/assets/vacation-destinations/asia-by-cruise.png",
+    location: "Singapore & Southeast Asia",
+    locationLink: "https://maps.google.com/?q=Singapore",
+    title: "Asia by Cruise",
+    slug: "asia-by-cruise",
+    shortDesc:
+      "Sail through iconic Southeast Asian cities like Singapore, Bangkok, and Hanoi on a luxurious cruise.",
   },
-
   {
-    url: "/assets/areaspractice/hail-damage.jpg",
-    title: "Hail Damage",
-    slug: "hail-damage",
-    shortTitle:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
-    description:
-      "Was your home damaged by a flood? Do you have a pipe burst in your home during a freeze? Did the insurance company deny your claim?",
+    image: "/assets/vacation-destinations/romantic-getaway-greece.png",
+    location: "Santorini, Greece",
+    locationLink: "https://maps.google.com/?q=Santorini,Greece",
+    title: "Romantic Getaway in Greece",
+    slug: "romantic-getaway-greece",
+    shortDesc:
+      "Escape to Santorini’s whitewashed villages, blue-domed churches, and captivating sunsets over the Aegean Sea.",
   },
-
   {
-    url: "/assets/areaspractice/plumbing-damage.jpg",
-    title: "Plumbing Damage",
-    slug: "plumbing-damage",
-    shortTitle:
-      "Is your claim being denied after an hurricane damaged your property? Obtain a free case review with us today!",
-    description:
-      "Is your claim being denied after an hurricane damaged your property? Obtain a free case review with us today!",
+    image: "/assets/vacation-destinations/venetian-gondola-experience.png",
+    location: "Venice, Italy",
+    locationLink: "https://maps.google.com/?q=Venice,Italy",
+    title: "Venetian Gondola Experience",
+    slug: "venetian-gondola-experience",
+    shortDesc:
+      "Glide through Venice’s romantic canals on a gondola ride while soaking in centuries-old architecture and culture.",
   },
-
   {
-    url: "/assets/areaspractice/smoke-damage.jpg",
-    title: "Smoke Damage",
-    slug: "smoke-damage",
-    shortTitle:
-      "Did your home or property recently suffer damage from smoke and fire? Is your insurance refusing to pay?",
-    description:
-      "Did your home or property recently suffer damage from smoke and fire? Is your insurance refusing to pay?",
+    image: "/assets/vacation-destinations/explore-canadian-rockies.png",
+    location: "Banff, Canada",
+    locationLink: "https://maps.google.com/?q=Banff,Canada",
+    title: "Explore the Canadian Rockies",
+    slug: "explore-canadian-rockies",
+    shortDesc:
+      "Adventure through Banff’s stunning landscapes with turquoise lakes, snowy peaks, and unforgettable hiking trails.",
   },
-
   {
-    url: "/assets/areaspractice/bad-faith-claims.jpg",
-    title: "Bad Faith Claims",
-    slug: "bad-faith-claims",
-    shortTitle:
-      "Did a sudden hail storm damage your home or property? Is the insurance company giving you the run around?",
-    description:
-      "Did a sudden hail storm damage your home or property? Is the insurance company giving you the run around?",
+    image: "/assets/vacation-destinations/bali.png",
+    location: "Bali, Indonesia",
+    locationLink: "https://maps.google.com/?q=Bali,Indonesia",
+    title: "Bali Paradise Retreat",
+    slug: "bali-paradise-retreat",
+    shortDesc:
+      "Discover the serene beauty of Bali with its lush rice terraces, stunning beaches, and vibrant cultural heritage.",
   },
-
   {
-    url: "/assets/areaspractice/vandalism-and-theft.jpg",
-    title: "Vandalism And Theft",
-    slug: "vandalism-and-theft",
-    shortTitle:
-      "Do you have a commercial large loss claim that was denied? Get a free case review today.",
-    description:
-      "Do you have a commercial large loss claim that was denied? Get a free case review today.",
+    image: "/assets/vacation-destinations/trek-through-patagonia.png",
+    location: "Patagonia, Argentina",
+    locationLink: "https://maps.google.com/?q=Patagonia,Argentina",
+    title: "Trek Through Patagonia",
+    slug: "trek-through-patagonia",
+    shortDesc:
+      "Embark on a thrilling adventure through Patagonia’s glaciers, mountains, and vast landscapes.",
+  },
+  {
+    image: "/assets/vacation-destinations/adventure-capital-new-zealand.png",
+    location: "Queenstown, New Zealand",
+    locationLink: "https://maps.google.com/?q=Queenstown,New+Zealand",
+    title: "Adventure Capital of New Zealand",
+    slug: "adventure-capital-new-zealand",
+    shortDesc:
+      "Discover Queenstown’s adrenaline-fueled activities, from bungee jumping to scenic hikes and fjord cruises.",
   },
 ];
 
