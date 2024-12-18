@@ -29,9 +29,9 @@ const config = {
         "2xl": "1rem",
       },
     },
-    maxWidth: {
-      "2xl": "1536px", // The default value for 2xl in Tailwind CSS
-    },
+    // maxWidth: {
+    //   "2xl": "1536px", // The default value for 2xl in Tailwind CSS
+    // },
   },
   darkMode: "class",
   plugins: [nextui()],

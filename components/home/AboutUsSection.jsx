@@ -2,13 +2,21 @@ import React from "react";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import RippleButton from "../shared/RippleButton";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const AboutUsSection = () => {
   return (
     <section className="relative">
       <div className="container pb-10 md:pb-24">
         <div className=" flex flex-col lg:flex-row items-center gap-5 lg:gap-14">
-          <div className="w-full lg:w-[35%] shrink-0">
+          <div className="w-full lg:w-[40%] shrink-0 relative">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <Image
                 src="/assets/homepage/april-espinosa.png"
@@ -16,6 +24,46 @@ const AboutUsSection = () => {
                 width={630}
                 height={770}
               ></Image>
+
+              <div className="text-white   px-10 py-5 bg-primary absolute bottom-0 border-r-8 border-t-8 border-white ">
+                <div className="flex justify-center items-center gap-3">
+                  <Link
+                    href="https://www.facebook.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaFacebookF className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/company/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaLinkedinIn className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://x.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaTwitter className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaInstagram className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary duration-300"
+                  >
+                    <FaYoutube className="size-5" />
+                  </Link>
+                </div>
+              </div>
             </ScrollMotionEffect>
           </div>
           <div className="w-full relative z-10">
