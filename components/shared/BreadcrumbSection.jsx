@@ -35,7 +35,7 @@ const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
             <div>
               <div className="relative z-10 gap-10 py-20 ">
                 <h1
-                  className={`text-white font-bold text-5xl text-center mb-6 `}
+                  className={`text-white font-bold text-3xl lg:text-5xl text-center mb-6 `}
                 >
                   {title}
                 </h1>

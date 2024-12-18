@@ -1,5 +1,6 @@
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 import RippleButton from "@/components/shared/RippleButton";
+import MorePackages from "@/components/vacation-destinations/MorePackages";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -209,6 +210,7 @@ const page = () => {
         </div>
       </div>
       {/* More Packages */}
+      <MorePackages />
     </>
   );
 };
