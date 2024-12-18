@@ -4,7 +4,7 @@ import CardMotion from "../motion/CardMotion";
 
 const GoogleMapSection = () => {
   return (
-    <div className="bg-[#1E2538]">
+    <div>
       <div>
         <CardMotion
           whileInView={{

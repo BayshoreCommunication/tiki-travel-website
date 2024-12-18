@@ -1,6 +1,7 @@
-import ContactHeroSection from "@/components/contact-us/ContactHeroSection";
+import ContactSection from "@/components/contact-us/ContactSection";
+import FAQ from "@/components/contact-us/FAQ";
 import GoogleMapSection from "@/components/contact-us/GoogleMapSection";
-import AchievementSection from "@/components/shared/AchievementSection";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 import CallToAction from "@/components/shared/CallToAction";
 
 export const metadata = {
@@ -20,9 +21,10 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      {/* <ContactHeroSection />
-      <GoogleMapSection /> */}
-      <CallToAction />
+      <BreadcrumbSection title={"Contact Us"} />
+      <ContactSection />
+      <GoogleMapSection />
+      <FAQ />
     </>
   );
 };

@@ -26,9 +26,9 @@ const BlogMainSection = async () => {
           <div className="mb-1 md:mb-12 flex flex-col lg:flex-row gap-3 lg:gap-8 justify-center lg:justify-between items-center">
             <div>
               <ScrollMotionEffect effect="fade-up" duration="2000">
-                <h2 className="text-3xl md:text-5xl font-semibold ">
+                <h1 className="text-3xl md:text-5xl font-semibold ">
                   See our latest blog!
-                </h2>
+                </h1>
               </ScrollMotionEffect>
             </div>
             <div className="w-full lg:w-[50%]">
