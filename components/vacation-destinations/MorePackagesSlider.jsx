@@ -15,16 +15,16 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const MorePackagesSlider = ({ className }) => {
   return (
-    <div className={`my-6 md:my-8  ${className}`}>
+    <div className={`  ${className}`}>
       <div className="flex items-center">
         <Swiper
-          slidesPerView={4}
+          slidesPerView={1}
           centeredSlides={true}
           spaceBetween={20}
           grabCursor={true}
           loop={true}
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
@@ -49,7 +49,7 @@ const MorePackagesSlider = ({ className }) => {
           className="mySwiper"
         >
           {vacationPackagesData.map((packages, index) => (
-            <SwiperSlide key={index} className="py-5">
+            <SwiperSlide key={index} className="p-4">
               <div className="bg-white rounded-lg shadow-lg text-start border overflow-hidden group">
                 <div className="overflow-hidden">
                   <Image
@@ -74,7 +74,7 @@ const MorePackagesSlider = ({ className }) => {
                       View
                     </Link>
                   </div>
-                  <h4 className="text-2xl font-medium text-black mt-3 ">
+                  <h4 className="text-2xl font-medium text-black mt-3 line-clamp-1">
                     {packages?.title}
                   </h4>
                   <p className="text-lg line-clamp-2 mt-3">

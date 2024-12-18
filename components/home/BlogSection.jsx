@@ -42,7 +42,7 @@ const BlogSection = async () => {
               <div className="flex justify-center md:justify-start mx-auto items-center  my-4">
                 <Link
                   href={`/blog/${blog.slug}`}
-                  className="text-secondary font-normal text-lg bg-none px-4 py-1 rounded-full hover:bg-secondary hover:text-white border-2 border-secondary "
+                  className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
                 >
                   Read More
                 </Link>
@@ -115,7 +115,7 @@ const BlogSection = async () => {
           <div className="flex justify-center md:invisible mt-12 md:mt-[-60px] visible">
             <Link
               href={"/blog"}
-              className="text-secondary font-normal text-lg bg-none px-4 py-2 rounded-full hover:bg-secondary hover:text-white border-2 border-secondary  "
+              className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
             >
               Read All Blogs
             </Link>
