@@ -3,8 +3,8 @@ import React from "react";
 import GetAllPostData from "@/lib/GetAllPostData";
 import Head from "next/head";
 import CallToAction from "@/components/shared/CallToAction";
-import PageHeroSection from "@/components/shared/PageHeroSection";
 import BlogMainSection from "@/components/blog/BlogMainSection";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 
 const page = async () => {
   const blogPostData = await GetAllPostData();
@@ -20,21 +20,11 @@ const page = async () => {
 
   return (
     <>
-      <Head>
-        <title>Blog - Carter Injury Law</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content={`At Carter Injury Law, you’re family. We offer open lines of communication to foster personal relationships and optimize case outcomes for our clients. `}
-        />
-      </Head>
-      <PageHeroSection
-        image={"/assets/shared/blogs.jpg"}
+      <BreadcrumbSection
+        bgImage={"/assets/shared/blog-breadcrumb-bg.png"}
         title={"Blogs"}
-        description={
-          "When the unexpected happens, we help individuals and businesses collect the money they deserve for their insurance claims."
-        }
       />
+
       <BlogMainSection blogPostData={blogPostData} />
       <CallToAction />
     </>

@@ -7,6 +7,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
 import PageHeroSection from "@/components/shared/PageHeroSection";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 
 const css = `
  h1, h2, p, br, nav {
@@ -57,19 +58,13 @@ const page = async ({ params }) => {
 
   return (
     <>
-      <Head>
-        <title>{blogDetails[0]?.title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={blogDetails[0]?.title} />
-      </Head>
       <style>{css}</style>
-      <PageHeroSection
-        image={"/assets/shared/blogs.jpg"}
-        title={blogDetails[0]?.title}
-        description={
-          "When the unexpected happens, we help individuals and businesses collect the money they deserve for their insurance claims."
-        }
+      <BreadcrumbSection
+        bgImage={"/assets/shared/blog-breadcrumb-bg.png"}
+        title={"Blog Details"}
+        // title={blogDetails[0]?.title}
       />
+
       <SectionLayout bg="bg-white">
         <CardMotion
           whileInView={{

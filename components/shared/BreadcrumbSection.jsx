@@ -1,5 +1,4 @@
 import React from "react";
-import SectionLayout from "../shared/SectionLayout";
 import Link from "next/link";
 import CardMotion from "../motion/CardMotion";
 import Image from "next/image";
@@ -35,7 +34,7 @@ const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
             <div>
               <div className="relative z-10 gap-10 py-20 ">
                 <h1
-                  className={`text-white font-bold text-3xl lg:text-5xl text-center mb-6 `}
+                  className={`text-white font-bold text-3xl lg:text-5xl text-center mb-2 `}
                 >
                   {title}
                 </h1>

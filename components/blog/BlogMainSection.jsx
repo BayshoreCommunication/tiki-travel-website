@@ -5,6 +5,7 @@ import Link from "next/link";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import GetAllPostData from "@/lib/GetAllPostData";
 import parse from "html-react-parser";
+import { MdOutlineDateRange } from "react-icons/md";
 
 const BlogMainSection = async () => {
   const blogPostData = await GetAllPostData();
@@ -22,13 +23,26 @@ const BlogMainSection = async () => {
     <section className="bg-white">
       <div className="container py-10 md:py-20">
         <div>
-          <ScrollMotionEffect effect="fade-up" duration="2000">
-            <h2 className="text-stone-950 !font-semibold text-3xl md:text-5xl mb-1 md:mb-12 text-center">
-              Our Recent Blog Post
-            </h2>
-          </ScrollMotionEffect>
+          <div className="mb-1 md:mb-12 flex flex-col lg:flex-row gap-3 lg:gap-8 justify-center lg:justify-between items-center">
+            <div>
+              <ScrollMotionEffect effect="fade-up" duration="2000">
+                <h2 className="text-3xl md:text-5xl font-semibold ">
+                  See our latest blog!
+                </h2>
+              </ScrollMotionEffect>
+            </div>
+            <div className="w-full lg:w-[50%]">
+              <ScrollMotionEffect effect="fade-up" duration="2000">
+                <p className="text-base md:text-lg">
+                  Aloha! I’m April Espinosa, the heart and soul behind Tiki
+                  Travel Agency. My journey into the world of travel began with
+                  a leap of faith – my husband and I{" "}
+                </p>
+              </ScrollMotionEffect>
+            </div>
+          </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8  justify-center text-center h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8  justify-center text-center h-full">
               {blogPostData?.data
                 ?.filter((pub, no) => pub.published === true)
                 ?.map((blogs, index) => (
@@ -37,37 +51,51 @@ const BlogMainSection = async () => {
                     duration="2000"
                     key={index}
                   >
-                    <Link href={`/blog/${blogs?.slug}`} key={index}>
-                      <div className=" bg-white shadow-md rounded-md">
-                        <Image
-                          width={1800}
-                          height={300}
-                          src={blogs?.featuredImage?.image?.url}
-                          alt={blogs?.featuredImage?.altText}
-                          className="bg-center bg-cover"
-                        />
-                        <div className="pt-2 pb-8 px-4">
-                          <div className="text-sm text-gray-500 flex items-center mt-1 justify-between">
-                            <span> {blogs?.category || "Blog post"}</span>
-                            <span> {postDate(blogs?.createdAt)}</span>
+                    <div className="group" key={index}>
+                      <div className="flex items-center  gap-4">
+                        <div className="relative w-full h-[280px] max-w-[280px] overflow-hidden shrink-0">
+                          <Image
+                            src={
+                              blogs?.featuredImage?.image?.url ||
+                              "/fallback-image.png"
+                            }
+                            alt={
+                              blogs?.featuredImage?.altText || "Featured Image"
+                            }
+                            layout="fill"
+                            className="object-cover object-center group-hover:scale-105 duration-500"
+                            priority
+                          />
+                        </div>
+
+                        <div className="">
+                          <div className="text-sm text-gray-500 flex items-center justify-between">
+                            {/* <span> {blogs?.category || "Blog post"}</span> */}
+                            <div className="flex items-center gap-1 text-base">
+                              <MdOutlineDateRange />
+
+                              <p className="text-base md:text-lg">
+                                {postDate(blogs?.createdAt)}
+                              </p>
+                            </div>
                           </div>
-                          <h1 className="font-semibold  text-2xl text-black text-center md:text-left mt-5 line-clamp-2">
+                          <h1 className="text-2xl font-medium text-black mt-3 text-start line-clamp-2">
                             {blogs?.title}
                           </h1>
-                          <div className="text-md text-black text-center md:text-left mt-2 line-clamp-2 ">
+                          <div className="text-base md:text-lg text-center mt-3 md:text-left  line-clamp-3 ">
                             {parse(blogs?.body)}
                           </div>
-                          <div className="mt-6 flex justify-center md:justify-start">
+                          <div className="mt-5 flex justify-center md:justify-start">
                             <Link
                               href={`/blog/${blogs?.slug}`}
-                              className="text-secondary font-normal text-lg bg-none px-4 py-2 rounded-full hover:bg-secondary hover:text-white border-2 border-secondary  "
+                              className="text-primary font-medium text-lg py-px border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
                             >
                               Read More
                             </Link>
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   </ScrollMotionEffect>
                 ))}
             </div>

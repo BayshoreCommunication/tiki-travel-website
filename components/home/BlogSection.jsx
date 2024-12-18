@@ -1,129 +1,112 @@
+import Image from "next/image";
 import React from "react";
 import SectionLayout from "../shared/SectionLayout";
-import CardMotion from "../motion/CardMotion";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
-import GetAllPostData from "@/lib/GetAllPostData";
 import Link from "next/link";
+import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import GetAllPostData from "@/lib/GetAllPostData";
+import parse from "html-react-parser";
+import { MdOutlineDateRange } from "react-icons/md";
 
-const BlogSection = async () => {
+const BlogMainSection = async () => {
   const blogPostData = await GetAllPostData();
 
   const postDate = (date) => {
-    return new Date(date).toLocaleDateString("en-US", {
+    const formattedDate = new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",
       day: "numeric",
     });
-  };
-
-  const renderBlogPosts = () => {
-    return blogPostData?.data
-      ?.filter((pub, index) => pub.published && index < 3)
-      ?.map((blog, index) => (
-        <Link href={`/blog/${blog.slug}`} key={index}>
-          <Card shadow="sm" radius="none" isPressable>
-            <CardBody className="p-0">
-              <Image
-                shadow="none"
-                radius="none"
-                width="100%"
-                className="w-full object-cover h-[300px]"
-                src={blog.featuredImage?.image?.url}
-                alt={blog.featuredImage?.altText}
-              />
-            </CardBody>
-            <CardFooter className="text-small block text-left">
-              <p className="text-default-500 block">
-                {postDate(blog.createdAt)}
-              </p>
-              <h2 className="text-default-500 text-lg font-bold line-clamp-2 mt-2">
-                {blog.title}
-              </h2>
-              <div className="flex justify-center md:justify-start mx-auto items-center  my-4">
-                <Link
-                  href={`/blog/${blog.slug}`}
-                  className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
-                >
-                  Read More
-                </Link>
-              </div>
-            </CardFooter>
-          </Card>
-        </Link>
-      ));
+    return formattedDate;
   };
 
   return (
-    <SectionLayout bg="bg-slate-50">
-      <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-          <CardMotion
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1.1 },
-            }}
-            initial={{ opacity: 0, y: 100 }}
-          >
-            <div className="">
-              <h2
-                className={`text-stone-950 font-bold text-3xl md:text-5xl mt-5 mb-4 text-center md:text-left`}
-              >
-                Our Recent Blogs
-              </h2>
+    <section className="bg-white">
+      <div className="container py-10 md:py-20">
+        <div>
+          <div className="mb-1 md:mb-12 flex flex-col lg:flex-row gap-3 lg:gap-8 justify-center lg:justify-between items-center">
+            <div>
+              <ScrollMotionEffect effect="fade-up" duration="2000">
+                <h2 className="text-3xl md:text-5xl font-semibold">
+                  See our latest blog!
+                </h2>
+              </ScrollMotionEffect>
             </div>
-          </CardMotion>
-          <CardMotion
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              transition: { duration: 1.1 },
-            }}
-            initial={{ opacity: 0, y: 100 }}
-          >
-            <div className="flex justify-end md:visible invisible">
-              <div className="mt-3"></div>
-              <Link
-                href={"/blog"}
-                className="text-primary font-medium text-xl py-2 border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500 "
-              >
-                Read All Blogs
-              </Link>
+            <div className="w-full lg:w-[50%]">
+              <ScrollMotionEffect effect="fade-up" duration="2000">
+                <div className="flex justify-end md:visible invisible">
+                  <Link
+                    href={"/vacation-packages"}
+                    className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
+                  >
+                    Read All Blogs
+                  </Link>
+                </div>
+              </ScrollMotionEffect>
             </div>
-          </CardMotion>
+          </div>
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8  justify-center text-center h-full">
+              {blogPostData?.data
+                ?.filter((pub, no) => pub.published === true)
+                ?.map((blogs, index) => (
+                  <ScrollMotionEffect
+                    effect="fade-up"
+                    duration="2000"
+                    key={index}
+                  >
+                    <div className="group" key={index}>
+                      <div className="flex  gap-4">
+                        <div className="relative w-full h-[280px] max-w-[280px] overflow-hidden shrink-0">
+                          <Image
+                            src={
+                              blogs?.featuredImage?.image?.url ||
+                              "/fallback-image.png"
+                            }
+                            alt={
+                              blogs?.featuredImage?.altText || "Featured Image"
+                            }
+                            layout="fill"
+                            className="object-cover object-center group-hover:scale-105 duration-500"
+                            priority
+                          />
+                        </div>
+
+                        <div className="">
+                          <div className="text-sm text-gray-500 flex items-center mt-1 justify-between">
+                            {/* <span> {blogs?.category || "Blog post"}</span> */}
+                            <div className="flex items-center gap-1 text-base">
+                              <MdOutlineDateRange />
+
+                              <p className="text-base md:text-lg">
+                                {postDate(blogs?.createdAt)}
+                              </p>
+                            </div>
+                          </div>
+                          <h1 className="text-2xl font-medium text-black mt-3 text-start line-clamp-2">
+                            {blogs?.title}
+                          </h1>
+                          <div className="text-base md:text-lg text-center mt-3 md:text-left  line-clamp-3 ">
+                            {parse(blogs?.body)}
+                          </div>
+                          <div className="mt-5 flex justify-center md:justify-start">
+                            <Link
+                              href={`/blog/${blogs?.slug}`}
+                              className="text-primary font-medium text-lg py-px border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
+                            >
+                              Read More
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollMotionEffect>
+                ))}
+            </div>
+          </div>
         </div>
-        <CardMotion
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1.1 },
-          }}
-          initial={{ opacity: 0, y: 100 }}
-        >
-          <div className="gap-4 grid grid-cols-1 sm:grid-cols-3 mt-0 md:mt-12">
-            {renderBlogPosts()}
-          </div>
-        </CardMotion>
-        <CardMotion
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1.1 },
-          }}
-          initial={{ opacity: 0, y: 100 }}
-        >
-          <div className="flex justify-center md:invisible mt-12 md:mt-[-60px] visible">
-            <Link
-              href={"/blog"}
-              className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
-            >
-              Read All Blogs
-            </Link>
-          </div>
-        </CardMotion>
       </div>
-    </SectionLayout>
+    </section>
   );
 };
 
-export default BlogSection;
+export default BlogMainSection;
