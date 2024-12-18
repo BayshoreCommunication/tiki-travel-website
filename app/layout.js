@@ -9,21 +9,8 @@ const rubik = Rubik({
 });
 
 export const metadata = {
-  title: "Tiki Travel Agency ",
-  description:
-    "Lets Explore Someplace New Tiki Travel Agency creates customized vacation itineraries for travel to Hawaii and Asia. Tiki Travel Agency believes that travel should be more than just a vacation; it should be an immersive adventure. ",
   metadataBase: new URL("https://tiki-travel-website.vercel.app"),
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-USA",
-    },
-  },
-  openGraph: {
-    images: "/opengraph-image.jpg",
-  },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

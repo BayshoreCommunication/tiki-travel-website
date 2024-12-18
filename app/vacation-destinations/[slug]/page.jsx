@@ -7,6 +7,20 @@ import Link from "next/link";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
+export const metadata = {
+  title: "",
+  description: "",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-USA",
+    },
+  },
+  openGraph: {
+    images: "/opengraph-image.jpg",
+  },
+};
+
 const page = () => {
   return (
     <>

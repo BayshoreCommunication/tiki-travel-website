@@ -48,7 +48,7 @@ const MainNavbar = () => {
       { title: "About Us", slug: "/about" },
       { title: "Vacation Destinations", slug: "/vacation-destinations" },
       { title: "Blog", slug: "/blog" },
-      { title: "Contact Us", slug: "/contact-us" },
+      { title: "Contact Us", slug: "/contact" },
     ],
     []
   );
