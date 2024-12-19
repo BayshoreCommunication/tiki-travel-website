@@ -16,7 +16,7 @@ const AboutUsSection = () => {
     <section className="relative overflow-hidden">
       <div className="container py-10 md:py-24">
         <div className=" flex flex-col gap-4 lg:gap-10">
-          <div className=" flex flex-col lg:flex-row items-end gap-4 lg:gap-14">
+          <div className=" flex flex-col lg:flex-row md:items-end 2xl:items-center  gap-4 lg:gap-14">
             <div className="w-full lg:w-[40%] shrink-0 relative">
               <ScrollMotionEffect effect="fade-right" duration="2000">
                 <Image
@@ -27,39 +27,76 @@ const AboutUsSection = () => {
                 ></Image>
 
                 <div className="text-white   px-10 py-5 bg-primary absolute bottom-0 border-r-8 border-t-8 border-white ">
-                  <div className="flex justify-center items-center gap-3">
+                  {/* <div className="flex justify-center items-center gap-3">
+                  <Link
+                    href="https://www.facebook.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaFacebookF className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/company/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaLinkedinIn className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://x.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaTwitter className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                  >
+                    <FaInstagram className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/ "
+                    target="_blank"
+                    className="inline-block p-2 rounded bg-secondary hover:bg-primary duration-300"
+                  >
+                    <FaYoutube className="size-5" />
+                  </Link>
+                </div> */}
+                  <div className="flex justify-start items-center gap-3">
                     <Link
                       href="https://www.facebook.com/ "
                       target="_blank"
-                      className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                      className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
                     >
                       <FaFacebookF className="size-5" />
                     </Link>
-                    <Link
-                      href="https://www.linkedin.com/company/ "
-                      target="_blank"
-                      className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
-                    >
-                      <FaLinkedinIn className="size-5" />
-                    </Link>
+                    {/* <Link
+                    href="https://www.linkedin.com/company/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
+                  >
+                    <FaLinkedinIn className="size-5" />
+                  </Link> */}
                     <Link
                       href="https://x.com/ "
                       target="_blank"
-                      className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                      className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
                     >
                       <FaTwitter className="size-5" />
                     </Link>
                     <Link
                       href="https://www.instagram.com/ "
                       target="_blank"
-                      className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
+                      className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
                     >
                       <FaInstagram className="size-5" />
                     </Link>
                     <Link
                       href="https://www.youtube.com/ "
                       target="_blank"
-                      className="inline-block p-2 rounded bg-secondary hover:bg-primary duration-300"
+                      className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
                     >
                       <FaYoutube className="size-5" />
                     </Link>

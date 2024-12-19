@@ -74,7 +74,7 @@ const MorePackagesSlider = ({ className }) => {
                       View
                     </Link>
                   </div>
-                  <h4 className="text-2xl font-medium text-black mt-3 line-clamp-1">
+                  <h4 className="text-2xl font-medium text-secondary mt-3 line-clamp-1">
                     {packages?.title}
                   </h4>
                   <p className="text-lg line-clamp-2 mt-3">

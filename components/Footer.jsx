@@ -52,13 +52,13 @@ const Footer = () => {
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full p-2.5 lg:p-3 md:ps-12 text-base lg:text-lg text-gray-900  border-gray-300 rounded-lg outline-none bg-white"
+                      className="block w-full p-2.5 lg:p-3 md:ps-12 text-base lg:text-lg text-gray-900  border-gray-600 rounded-lg outline-none bg-white"
                       placeholder="example@gmail.com"
                       required
                     />
                     <button
                       type="submit"
-                      className="text-white absolute end-0 bottom-0 bg-primary hover:text-secondary duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
+                      className="text-white absolute end-0 bottom-0 bg-primary hover:text-primary duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
                     >
                       Subscribe Now
                     </button>
@@ -169,7 +169,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className="my-6 border-white opacity-10 sm:mx-auto lg:my-8" />
-          <div className="md:flex :items-center sm:justify-between">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="text-[18px] font-medium text-center text-white">
               © 2024{" "}
               <a href="#/" className="hover:underline text-primary">
@@ -178,15 +178,42 @@ const Footer = () => {
               . All Rights Reserved.
             </div>
 
-            <div className="text-[18px] font-medium text-center text-white">
-              Design & Developed by{" "}
-              <a
-                href="https://www.bayshorecommunication.com/"
+            <div className="flex justify-center lg:justify-end items-center gap-3">
+              <Link
+                href="https://www.facebook.com/ "
                 target="_blank"
-                className="font-medium hover:underline text-primary"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
               >
-                BayShore Communication
-              </a>
+                <FaFacebookF className="size-5" />
+              </Link>
+              {/* <Link
+                    href="https://www.linkedin.com/company/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                  >
+                    <FaLinkedinIn className="size-5" />
+                  </Link> */}
+              <Link
+                href="https://x.com/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaTwitter className="size-5" />
+              </Link>
+              <Link
+                href="https://www.instagram.com/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaInstagram className="size-5" />
+              </Link>
+              <Link
+                href="https://www.youtube.com/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary duration-300"
+              >
+                <FaYoutube className="size-5" />
+              </Link>
             </div>
           </div>
         </div>

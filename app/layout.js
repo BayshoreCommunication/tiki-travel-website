@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={rubik.className}>
         <Providers>
-          <div className="overflow-x-hidden text-black bg-white">
+          <div className="overflow-x-hidden text-secondary bg-white">
             <MainNavbar />
             {children}
             <Footer />

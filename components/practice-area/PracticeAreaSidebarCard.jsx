@@ -33,7 +33,7 @@ const PracticeAreaSidebarCard = ({ allServiceData }) => {
                     className="shrink-0"
                   />
                   <p
-                    className={`text-xl font-medium group-hover:text-primary duration-300 ${pathname === "/areas-of-practice/" + service?.slug ? "text-primary " : "text-black"}`}
+                    className={`text-xl font-medium group-hover:text-primary duration-300 ${pathname === "/areas-of-practice/" + service?.slug ? "text-primary " : "text-secondary"}`}
                   >
                     {service.title}
                   </p>

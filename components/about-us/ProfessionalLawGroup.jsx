@@ -28,7 +28,7 @@ const ProfessionalLawGroup = () => {
     <section className="bg-white">
       <div className="container py-10 md:py-20">
         <ScrollMotionEffect effect="fade-up" duration="2000">
-          <h2 className="font-black text-3xl md:text-5xl text-black text-center ">
+          <h2 className="font-black text-3xl md:text-5xl text-secondary text-center ">
             About The Professional Law Group
           </h2>
         </ScrollMotionEffect>
@@ -43,10 +43,10 @@ const ProfessionalLawGroup = () => {
                   height={500}
                   alt="David Carter"
                 />
-                <h2 className="font-black text-xl md:text-2xl text-black text-center mt-5">
+                <h2 className="font-black text-xl md:text-2xl text-secondary text-center mt-5">
                   {el?.title}
                 </h2>
-                <p className="mt-2 md:mt-3 text-[16px] md:text-[20px] font-normal text-black  text-center leading-tight max-w-[800px]">
+                <p className="mt-2 md:mt-3 text-[16px] md:text-[20px] font-normal text-secondary  text-center leading-tight max-w-[800px]">
                   {el?.content}
                 </p>
               </div>

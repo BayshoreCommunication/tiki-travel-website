@@ -44,7 +44,7 @@ const OurValues = () => {
   return (
     <div className=" bg-[#F5F5F5] ">
       <div className="container py-10 md:py-24">
-        <div className="flex flex-col items-center mb-4">
+        <div className="flex flex-col items-center mb-10 lg:20">
           <h2 className="text-3xl lg:text-5xl font-semibold text-center">
             Our Values
           </h2>
@@ -54,23 +54,20 @@ const OurValues = () => {
           </p>
         </div>
         {/* Mapping the features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {features.map((feature, index) => (
-            <div>
-              <ScrollMotionEffect effect="fade-up" duration="2000" key={index}>
-                <div className="p-5 md:p-8 shadow-md rounded-lg bg-white text-gray-700 md:min-h-[265px] hover:scale-105 duration-500">
-                  <div>
-                    {" "}
-                    <h3 className="text-xl font-semibold text-primary  mb-1">
-                      {feature.id.toString().padStart(2, "0")}
-                    </h3>
-                    <h3 className="text-2xl font-semibold text-secondary  mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600">{feature.description}</p>{" "}
-                  </div>
-                </div>
-              </ScrollMotionEffect>
+            <div key={index}>
+              <div className="p-5 md:p-8 shadow-md rounded-lg bg-white text-gray-700 hover:scale-105 duration-500 flex flex-col h-full">
+                <h3 className="text-xl font-semibold text-primary mb-1">
+                  {feature.id.toString().padStart(2, "0")}
+                </h3>
+                <h3 className="text-2xl font-semibold text-secondary mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 flex-grow text-base lg:text-lg">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -10,7 +10,7 @@ const AreasPractice = () => {
       <div className="container py-10 md:py-20">
         <div className="max-w-[700px] mx-auto">
           <ScrollMotionEffect effect="fade-right" duration="2000">
-            <h1 className="font-black text-4xl md:text-5xl text-black text-center">
+            <h1 className="font-black text-4xl md:text-5xl text-secondary text-center">
               Legal Practice Areas
             </h1>
           </ScrollMotionEffect>
@@ -27,10 +27,10 @@ const AreasPractice = () => {
                   className="mx-auto"
                 />
                 <div className="pt-2 pb-8 px-4">
-                  <h1 className="font-semibold  text-2xl text-black text-center md:text-left mt-5">
+                  <h1 className="font-semibold  text-2xl text-secondary text-center md:text-left mt-5">
                     {el?.title}
                   </h1>
-                  <p className="text-md text-black text-center md:text-left mt-2 line-clamp-2 ">
+                  <p className="text-md text-secondary text-center md:text-left mt-2 line-clamp-2 ">
                     {el?.shortTitle}
                   </p>
                   <div className="mt-8">

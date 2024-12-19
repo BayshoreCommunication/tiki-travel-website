@@ -50,7 +50,7 @@ const VacationPackages = () => {
                       View
                     </Link>
                   </div>
-                  <h4 className="text-2xl font-medium text-black mt-3 ">
+                  <h4 className="text-2xl font-medium text-secondary mt-3 ">
                     {packages?.title}
                   </h4>
                   <p className="text-lg line-clamp-2 mt-3">
@@ -61,7 +61,7 @@ const VacationPackages = () => {
                     <RippleButton
                       buttonText="Read More"
                       rippleDuration={3000}
-                      href={packages?.slug}
+                      href={`/vacation-destinations/${packages?.slug}`}
                       className="!text-base !font-normal !py-2 !px-6"
                     />
                   </div>

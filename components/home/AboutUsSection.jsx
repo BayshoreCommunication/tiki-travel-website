@@ -26,7 +26,7 @@ const AboutUsSection = () => {
               ></Image>
 
               <div className="text-white   px-10 py-5 bg-primary absolute bottom-0 border-r-8 border-t-8 border-white ">
-                <div className="flex justify-center items-center gap-3">
+                {/* <div className="flex justify-center items-center gap-3">
                   <Link
                     href="https://www.facebook.com/ "
                     target="_blank"
@@ -59,6 +59,43 @@ const AboutUsSection = () => {
                     href="https://www.youtube.com/ "
                     target="_blank"
                     className="inline-block p-2 rounded bg-secondary hover:bg-primary duration-300"
+                  >
+                    <FaYoutube className="size-5" />
+                  </Link>
+                </div> */}
+                <div className="flex justify-start items-center gap-3">
+                  <Link
+                    href="https://www.facebook.com/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
+                  >
+                    <FaFacebookF className="size-5" />
+                  </Link>
+                  {/* <Link
+                    href="https://www.linkedin.com/company/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
+                  >
+                    <FaLinkedinIn className="size-5" />
+                  </Link> */}
+                  <Link
+                    href="https://x.com/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
+                  >
+                    <FaTwitter className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary   duration-300"
+                  >
+                    <FaInstagram className="size-5" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/ "
+                    target="_blank"
+                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
                   >
                     <FaYoutube className="size-5" />
                   </Link>
@@ -99,7 +136,7 @@ const AboutUsSection = () => {
                   <RippleButton
                     buttonText="More About Us"
                     rippleDuration={2000}
-                    href="/"
+                    href="/about"
                     className="mt-5 "
                   />
                 </div>

@@ -1,12 +1,65 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 import RippleButton from "../shared/RippleButton";
+import { Button } from "@nextui-org/react";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const serviceID = "service_5yimeas";
+    const templateID = "template_j4y4dmv";
+    const publicKey = "Y-2_mv-FHC710OGp_";
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then(() => {
+        setLoading(false);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Your message has been sent successfully.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        setLoading(false);
+        Swal.fire({
+          icon: "error",
+          title: "Error Sending Message",
+          text: "Something went wrong. Please try again later.",
+        });
+        console.error("Failed to send message:", error);
+      });
+  };
+
   return (
     <div>
-      <form className="w-full ">
+      <form className="w-full" onSubmit={handleSubmit}>
         <div className="md:flex items-start gap-x-3">
           <div className="w-full mb-3">
             <input
@@ -15,6 +68,8 @@ const ContactForm = () => {
               required
               type="text"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
 
@@ -25,18 +80,21 @@ const ContactForm = () => {
               required
               type="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
         </div>
-
         <div className="md:flex items-center gap-x-3">
           <div className="w-full mb-3">
             <input
               className="bg-white border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-secondary focus:border-secondary block w-full p-2.5 py-3 placeholder:text-base pl-5 mt-3"
-              placeholder="+1 408 XXX XXXX"
+              placeholder="+1 23456789"
               required
               type="text"
               name="phone"
+              value={formData.phone}
+              onChange={handleChange}
             />
           </div>
 
@@ -47,10 +105,11 @@ const ContactForm = () => {
               required
               type="text"
               name="subject"
+              value={formData.subject}
+              onChange={handleChange}
             />
           </div>
         </div>
-
         <div className="mb-6">
           <textarea
             rows={4}
@@ -59,10 +118,18 @@ const ContactForm = () => {
             placeholder="Write Your Message..."
             required
             name="message"
+            value={formData.message}
+            onChange={handleChange}
           />
         </div>
 
-        <RippleButton buttonText="Sand Message" />
+        <button
+          className="text-white font-medium text-md md:text-lg bg-primary hover:bg-secondary transition-all duration-400 px-8 md:px-16 py-3 rounded-sm z-50"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send Message"}
+        </button>
       </form>
     </div>
   );

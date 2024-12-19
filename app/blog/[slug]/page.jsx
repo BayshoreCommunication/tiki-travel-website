@@ -83,10 +83,10 @@ const page = async ({ params }) => {
             {blogDetails?.map((blogs, index) => (
               <div className="col-span-2">
                 <div className="flex items-center justify-between">
-                  <p className="text-[.9rem] md:text-[1rem] text-black text-left italic mt-4 ">
+                  <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
                     {blogs?.category || "Blog Post"}
                   </p>
-                  <p className="text-[.9rem] md:text-[1rem] text-black text-left italic mt-4 ">
+                  <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
                     {postDate(blogs?.createdAt)}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ const page = async ({ params }) => {
             ))}
 
             <div className="col-span-2 sm:col-span-1 h-[100%] md:h-[1000px] overflow-y-scroll overflow-x-hidden  p-3 rounded-lg">
-              <h2 className="font-medium text-4xl text-black border-b-2 border-gray-500 pb-4 mb-6">
+              <h2 className="font-medium text-4xl text-secondary border-b-2 border-gray-500 pb-4 mb-6">
                 Recent Cases
               </h2>
               {blogPostData?.data
@@ -127,7 +127,7 @@ const page = async ({ params }) => {
                       className="w-[100px] h-auto bg-center bg-cover"
                     />
                     <div>
-                      <div className="text-md font-bold text-black text-left line-clamp-2">
+                      <div className="text-md font-bold text-secondary text-left line-clamp-2">
                         {blogs?.title}
                       </div>
                     </div>

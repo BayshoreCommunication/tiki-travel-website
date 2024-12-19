@@ -20,31 +20,33 @@ const ContactSection = () => {
           </h1>
         </div>
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-10">
-          <div className="w-full lg:w-[30%] bg-[#F2F2F2] p-6 lg:p-10 rounded-lg">
+          <div className="w-full lg:w-[30%] bg-[#F2F2F2] p-6 lg:p-10 rounded-lg flex flex-col justify-between ">
             <div>
-              <h4 className="text-2xl lg:text-3xl mb-2 font-semibold">
-                Contact Information
-              </h4>
-              <p className="text-base md:text-lg">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing. Aenean
-              </p>
-            </div>
-            <div className="flex flex-col gap-4 my-8">
-              <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
-                <IoCall />
-                <Link href="tel:9545290695">(954)-529-0695</Link>
+              <div>
+                <h4 className="text-2xl lg:text-3xl mb-2 font-semibold">
+                  Contact Information
+                </h4>
+                <p className="text-base md:text-lg">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing. Aenean
+                </p>
               </div>
-              <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
-                <IoMail />
-                <a href="mailto:april@tikitravelagency.com">
-                  april@tikitravelagency.com
-                </a>
-              </div>
-              <div className="hover:text-primary duration-300 flex items-center gap-1  hover:underline">
-                <IoLocation />
-                <Link href="https://maps.app.goo.gl/RF4AXnruacm9HQjUA">
-                  Tampa, Florida
-                </Link>
+              <div className="flex flex-col gap-4 my-8">
+                <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
+                  <IoCall />
+                  <Link href="tel:9545290695">(954)-529-0695</Link>
+                </div>
+                <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
+                  <IoMail />
+                  <a href="mailto:april@tikitravelagency.com">
+                    april@tikitravelagency.com
+                  </a>
+                </div>
+                <div className="hover:text-primary duration-300 flex items-center gap-1  hover:underline">
+                  <IoLocation />
+                  <Link href="https://maps.app.goo.gl/RF4AXnruacm9HQjUA">
+                    Tampa, Florida
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="flex justify-start items-center gap-3 pt-10">
@@ -55,13 +57,13 @@ const ContactSection = () => {
               >
                 <FaFacebookF className="size-5" />
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.linkedin.com/company/ "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
               >
                 <FaLinkedinIn className="size-5" />
-              </Link>
+              </Link> */}
               <Link
                 href="https://x.com/ "
                 target="_blank"
