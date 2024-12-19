@@ -2,8 +2,10 @@ import React from "react";
 import { vacationPackagesData } from "@/config/data";
 import Image from "next/image";
 import Link from "next/link";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPlayCircle } from "react-icons/fa";
+
 import RippleButton from "../shared/RippleButton";
+import { FaImage } from "react-icons/fa6";
 
 const VacationPackages = () => {
   return (
@@ -27,7 +29,7 @@ const VacationPackages = () => {
                 key={index}
                 className="bg-white rounded-lg shadow-lg text-start border overflow-hidden group"
               >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden relative">
                   <Image
                     src={packages?.image}
                     alt={packages?.title}
@@ -35,6 +37,16 @@ const VacationPackages = () => {
                     height={280}
                     className="group-hover:scale-105 duration-300 w-full"
                   ></Image>
+                  <div className=" flex items-center gap-4 absolute bottom-2 left-2">
+                    <div className=" flex items-center gap-2 py-1 px-4 text-white bg-secondary bg-opacity-70 rounded-full">
+                      <FaImage />
+                      <span>Gallery</span>
+                    </div>
+                    <div className=" flex items-center gap-2 py-1 px-4 text-white bg-secondary bg-opacity-70 rounded-full">
+                      <FaPlayCircle />
+                      <span>Video</span>
+                    </div>
+                  </div>
                 </div>
                 <div className=" p-4 md:p-5 lg:p-6 ">
                   <div className="flex items-center gap-4">
