@@ -36,7 +36,7 @@ const BlogMainSection = async () => {
                 <p className="text-base md:text-lg text-center lg:text-start">
                   Aloha! I’m April Espinosa, the heart and soul behind Tiki
                   Travel Agency. My journey into the world of travel began with
-                  a leap of faith – my husband and I.{" "}
+                  a leap of faith – my husband and I.
                 </p>
               </ScrollMotionEffect>
             </div>

@@ -1,3 +1,5 @@
+import LightImageGallery from "@/components/shared/LightImageGallery";
+
 export const metadata = {
   title: "",
   description: "",
@@ -15,7 +17,8 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <BreadcrumbSection />
+      {/* <BreadcrumbSection /> */}
+      <LightImageGallery />
     </>
   );
 };
