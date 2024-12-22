@@ -35,19 +35,19 @@ const featuredData = [
     text: "Step away from the familiar and embrace the thrill of discovering unique locations that inspire awe and wonder.",
   },
   {
-    bgImage: "/assets/homepage/featuredImage-6.png",
+    bgImage: "/assets/homepage/featured-6.png",
     icon: "/assets/homepage/icon-6.png",
     title: "Dive into Scenic Serenity",
     text: "Experience tranquil beauty and rejuvenation as you explore picturesque waterways, lush forests, and vibrant landscapes.",
   },
   {
-    bgImage: "/assets/homepage/featured-7.png",
+    bgImage: "/assets/homepage/featured7.png",
     icon: "/assets/homepage/icon-7.png",
     title: "Chasing Horizons, Finding Peace",
     text: "Follow the horizon to destinations where vast skies and endless vistas offer peace, adventure, and inspiration.",
   },
   {
-    bgImage: "/assets/homepage/featured-8.png",
+    bgImage: "/assets/homepage/featured8.png",
     icon: "/assets/homepage/icon-8.png",
     title: "Your Gateway to Endless Exploration",
     text: "Unlock the door to a world of adventures, from thrilling expeditions to peaceful escapes, designed to ignite your inner explorer.",

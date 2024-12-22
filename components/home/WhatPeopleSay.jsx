@@ -12,7 +12,7 @@ const WhatPeopleSay = () => {
         className="absolute inset-0 object-cover bg-center w-full h-full"
         width={1920}
         height={700}
-        src="/assets/homepage/homebannerbg.jpg"
+        src="/assets/homepage/home-banner-bg.jpg"
         alt="Header background"
       />
 
@@ -56,7 +56,7 @@ const WhatPeopleSay = () => {
             </div>
           </ScrollMotionEffect> */}
           <Image
-            src="/assets/homepage/paper-plane-2.png"
+            src="/assets/homepage/paper-plane-2nd.png"
             alt="paper plane"
             width={320}
             height={180}

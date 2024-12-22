@@ -9,7 +9,7 @@ const CallToAction = () => {
         className="absolute inset-0 object-cover bg-center w-full h-full"
         width={1920}
         height={700}
-        src="/assets/homepage/call-to-action-bg.png"
+        src="/assets/homepage/call-to-action.png"
         alt="Header background"
       />
       <div className="container py-10 md:py-20 ">
