@@ -1,4 +1,4 @@
-import LightImageGallery from "@/components/shared/LightImageGallery";
+import LightImageGallery from "@/components/shared/TikiLightImageGallery";
 
 export const metadata = {
   title: "",
