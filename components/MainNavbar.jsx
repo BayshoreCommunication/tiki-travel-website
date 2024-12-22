@@ -18,7 +18,6 @@ import { IoLocationSharp } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 
 import Image from "next/image";
-import { areaspracticeData } from "@/config/data";
 
 const orbitron = Orbitron({ subsets: ["latin"] });
 
@@ -77,10 +76,6 @@ const MainNavbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
-
-  const setPathSlug = areaspracticeData?.some(
-    (el) => pathname === `/practice-areas/${el?.slug}`
-  );
 
   return (
     <section className={"relative z-50 py-2 lg:py-8"}>

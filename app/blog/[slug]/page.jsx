@@ -3,10 +3,7 @@ import GetAllPostData from "@/lib/GetAllPostData";
 import parse from "html-react-parser";
 import SectionLayout from "@/components/shared/SectionLayout";
 import CardMotion from "@/components/motion/CardMotion";
-import Head from "next/head";
 import Link from "next/link";
-import { Playfair_Display } from "next/font/google";
-import PageHeroSection from "@/components/shared/PageHeroSection";
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 
 const css = `
