@@ -132,6 +132,7 @@ export const blogsData = [
 export const vacationPackagesData = [
   {
     image: "/assets/vacation-destinations/cherry-blossoms-japan.png",
+    gallerySlug: "cherry-blossoms-japan.png",
     location: "Kyoto, Japan",
     locationLink: "https://maps.google.com/?q=Kyoto,Japan",
     title: "Cherry Blossoms in Japan",

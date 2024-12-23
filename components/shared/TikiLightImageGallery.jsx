@@ -20,7 +20,7 @@ const TikiLightImageGallery = () => {
   };
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <LightGallery onInit={onInit} speed={500} plugins={[lgThumbnail, lgZoom]}>
         {vacationPackagesData.map((packages, index) => (
           <Link key={index} href={packages?.image} aria-label={packages?.title}>

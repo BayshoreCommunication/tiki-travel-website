@@ -21,7 +21,10 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <BreadcrumbSection title={"Contact Us"} />
+      <BreadcrumbSection
+        bgImage={"/assets/shared/contact-breadcrumb-bg.png"}
+        title={"Contact Us"}
+      />
       <ContactSection />
       <GoogleMapSection />
       <FAQ />
