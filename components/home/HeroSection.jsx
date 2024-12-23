@@ -19,7 +19,7 @@ const HeroSection = () => {
 
   return (
     <div className="container overflow-hidden  ">
-      <div className="relative w-full  h-[500px] md:h-[700px] flex items-center justify-center">
+      <div className="relative w-full  h-[500px] md:h-[680px] flex items-center justify-center">
         <Image
           className="absolute inset-0 object-cover bg-bottom w-full h-full"
           width={1920}

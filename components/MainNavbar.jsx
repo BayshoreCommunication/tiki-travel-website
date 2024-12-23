@@ -78,10 +78,10 @@ const MainNavbar = () => {
   }, [handleScroll]);
 
   return (
-    <section className={"relative z-50 py-2 lg:py-8"}>
+    <section className={"relative z-50 py-2 lg:py-5"}>
       <div className="bg-primary">
         <div className="bg-white hidden md:block">
-          <div className="flex flex-col gap-y-3 lg:gap-y-5 items-center container  justify-center">
+          <div className="flex flex-col gap-y-3  items-center container  justify-center">
             <div className=" flex items-center gap-x-10 2xl:gap-x-16">
               <Link href={"/"}>
                 <Image
@@ -94,7 +94,7 @@ const MainNavbar = () => {
               </Link>
             </div>
 
-            <div className="px-12 py-4 border rounded-full">
+            <div className="px-12 py-3 border rounded-full">
               <div className="flex items-center justify-stretch gap-y-10 gap-x-8  xl:gap-x-8">
                 {menuItems.map((el) => (
                   <Link
