@@ -39,7 +39,7 @@ const page = () => {
                 <h1 className="font-semibold text-3xl md:text-4xl lg:text-4xl text-secondary">
                   Cherry Blossoms Adventure in Japan 🌸
                 </h1>
-                <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 justify-between border-b pb-4 pt-2 items-center">
+                <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 justify-start lg:justify-between border-b pb-4 pt-2 items-start lg:items-center">
                   <p className="text-base md:text-lg">
                     Discover Japan's breathtaking cherry blossoms during
                     spring—an unforgettable journey through culture, beauty, and

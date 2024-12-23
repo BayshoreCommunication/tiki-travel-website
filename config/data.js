@@ -132,7 +132,7 @@ export const blogsData = [
 export const vacationPackagesData = [
   {
     image: "/assets/vacation-destinations/cherry-blossoms-japan.png",
-    gallerySlug: "cherry-blossoms-japan.png",
+    video: "/public/assets/vacation-destinations/april-bali-swing.mp4",
     location: "Kyoto, Japan",
     locationLink: "https://maps.google.com/?q=Kyoto,Japan",
     title: "Cherry Blossoms in Japan",
@@ -239,6 +239,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/visit-thailand.png",
+    video: "",
     location: "Bangkok, Thailand",
     locationLink: "https://maps.google.com/?q=Bangkok,Thailand",
     title: "Visit Thailand",
@@ -248,6 +249,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/honeymoons-hawaii.png",
+    video: "",
     location: "Maui, Hawaii",
     locationLink: "https://maps.google.com/?q=Maui,Hawaii",
     title: "Honeymoons in Hawaii",
@@ -257,6 +259,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/island-hopping-hawaii.png",
+    video: "",
     location: "Hawaii, USA",
     locationLink: "https://maps.google.com/?q=Hawaii,USA",
     title: "Island Hopping Hawaii",
@@ -266,6 +269,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/maldives.png",
+    video: "",
     location: "Malé, Maldives",
     locationLink: "https://maps.google.com/?q=Male,Maldives",
     title: "Luxury Escape to the Maldives",
@@ -275,6 +279,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/asia-by-cruise.png",
+    video: "",
     location: "Singapore & Southeast Asia",
     locationLink: "https://maps.google.com/?q=Singapore",
     title: "Asia by Cruise",
@@ -284,6 +289,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/romantic-getaway-greece.png",
+    video: "",
     location: "Santorini, Greece",
     locationLink: "https://maps.google.com/?q=Santorini,Greece",
     title: "Romantic Getaway in Greece",
@@ -293,6 +299,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/venetian-gondola-experience.png",
+    video: "",
     location: "Venice, Italy",
     locationLink: "https://maps.google.com/?q=Venice,Italy",
     title: "Venetian Gondola Experience",
@@ -302,6 +309,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/explore-canadian-rockies.png",
+    video: "",
     location: "Banff, Canada",
     locationLink: "https://maps.google.com/?q=Banff,Canada",
     title: "Explore the Canadian Rockies",
@@ -311,6 +319,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/bali.png",
+    video: "",
     location: "Bali, Indonesia",
     locationLink: "https://maps.google.com/?q=Bali,Indonesia",
     title: "Bali Paradise Retreat",
@@ -320,6 +329,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/trek-through-patagonia.png",
+    video: "",
     location: "Patagonia, Argentina",
     locationLink: "https://maps.google.com/?q=Patagonia,Argentina",
     title: "Trek Through Patagonia",
@@ -329,6 +339,7 @@ export const vacationPackagesData = [
   },
   {
     image: "/assets/vacation-destinations/adventure-capital-new-zealand.png",
+    video: "",
     location: "Queenstown, New Zealand",
     locationLink: "https://maps.google.com/?q=Queenstown,New+Zealand",
     title: "Adventure Capital of New Zealand",

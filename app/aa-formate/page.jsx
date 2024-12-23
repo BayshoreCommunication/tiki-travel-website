@@ -1,4 +1,5 @@
 import LightImageGallery from "@/components/shared/TikiLightImageGallery";
+import Testing from "@/components/testing/Testing";
 
 export const metadata = {
   title: "",
@@ -18,7 +19,7 @@ const page = () => {
   return (
     <>
       {/* <BreadcrumbSection /> */}
-      <LightImageGallery />
+      <Testing />
     </>
   );
 };

@@ -70,7 +70,7 @@ export default function FeaturedSection() {
         </p>
       </div>
       {/* Featured Card */}
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {featuredData.map((item, index) => (
           <div
             key={index}
@@ -102,12 +102,13 @@ export default function FeaturedSection() {
                         alt={item.title}
                         width={40}
                         height={40}
+                        className="w-6 md:w-8 2xl:w-10"
                         style={{
                           filter: "brightness(0) saturate(100%) invert(100%)",
                         }}
                       ></Image>
                     </div>
-                    <h3 className="text-center text-lg font-medium md:text-xl">
+                    <h3 className="text-center text-lg font-medium 2xl:text-xl">
                       {item.title}
                     </h3>
                   </div>
@@ -126,12 +127,13 @@ export default function FeaturedSection() {
                         alt={item.title}
                         width={60}
                         height={60}
+                        className="w-10 2xl:w-14"
                         style={{
                           filter: "brightness(0) saturate(100%) invert(100%)",
                         }}
                       ></Image>
                     </div>
-                    <h3 className="mt-4 mb-3 text-center text-xl font-semibold md:text-2xl">
+                    <h3 className="mt-4 mb-2 text-center text-xl font-semibold 2xl:text-2xl">
                       {item.title}
                     </h3>
                     <p className=" text-center text-base opacity-70 2xl:text-xl">

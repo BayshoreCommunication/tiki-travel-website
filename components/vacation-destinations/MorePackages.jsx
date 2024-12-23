@@ -7,11 +7,13 @@ const MorePackages = () => {
   return (
     <div className="bg-[#F5F5F5] py-10 lg:py-20">
       <div className="container">
-        <div className=" flex items-center justify-between mb-4">
-          <h2 className="text-3xl lg:text-5xl font-semibold">More Packages</h2>
-          <div className="flex justify-end md:visible invisible">
+        <div className=" flex items-center justify-center lg:justify-between mb-4">
+          <h2 className="text-3xl lg:text-5xl font-semibold text-center">
+            More Packages
+          </h2>
+          <div className="justify-end md:flex hidden">
             <Link
-              href={"/vacation-packages"}
+              href={"/vacation-destinations"}
               className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
             >
               View All Packages
@@ -22,7 +24,7 @@ const MorePackages = () => {
       <MorePackagesSlider />
       <div className="flex justify-center md:invisible mt-12 md:mt-[-60px] visible">
         <Link
-          href={"/vacation-packages"}
+          href={"/vacation-destinations"}
           className="text-primary font-medium text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
         >
           View All Packages

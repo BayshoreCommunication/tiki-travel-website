@@ -30,7 +30,7 @@ const HeroSection = () => {
 
         {/* Centered text */}
 
-        <div className=" relative flex flex-col items-center justify-center w-full max-w-[1024px] mx-auto">
+        <div className=" relative flex flex-col items-center justify-center w-full max-w-[1024px] mx-auto px-8 md:px-16 xl:px-0">
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <h1 className="mt-4 md:mt-10 text-3xl lg:text-5xl xl:text-6xl font-semibold text-white text-center leading-snug md:leading-tight">
               Discover destinations that ignite your wanderlust.

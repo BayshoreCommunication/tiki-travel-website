@@ -148,7 +148,7 @@ const AboutUsSection = () => {
       <div className="absolute bottom-0 lg:bottom-10 right-10 w-[200px] lg:w-[400px]">
         <ScrollMotionEffect effect="fade-in" duration="2000">
           <Image
-            src="/assets/homepage/paper-plane-2.png"
+            src="/assets/homepage/paper-plane-2nd.png"
             alt="paper plane"
             width={320}
             height={180}
