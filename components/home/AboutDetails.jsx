@@ -22,7 +22,7 @@ const AboutDetails = () => {
     <section className="relative">
       <div className="container py-10 md:pb-24">
         <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-14">
-          <div className="w-full lg:w-[50%] shrink-0">
+          <div className="w-full lg:w-[40%] shrink-0">
             <div className="relative">
               <ScrollMotionEffect effect="fade-left" duration="2000">
                 <Image
@@ -32,13 +32,11 @@ const AboutDetails = () => {
                   height={770}
                 />
               </ScrollMotionEffect>
-              <div className="absolute left-[4%] md:left-[10%] bottom-3 md:bottom-8 z-10">
+              <div className="absolute left-[4%] md:-left-[8%] bottom-3 md:bottom-10 z-10">
                 <ScrollMotionEffect effect="fade-left" duration="2000">
                   <button
                     className="group relative w-[100px] h-[100px]"
-                    onClick={() =>
-                      openModal("https://www.youtube.com/embed/NFWSFbqL0A0")
-                    }
+                    // onClick={() => openModal("youtube video link")}
                   >
                     <div className="p-1 border-3 border-primary rounded-full border-dotted animate-spin duration-[10s] absolute inset-0 m-auto w-[100px] h-[100px]"></div>
                     <div className="absolute inset-0 m-auto w-[90px] h-[90px] bg-primary group-hover:bg-secondary group-hover:!bg-opacity-100 flex items-center justify-center rounded-full">
