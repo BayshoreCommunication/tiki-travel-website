@@ -109,7 +109,7 @@ const MainNavbar = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden ">
+        <div className="md:hidden fixed top-0 w-full ">
           <Navbar
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
