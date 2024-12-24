@@ -21,7 +21,6 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <HeroSection />
       <TermsOfService />
       <CallToAction />
     </>

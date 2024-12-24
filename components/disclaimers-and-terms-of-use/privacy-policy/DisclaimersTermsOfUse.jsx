@@ -38,116 +38,155 @@ const DisclaimersTermsOfUse = () => {
     <>
       <style>{css}</style>
       <SectionLayout>
-        <div className="text-center md:text-left text-md md:text-xl">
-          <div className="my-2">
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              Last updated July 08, 2024
-            </p>
-          </div>
-          <div className="">
-            <h5 className="text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left">
-              Consumer CoTrip Law, P.A.unication
-            </h5>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`To ensure that consumers’ inquiries are handled accurately, courteously, and promptly, phone calls between you and Trip Law, P.A. or any of our affiliates, agents, case managers, paralegals, and/or attorneys may be recorded. We may from time to time make calls and/or send text messages to you at any telephone number associated with your account. The manner in which these calls or text (SMS) messages are made to you may include, but is not limited to, the use of prerecorded/artificial voice messages and/or an automatic telephone dialing system. You certify, warrant, and represent that the telephone numbers you have provided to us are your contact numbers. You represent that you are permitted to receive calls at each of the telephone numbers you have provided to us. You agree that Trip Law, P.A. may send emails to you at any email address you provide us, or use other electronic means of coTrip Law, P.A.unication to the extent permitted by law.`}
-            </p>
-          </div>
-          <div className="">
-            <h5 className="text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left">
-              Content Is Information Only, Not Advice
-            </h5>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`Thank you for visiting the web site of Trip Law, P.A., P.A. These
-              Terms of Use ("Terms of Use" or “Terms”) are a legal and binding
-              agreement between you and Trip Law, P.A. governing your access to
-              and use of the website located at`}{" "}
-              <Link href="#/" target="_blank" className="hover:underline">
-                #/
-              </Link>
-              {`, any websites that Trip Law, P.A. maintains which link to these
-              terms, and any mobile applications currently in use or as we may
-              introduce from time to time (the website and mobile applications,
-              or any portion thereof, the “Site”). The information contained on
-              the Site is provided for educational and informational purposes
-              only and the contents of the Site are not and should not be
-              construed as legal advice. As is described further below, nothing
-              on the Site is legal advice or should supplement or inform in
-              anyway your legal decisions or a decision to seek legal advice.`}
-            </p>
-
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`The Site is not an offer to perform services on any matter. This Site contains general information from a variety of sources and might not reflect current legal developments. We do not undertake to update material in our Site to reflect subsequent legal or other developments.`}
-            </p>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {` Please read our Disclaimer below, which is incorporated into these
-              Terms, for additional limitations on the use and effect of the
-              Site. This “Terms of Use” outlines the conditions on which the
-              Site is made available to you. Read the Terms of Use carefully. If
-              you use this Site, you are deemed to have agreed to these Terms of
-              Use. This Site is designed to be accessible to and usable by
-              people with and without disabilities. Please call us at`}{" "}
+        <div>
+          <h1
+            className={`font-semibold text-3xl lg:text-5xl mb-10 text-center`}
+          >
+            Disclaimers
+          </h1>
+        </div>
+        <div className="flex flex-col gap-8">
+          <div>
+            <p className="text-lg lg:text-xl mb-3">
+              At Tiki Travel Agency, we prioritize your privacy and are
+              committed to complying with all relevant laws and regulations
+              concerning the personal information we collect from you through
+              our website,{" "}
               <Link
-                href={"tel:863.370.2427"}
-                className="hover:underline text-blue-500"
+                href="https://tikitravelagency.com/"
+                className="text-primary"
               >
-                863.370.2427
+                https://tikitravelagency.com/
               </Link>{" "}
-              or{" "}
-              <Link
-                href={"mailto:info@trip-law.com"}
-                className="hover:underline text-blue-500"
-              >
-                email us
-              </Link>{" "}
-              {` us if you encounter an accessibility or usability issue on this
-              site.`}
-            </p>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`We may update, change, modify, or revise these Terms of Use at any time and for any reason. Any changes will become effective upon posting to the Site, along with the date on which it was most recently revised as indicated by the “Last Updated” heading at the top of these Terms of Use. Your continued access to and/or use of the Site after any such modifications constitute your acceptance of the Terms of Use as modified. It is your responsibility to review the Terms of Use regularly for updates. Please contact us as provided above if you would like information regarding any modifications. If any modification to these Terms of Use is held to be invalid, void, or unenforceable for any reason, such modifications shall be deemed severable and shall not affect the validity and enforceability of these Terms of Use and the remaining provision.`}
+              , and other platforms we manage.
             </p>
           </div>
-          <div className="">
-            <h5 className="text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left">
-              Use
+          <div className=" flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Information Collection</h5>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">
+              We gather two types of information:
             </h5>
-
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {` TRIP LAW, P.A. hereby grants you a non-exclusive,
-              non-transferable, revocable, limited right and license to access
-              and use the Site solely for your personal use in accordance with
-              these Terms of Use. You shall not, in any way, otherwise copy,
-              reproduce, distribute, transmit, display, perform, reproduce,
-              publish, license, modify, create derivative works from, sell, or
-              exploit the Site.`}
+            <p className="text-lg lg:text-xl">
+              Voluntarily Provided Information: Details you actively share with
+              us, such as your name, contact information, and preferences, when
+              engaging with our services or promotions.
             </p>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`TRIP LAW, P.A. may at any time, for any reason, and without notice
-              or liability: (a) modify, suspend, or terminate operation of or
-              access to the Site and related services, or (b) change, revise, or
-              modify the Site and affiliated services.`}
+
+            <p className="text-lg lg:text-xl">
+              Automatically Collected Information: Data your devices send during
+              interactions with our website, including IP addresses, browser
+              types, pages visited, and the duration of visits.
+            </p>
+            <p className="text-lg lg:text-xl">Use of Collected Information</p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">
+              The information we collect is utilized to:
+            </h5>
+            <p className="text-lg lg:text-xl">
+              Enhance and personalize your experience with our services.
+            </p>
+            <p className="text-lg lg:text-xl">
+              Communicate with you effectively.
+            </p>
+            <p className="text-lg lg:text-xl">
+              Analyze website usage to improve our offerings.
             </p>
           </div>
-          <div className="">
-            <h5 className="text-stone-950 font-bold text-xl md:text-2xl  text-center md:text-left">
-              Ownership and Intellectual Property Rights
-            </h5>
-
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`The Site and TRIP LAW, P.A. software, systems, technology, and
-              know-how (“`}
-              <strong>{`TRIP LAW, P.A. Technology`}</strong>
-              {`”) are owned by or
-              licensed to TRIP LAW, P.A. and are protected by copyright,
-              trademark, trade dress, patent, and/or other intellectual property
-              rights and proprietary rights. All trademarks, trade names,
-              graphics, logos, and trade dress included in or made available
-              through the Site and Online Services are owned by or licensed to
-              TRIP LAW, P.A. and protected by U.S. and international trademark
-              laws (collectively, the “Marks”).`}
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Communication</h5>
+            <p className="text-lg lg:text-xl">
+              To ensure accurate and prompt handling of your inquiries,
+              communications between you and Tiki Travel Agency, including those
+              with our affiliates or agents, may be recorded. We may also
+              contact you via phone calls or text messages at the numbers
+              associated with your account, using methods such as prerecorded
+              messages or automated dialing systems. By providing your contact
+              numbers, you confirm they are yours and that you consent to
+              receive communications from us. Additionally, we may send emails
+              to any email address you provide or use other electronic
+              communication methods as permitted by law.
             </p>
-            <p className="text-lg text-stone-950 text-center md:text-left">
-              {`Except as expressly set forth herein, nothing herein shall be construed to confer any grant or license of any TRIP LAW, P.A. Intellectual Property Rights, whether by estoppel, by implication, or otherwise. You are strictly prohibited from using any TRIP LAW, P.A. intellectual property except as expressly provided in these Terms of Use. You are also advised that TRIP LAW, P.A. and its licensors will aggressively enforce its intellectual property rights to the fullest extent of the law.`}
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Security</h5>
+            <p className="text-lg lg:text-xl">
+              We implement commercially acceptable measures to protect your
+              personal information from loss, theft, unauthorized access,
+              disclosure, copying, use, or modification. However, please be
+              aware that no method of electronic transmission or storage is
+              entirely secure. You are responsible for maintaining the security
+              of your passwords and personal information within our services.
             </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Retention of Information</h5>
+            <p className="text-lg lg:text-xl">
+              We retain your personal information only as long as necessary for
+              the purposes outlined in this policy or as required by law. Once
+              your information is no longer needed, we will delete or anonymize
+              it.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Children’s Privacy</h5>
+            <p className="text-lg lg:text-xl">
+              Our website may contain links to external sites not operated by
+              us. We are not responsible for the content or privacy practices of
+              these sites and recommend reviewing their privacy policies.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl  ">Your Rights</h5>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl ">You have the right to:</h5>
+            <p className="text-lg lg:text-xl">
+              Access the personal information we hold about you.
+            </p>
+            <p>
+              Request corrections to any inaccurate or outdated information.
+            </p>
+            <p>Withdraw consent for direct marketing communications.</p>
+            <p>
+              Unsubscribe from our email database or opt-out of communications
+              by contacting us or using the opt-out facilities provided in the
+              communication.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl ">Use of Cookies</h5>
+            <p className="text-lg lg:text-xl">
+              We use cookies to collect information about your activity on our
+              site to enhance your experience. For more details, please refer to
+              our Cookie Policy.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl ">External Links</h5>
+            <p className="text-lg lg:text-xl">
+              Our website may contain links to external sites not operated by
+              us. We are not responsible for the content or privacy practices of
+              these sites and recommend reviewing their privacy policies.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl ">Policy Updates</h5>
+            <p className="text-lg lg:text-xl">
+              We may update this privacy policy to reflect changes in our
+              practices or for other operational, legal, or regulatory reasons.
+              The latest version will always be available on our website.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <h5 className=" font-bold text-2xl ">Contact Us</h5>
+            <p className="text-lg lg:text-xl">
+              If you have any questions or concerns regarding your privacy,
+              please contact us via the contact form on our website.
+            </p>
+            <p>This policy is effective as of December 24, 2024.</p>
           </div>
         </div>
       </SectionLayout>

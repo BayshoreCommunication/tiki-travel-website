@@ -20,7 +20,6 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <HeroSection />
       <CookiePolicy />
       <CallToAction />
     </>
