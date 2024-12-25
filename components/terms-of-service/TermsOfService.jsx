@@ -10,7 +10,7 @@ const TermsOfService = () => {
           <h1
             className={`font-semibold text-3xl lg:text-5xl mb-10 text-center`}
           >
-            Terms of service
+            Terms of Service
           </h1>
         </div>
         <div className="flex flex-col gap-8">

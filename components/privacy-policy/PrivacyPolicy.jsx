@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
           <h1
             className={`font-semibold text-3xl lg:text-5xl mb-10 text-center`}
           >
-            Terms of service
+            Privacy Policy{" "}
           </h1>
         </div>
         <div className="flex flex-col gap-8">

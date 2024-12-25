@@ -112,8 +112,12 @@ const CookiePolicy = () => {
                 Activities like hacking, spreading malware, or harassment are
                 not tolerated. Other Violations: Actions that violate consumer
                 protection laws, privacy rights, or promote illegal activities
-                are strictly prohibited. Policy Updates
+                are strictly prohibited.
               </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h5 className=" font-medium text-xl ">Policy Updates:</h5>
+
               <p className="text-lg lg:text-xl">
                 This policy may be updated periodically. Changes will take
                 effect immediately upon publication or as stated in the revised
