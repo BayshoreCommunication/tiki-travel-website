@@ -73,7 +73,10 @@ const Footer = () => {
                 <ul className="ml-0 text-white list-none text-[18px] font-normal">
                   {SITECONFIG?.footer?.quick_links?.map((el, index) => (
                     <li className="mb-4" key={index}>
-                      <Link href={el.slug} className="hover:underline">
+                      <Link
+                        href={el.slug}
+                        className="hover:underline font-light"
+                      >
                         {el.title}
                       </Link>
                     </li>
@@ -88,10 +91,13 @@ const Footer = () => {
                 <ul className="ml-0 text-[18px] font-normal text-white list-none">
                   {SITECONFIG?.footer?.company?.map((el, index) => (
                     <li className="mb-4" key={index}>
-                      <Link href={el.slug} className="hover:underline">
+                      <Link
+                        href={el.slug}
+                        className="hover:underline font-light"
+                      >
                         {el.title}
                       </Link>
-                      {/* <p className="hover:underline cursor-pointer text-base">
+                      {/* <p className="hover:underline font-light cursor-pointer text-base">
                         {" "}
                         {el.title}
                       </p> */}
@@ -115,7 +121,7 @@ const Footer = () => {
                     </div>
                     <Link
                       href="https://maps.app.goo.gl/BxuNRwy3CHg2ykCd7"
-                      className=" hover:underline duration-300 "
+                      className=" hover:underline font-light duration-300 "
                       target="_blank"
                     >
                       <div className="w-full">
@@ -134,7 +140,7 @@ const Footer = () => {
                     <div className="flex flex-wrap gap-x-3 gap-y-1">
                       <Link
                         href="tel:(954)-529-0695"
-                        className="hover:underline duration-300 text-base"
+                        className="hover:underline font-light duration-300 text-base font-light"
                       >
                         {`(954)-529-0695`}
                       </Link>
@@ -152,13 +158,13 @@ const Footer = () => {
                     <div className="flex flex-col gap-px">
                       <Link
                         href="mailto:april@tikitravelagency.com"
-                        className="hover:underline duration-300 text-base"
+                        className="hover:underline font-light duration-300 text-base font-light"
                       >
                         april@tikitravelagency.com
                       </Link>
                       {/* <Link
                         href="mailto:myra@ .com"
-                        className="hover:underline duration-300"
+                        className="hover:underline font-light duration-300"
                       >
                         myra@ .com
                       </Link> */}
@@ -172,7 +178,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="text-[18px] font-medium text-center text-white">
               © 2024{" "}
-              <a href="#/" className="hover:underline text-primary">
+              <a href="#/" className="hover:underline font-light text-primary">
                 Tiki Travel Agency
               </a>
               . All Rights Reserved.
