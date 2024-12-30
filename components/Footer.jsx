@@ -9,7 +9,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { ImFacebook2 } from "react-icons/im";
 import { BsLinkedin } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaInstagramSquare, FaPinterestP } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
@@ -184,21 +184,28 @@ const Footer = () => {
               . All Rights Reserved.
             </div>
 
-            <div className="flex justify-center lg:justify-end items-center gap-3">
+            <div className="flex justify-start items-center gap-3 ">
               <Link
-                href="https://www.facebook.com/ "
+                href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
               >
                 <FaFacebookF className="size-5" />
               </Link>
               {/* <Link
-                    href="https://www.linkedin.com/company/ "
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-                  >
-                    <FaLinkedinIn className="size-5" />
-                  </Link> */}
+                href="https://www.linkedin.com/company/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaLinkedinIn className="size-5" />
+              </Link> */}
+              <Link
+                href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaInstagram className="size-5" />
+              </Link>
               <Link
                 href="https://x.com/ "
                 target="_blank"
@@ -206,19 +213,20 @@ const Footer = () => {
               >
                 <FaTwitter className="size-5" />
               </Link>
-              <Link
-                href="https://www.instagram.com/ "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaInstagram className="size-5" />
-              </Link>
+
               <Link
                 href="https://www.youtube.com/ "
                 target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary duration-300"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
               >
                 <FaYoutube className="size-5" />
+              </Link>
+              <Link
+                href="https://www.pinterest.com/tikitravelagency/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaPinterestP className="size-5" />
               </Link>
             </div>
           </div>
