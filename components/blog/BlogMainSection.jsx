@@ -1,24 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import SectionLayout from "../shared/SectionLayout";
 import Link from "next/link";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
-// import GetAllPostData from "@/lib/GetAllPostData";
-import parse from "html-react-parser";
 import { MdOutlineDateRange } from "react-icons/md";
 
 const BlogMainSection = async () => {
-  // const blogPostData = await GetAllPostData();
-
-  // const postDate = (date) => {
-  //   const formattedDate = new Date(date).toLocaleDateString("en-US", {
-  //     year: "numeric",
-  //     month: "long",
-  //     day: "numeric",
-  //   });
-  //   return formattedDate;
-  // };
-
   return (
     <section className="bg-white">
       <div className="container py-10 md:py-14">
