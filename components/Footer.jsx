@@ -17,7 +17,7 @@ import { IoMdHome } from "react-icons/io";
 import {
   FaFacebookF,
   FaLinkedinIn,
-  FaTwitter,
+  FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
 
@@ -207,15 +207,15 @@ const Footer = () => {
                 <FaInstagram className="size-5" />
               </Link>
               <Link
-                href="https://x.com/ "
+                href="https://x.com/tikitravelagenc"
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
               >
-                <FaTwitter className="size-5" />
+                <FaXTwitter className="size-5" />
               </Link>
 
               <Link
-                href="https://www.youtube.com/ "
+                href="https://www.youtube.com/@TikiTravelAgency "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
               >

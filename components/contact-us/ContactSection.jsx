@@ -5,7 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
+  FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
@@ -74,15 +74,15 @@ const ContactSection = () => {
                 <FaInstagram className="size-5" />
               </Link>
               <Link
-                href="https://x.com/ "
+                href="https://x.com/tikitravelagenc"
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
               >
-                <FaTwitter className="size-5" />
+                <FaXTwitter className="size-5" />
               </Link>
 
               <Link
-                href="https://www.youtube.com/ "
+                href="https://www.youtube.com/@TikiTravelAgency "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary duration-300"
               >

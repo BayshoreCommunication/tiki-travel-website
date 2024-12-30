@@ -23,40 +23,40 @@ const FAQ = () => {
           <div>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What services does Tiki Travel Agency offer?"
-                answer="From Hawaii to Asia, to Safari, the Caribbean and Europe we specialize in full-service travel planning and itineraries!"
+                title="What services does Tiki Travel Agency offer?"
+                answer="From Hawaii to Asia, to Safari, the Caribbean and Europe we specialize in full-service travel planning and itineraries!"
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="How do I prepare my itinerary as per my needs?"
-                answer="Absolutely! We design personalized journeys to suit your desires and requirements."
+                title="How do I prepare my itinerary as per my needs?"
+                answer="Absolutely! We design personalized journeys to suit your desires and requirements."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What kind of trips can you plan with it?"
-                answer="Depending on your chosen destination, we can arrange family vacations, honeymoons, luxury getaways, adventure trips, group tours and more."
+                title="What kind of trips can you plan with it?"
+                answer="Depending on your chosen destination, we can arrange family vacations, honeymoons, luxury getaways, adventure trips, group tours and more."
               />
             </ScrollMotionEffect>
           </div>
           <div>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="Can you help with arranging flights and accommodations?"
-                answer="Sure, we plan for key aspects like flights, hotels, transportation, and activities to create barrier-free experiences."
+                title="Can you help with arranging flights and accommodations?"
+                answer="Sure, we plan for key aspects like flights, hotels, transportation, and activities to create barrier-free experiences."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What destinations do you focus on?"
-                answer="We specialize in Hawaii, Asia, Safari destinations, the Caribbean and Europe and provide best in class expertise for each of these regions."
+                title="What destinations do you focus on?"
+                answer="We specialize in Hawaii, Asia, Safari destinations, the Caribbean and Europe and provide best in class expertise for each of these regions."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="Are you able to assist travelers with last-minute travel plans?"
-                answer="Yes, we do our best to help with last minute travel requests and will rush to create a great itinerary."
+                title="Are you able to assist travelers with last-minute travel plans?"
+                answer="Yes, we do our best to help with last minute travel requests and will rush to create a great itinerary."
               />
             </ScrollMotionEffect>
           </div>
