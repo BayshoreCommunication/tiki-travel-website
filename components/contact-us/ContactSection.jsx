@@ -9,6 +9,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
+import { FaPinterestP } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
@@ -27,7 +28,8 @@ const ContactSection = () => {
                   Contact Information
                 </h4>
                 <p className="text-base md:text-lg">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing. Aenean
+                  Make your travel plans today! Schedule a call for more
+                  information and start planning your adventure.
                 </p>
               </div>
               <div className="flex flex-col gap-4 my-8">
@@ -51,7 +53,7 @@ const ContactSection = () => {
             </div>
             <div className="flex justify-start items-center gap-3 pt-10">
               <Link
-                href="https://www.facebook.com/ "
+                href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
               >
@@ -65,25 +67,33 @@ const ContactSection = () => {
                 <FaLinkedinIn className="size-5" />
               </Link> */}
               <Link
-                href="https://x.com/ "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaTwitter className="size-5" />
-              </Link>
-              <Link
-                href="https://www.instagram.com/ "
+                href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
               >
                 <FaInstagram className="size-5" />
               </Link>
               <Link
+                href="https://x.com/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaTwitter className="size-5" />
+              </Link>
+
+              <Link
                 href="https://www.youtube.com/ "
                 target="_blank"
                 className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary duration-300"
               >
                 <FaYoutube className="size-5" />
+              </Link>
+              <Link
+                href="https://www.pinterest.com/tikitravelagency/ "
+                target="_blank"
+                className="inline-block p-3  rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary duration-300"
+              >
+                <FaPinterestP className="size-5" />
               </Link>
             </div>
           </div>

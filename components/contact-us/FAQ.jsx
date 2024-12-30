@@ -23,40 +23,40 @@ const FAQ = () => {
           <div>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="How long does it typically take to process a nonimmigrant visa application for the United States?"
-                answer="Visa processing times varies depending on the type of visa or the circumstances of the applicant. Generally, it takes between a few weeks to several months to get a decision."
+                title="What services does Tiki Travel Agency offer?"
+                answer="From Hawaii to Asia, to Safari, the Caribbean and Europe we specialize in full-service travel planning and itineraries!"
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="Can I apply for a US visa if I have previously been denied one?"
-                answer="As, individuals who have been denied a US visa in the past can reapply, but they must address the reasons for the previous denial and provide any additional documentation or information requested by the consular officer. It's essential to thoroughly review the reasons for the previous denial and ensure that the new application addresses any concerns raised by the consular officer."
+                title="How do I prepare my itinerary as per my needs?"
+                answer="Absolutely! We design personalized journeys to suit your desires and requirements."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What documentation do I need to provide as part of my US visa application?"
-                answer="The documentations needed generally depends on the visa you are applying for. Usually, you need a valid passport, completed DS-160 form, a passport-sized photograph, proof of payment of the visa application fee, and any supporting documents relevant to your specific visa category such as letter of acceptance, employment letters, or financial statements."
+                title="What kind of trips can you plan with it?"
+                answer="Depending on your chosen destination, we can arrange family vacations, honeymoons, luxury getaways, adventure trips, group tours and more."
               />
             </ScrollMotionEffect>
           </div>
           <div>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="How long does it typically take to process a nonimmigrant visa application for the United States?"
-                answer="Visa processing times varies depending on the type of visa or the circumstances of the applicant. Generally, it takes between a few weeks to several months to get a decision."
+                title="Can you help with arranging flights and accommodations?"
+                answer="Sure, we plan for key aspects like flights, hotels, transportation, and activities to create barrier-free experiences."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="Can I apply for a US visa if I have previously been denied one?"
-                answer="As, individuals who have been denied a US visa in the past can reapply, but they must address the reasons for the previous denial and provide any additional documentation or information requested by the consular officer. It's essential to thoroughly review the reasons for the previous denial and ensure that the new application addresses any concerns raised by the consular officer."
+                title="What destinations do you focus on?"
+                answer="We specialize in Hawaii, Asia, Safari destinations, the Caribbean and Europe and provide best in class expertise for each of these regions."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What documentation do I need to provide as part of my US visa application?"
-                answer="The documentations needed generally depends on the visa you are applying for. Usually, you need a valid passport, completed DS-160 form, a passport-sized photograph, proof of payment of the visa application fee, and any supporting documents relevant to your specific visa category such as letter of acceptance, employment letters, or financial statements."
+                title="Are you able to assist travelers with last-minute travel plans?"
+                answer="Yes, we do our best to help with last minute travel requests and will rush to create a great itinerary."
               />
             </ScrollMotionEffect>
           </div>
