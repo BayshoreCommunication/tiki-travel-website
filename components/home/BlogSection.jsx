@@ -21,7 +21,7 @@ const BlogMainSection = async () => {
               <ScrollMotionEffect effect="fade-up" duration="2000">
                 <div className="flex justify-end">
                   <Link
-                    href={"/blog"}
+                    href="#"
                     className="text-primary font-medium text-base lg:text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
                   >
                     Read All Blogs
@@ -151,7 +151,7 @@ const BlogMainSection = async () => {
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="flex justify-center  md:hidden visible md:invisible mt-10">
               <Link
-                href={"/blog"}
+                href={"#"}
                 className="text-primary font-medium text-base lg:text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
               >
                 Read All Blogs
