@@ -37,6 +37,52 @@ ul {
 
 `;
 
+function extractTextFromHtml(htmlString) {
+  // Use regex to strip HTML tags and extract plain text
+  const plainText = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
+  return plainText;
+}
+
+function truncateText(text, wordLimit) {
+  const words = text.split(/\s+/);
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(" ") + "...";
+  }
+  return text;
+}
+
+export async function generateMetadata({ params }) {
+  const blogPostData = await GetAllPostData();
+
+  const blogDetails = blogPostData?.data?.find(
+    (blogs) => blogs.slug === params.slug
+  );
+
+  if (!blogDetails) {
+    return {
+      title: "Blog not found",
+      description: "No blog post available.",
+    };
+  }
+
+  const rawDescription = blogDetails?.body || "";
+  const plainTextDescription = extractTextFromHtml(rawDescription);
+  const shortDescription = truncateText(plainTextDescription, 120);
+
+  return {
+    title: blogDetails?.title,
+    description: shortDescription,
+    openGraph: {
+      title: blogDetails?.title,
+      description: shortDescription,
+      images: blogDetails?.featuredImage?.image?.url,
+      url: `https://tiki-travel-website.vercel.app/blog/${blogDetails?.slug}`,
+      type: "article",
+      site_name: "tiki-travel-website.com",
+    },
+  };
+}
+
 const page = async ({ params }) => {
   const blogPostData = await GetAllPostData();
 
