@@ -88,7 +88,29 @@ export default function FeaturedSection() {
                     className="w-full"
                   />
                 </div>
-                <div
+                <div className="absolute bottom-0 top-0 flex w-full items-center justify-center bg-black/50 p-6 text-white duration-500 hover:bg-[#0BB4AC]">
+                  <div className="flex flex-col justify-center items-center">
+                    <div>
+                      <Image
+                        src={item.icon}
+                        alt={item.title}
+                        width={60}
+                        height={60}
+                        className="w-10 2xl:w-14"
+                        style={{
+                          filter: "brightness(0) saturate(100%) invert(100%)",
+                        }}
+                      ></Image>
+                    </div>
+                    <h3 className="mt-4 mb-2 text-center text-xl font-semibold 2xl:text-2xl">
+                      {item.title}
+                    </h3>
+                    <p className=" text-center text-base opacity-70 2xl:text-xl">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+                {/* <div
                   className={`absolute bottom-0 flex w-full items-center justify-center bg-black/70 p-6 text-white duration-300 ${
                     activeIndex === index
                       ? "invisible opacity-0"
@@ -140,7 +162,7 @@ export default function FeaturedSection() {
                       {item.text}
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </ScrollMotionEffect>
           </div>
