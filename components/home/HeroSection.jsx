@@ -22,9 +22,9 @@ const HeroSection = () => {
       <div className="relative w-full  h-[500px] md:h-[680px] flex items-center justify-center">
         <Image
           className="absolute inset-0 object-cover bg-bottom w-full h-full"
-          width={1920}
+          width={2000}
           height={700}
-          src={"/assets/homepage/home-header-bg.jpg"}
+          src={"/assets/homepage/home-header-bg-1.jpg"}
           alt="Bg Image"
         />
 
@@ -50,7 +50,8 @@ const HeroSection = () => {
               <RippleButton
                 buttonText="Lets Plan a Vacation"
                 rippleDuration={2000}
-                href="/"
+                href="https://calendly.com/espinosa-april/30min?month=2025-01"
+                target="_blank"
               />
               {/* <Link
               href={"/appointment"}

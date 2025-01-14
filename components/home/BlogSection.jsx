@@ -47,6 +47,7 @@ const BlogMainSection = async () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8  justify-center text-center h-full">
               {blogPostData?.data
                 ?.filter((pub) => pub.published === true)
+                ?.slice(-3) // Slices the last 3 blog posts
                 ?.map((blogs, index) => (
                   <div key={index} className="group border block bg-white  ">
                     <div className="w-full h-[250px] overflow-hidden relative">

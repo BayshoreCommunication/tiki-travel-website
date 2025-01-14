@@ -20,7 +20,7 @@ const TestimonialSlideSection = ({ className }) => {
   const nextButtonRef = useRef(null);
 
   return (
-    <div className={`my-6 md:my-8  ${className}`}>
+    <div className={`my-3 md:my-4  ${className}`}>
       <div className="flex items-center">
         <button
           ref={prevButtonRef}
@@ -48,7 +48,7 @@ const TestimonialSlideSection = ({ className }) => {
         >
           {[1, 2, 3, 4, 5].map((el, index) => (
             <SwiperSlide key={index}>
-              <div className="w-full lg:w-[80%] text-center mx-auto flex flex-col gap-2 lg:gap-5">
+              <div className="w-full lg:w-[90%] text-center mx-auto flex flex-col gap-2 lg:gap-5">
                 <div className=" flex items-center justify-center">
                   <FaQuoteRight className="size-7  text-white mb-1" />
                 </div>

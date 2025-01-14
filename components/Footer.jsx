@@ -41,7 +41,7 @@ const Footer = () => {
                     className="object-cover"
                   />
                 </Link>
-                <p className="py-5 text-[18px] font-normal text-center text-white md:text-left max-w-[450px] leading-8">
+                <p className="py-5 text-[18px] font-light text-center text-white md:text-left max-w-[450px] leading-8">
                   Whether you're seeking thrilling mountain treks, serene beach
                   escapes, or cultural immersions, we offer tailor-made travel
                   experiences that ignite your passion for adventure.
@@ -64,6 +64,11 @@ const Footer = () => {
                     </button>
                   </div>
                 </form>
+                <div className="py-5 text-[18px] font-light text-center text-white md:text-left max-w-[450px] leading-8 space-y-2">
+                  <p>FL Seller of Travel #T11133781</p>
+                  <p>FL Seller of Travel #T11133781</p>
+                  <p>FL Seller of Travel #T11133781</p>
+                </div>
               </div>
               <div className="">
                 <h2 className="text-[22px] font-semibold text-white">
@@ -72,7 +77,7 @@ const Footer = () => {
                 <hr className="mt-2 mb-6 w-28  border-primary" />
                 <ul className="ml-0 text-white list-none text-[18px] font-normal">
                   {SITECONFIG?.footer?.quick_links?.map((el, index) => (
-                    <li className="mb-4" key={index}>
+                    <li className="mb-5 lg:mb-8" key={index}>
                       <Link
                         href={el.slug}
                         className="hover:underline font-light"
@@ -90,7 +95,7 @@ const Footer = () => {
                 <hr className="w-32 mt-2 mb-6 border-primary" />
                 <ul className="ml-0 text-[18px] font-normal text-white list-none">
                   {SITECONFIG?.footer?.company?.map((el, index) => (
-                    <li className="mb-4" key={index}>
+                    <li className="mb-5 lg:mb-8" key={index}>
                       <Link
                         href={el.slug}
                         className="hover:underline font-light"
@@ -111,7 +116,7 @@ const Footer = () => {
                 </h2>
                 <hr className="w-24 mt-2 mb-6 border-primary" />
                 <ul className="ml-0 text-[18px] font-normal text-white list-none">
-                  <li className="mb-4">
+                  <li className="mb-5">
                     <div className="flex items-center gap-x-1">
                       <IoLocationSharp className="size-6 text-white" />
 
@@ -140,7 +145,7 @@ const Footer = () => {
                     <div className="flex flex-wrap gap-x-3 gap-y-1">
                       <Link
                         href="tel:(954)-529-0695"
-                        className="hover:underline font-light duration-300 text-base font-light"
+                        className="hover:underline font-light duration-300 text-base "
                       >
                         {`(954)-529-0695`}
                       </Link>
@@ -158,7 +163,7 @@ const Footer = () => {
                     <div className="flex flex-col gap-px">
                       <Link
                         href="mailto:april@tikitravelagency.com"
-                        className="hover:underline font-light duration-300 text-base font-light"
+                        className="hover:underline font-light duration-300 text-base"
                       >
                         april@tikitravelagency.com
                       </Link>
@@ -170,63 +175,77 @@ const Footer = () => {
                       </Link> */}
                     </div>
                   </li>
+                  <li className="flex justify-start items-center gap-3 pt-2">
+                    <Link
+                      href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
+                      target="_blank"
+                      className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                    >
+                      <FaFacebookF className="size-4" />
+                    </Link>
+                    {/* <Link
+                href="https://www.linkedin.com/company/ "
+                target="_blank"
+                className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+              >
+                <FaLinkedinIn className="size-4" />
+              </Link> */}
+                    <Link
+                      href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
+                      target="_blank"
+                      className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                    >
+                      <FaInstagram className="size-4" />
+                    </Link>
+                    <Link
+                      href="https://x.com/tikitravelagenc"
+                      target="_blank"
+                      className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                    >
+                      <FaXTwitter className="size-4" />
+                    </Link>
+
+                    <Link
+                      href="https://www.youtube.com/@TikiTravelAgency "
+                      target="_blank"
+                      className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                    >
+                      <FaYoutube className="size-4" />
+                    </Link>
+                    <Link
+                      href="https://www.pinterest.com/tikitravelagency/ "
+                      target="_blank"
+                      className="inline-block p-2.5  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                    >
+                      <FaPinterestP className="size-4" />
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <hr className="my-6 border-white opacity-10 sm:mx-auto lg:my-8" />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-            <div className="text-[18px] font-medium text-center text-white">
-              © 2024{" "}
-              <a href="#/" className="hover:underline font-light text-primary">
+            <div className="text-[18px] font-normal text-center text-white">
+              <span> © 2024</span>{" "}
+              <Link
+                href="javascript:void(0)"
+                className="hover:underline  text-primary"
+              >
                 Tiki Travel Agency
-              </a>
-              . All Rights Reserved.
+              </Link>{" "}
+              All Rights Reserved.
             </div>
 
-            <div className="flex justify-start items-center gap-3 ">
+            <div className="text-[18px] font-normal text-center text-white">
+              <span>Design & Developed by</span>
               <Link
-                href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
+                href="https://www.bayshorecommunication.com/"
                 target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
+                className="hover:underline  text-primary"
               >
-                <FaFacebookF className="size-5" />
-              </Link>
-              {/* <Link
-                href="https://www.linkedin.com/company/ "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaLinkedinIn className="size-5" />
-              </Link> */}
-              <Link
-                href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaInstagram className="size-5" />
-              </Link>
-              <Link
-                href="https://x.com/tikitravelagenc"
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaXTwitter className="size-5" />
-              </Link>
-
-              <Link
-                href="https://www.youtube.com/@TikiTravelAgency "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaYoutube className="size-5" />
-              </Link>
-              <Link
-                href="https://www.pinterest.com/tikitravelagency/ "
-                target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 text-white border-gray-600 hover:text-primary hover:border-primary   duration-300"
-              >
-                <FaPinterestP className="size-5" />
+                {" "}
+                Bayshore Communication
               </Link>
             </div>
           </div>

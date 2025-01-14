@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa6";
+import { Link } from "@nextui-org/react";
 
 const AboutDetails = () => {
   const [videoSrc, setVideoSrc] = useState("");
@@ -26,13 +27,13 @@ const AboutDetails = () => {
             <div className="relative">
               <ScrollMotionEffect effect="fade-left" duration="2000">
                 <Image
-                  src="/assets/homepage/about.png"
+                  src="/assets/homepage/about2.png "
                   alt="April Espinosa"
                   width={800}
                   height={770}
                 />
               </ScrollMotionEffect>
-              <div className="absolute left-[4%] md:-left-[8%] bottom-3 md:bottom-10 z-10">
+              {/* <div className="absolute left-[4%] md:-left-[8%] bottom-3 md:bottom-10 z-10">
                 <ScrollMotionEffect effect="fade-left" duration="2000">
                   <button
                     className="group relative w-[100px] h-[100px]"
@@ -44,7 +45,7 @@ const AboutDetails = () => {
                     </div>
                   </button>
                 </ScrollMotionEffect>
-              </div>
+              </div> */}
             </div>
           </div>
           <div>
@@ -92,12 +93,13 @@ const AboutDetails = () => {
                   </li>
                 </ul>
                 <div className="mt-3">
-                  <a
-                    href="#"
+                  <Link
+                    href="https://calendly.com/espinosa-april/30min?month=2025-01"
+                    target="_blank"
                     className="text-primary font-medium text-xl py-2 border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
                   >
                     Let's get ready to sail!
-                  </a>
+                  </Link>
                 </div>
               </div>
             </ScrollMotionEffect>
@@ -106,7 +108,7 @@ const AboutDetails = () => {
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
           onClick={closeModal}
@@ -131,7 +133,7 @@ const AboutDetails = () => {
             ></iframe>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 };

@@ -20,96 +20,56 @@ const AboutUsSection = () => {
           <div className="w-full lg:w-[40%] shrink-0 relative">
             <ScrollMotionEffect effect="fade-right" duration="2000">
               <Image
-                src="/assets/homepage/april-espinosa.png"
+                src="/assets/homepage/april-espinosa-1.png"
                 alt="April Espinosa"
                 width={630}
                 height={770}
               ></Image>
 
-              <div className="text-white   px-10 py-5 bg-primary absolute bottom-0 border-r-8 border-t-8 border-white ">
-                {/* <div className="flex justify-center items-center gap-3">
-                  <Link
-                    href="https://www.facebook.com/ "
-                    target="_blank"
-                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
-                  >
-                    <FaFacebookF className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/company/ "
-                    target="_blank"
-                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
-                  >
-                    <FaLinkedinIn className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://x.com/tikitravelagenc"
-                    target="_blank"
-                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
-                  >
-                    <FaXTwitter  className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/ "
-                    target="_blank"
-                    className="inline-block p-2 rounded bg-secondary hover:bg-primary   duration-300"
-                  >
-                    <FaInstagram className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://www.youtube.com/@TikiTravelAgency "
-                    target="_blank"
-                    className="inline-block p-2 rounded bg-secondary hover:bg-primary duration-300"
-                  >
-                    <FaYoutube className="size-5" />
-                  </Link>
-                </div> */}
-
-                <div className="flex justify-start items-center gap-3 ">
-                  <Link
-                    href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
-                  >
-                    <FaFacebookF className="size-5" />
-                  </Link>
-                  {/* <Link
+              <div className="flex justify-evenly items-center gap-3 pt-8">
+                <Link
+                  href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
+                  target="_blank"
+                  className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
+                >
+                  <FaFacebookF className="size-5 lg:size-6" />
+                </Link>
+                {/* <Link
                 href="https://www.linkedin.com/company/ "
                 target="_blank"
-                className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
+                className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
               >
-                <FaLinkedinIn className="size-5" />
+                <FaLinkedinIn className="size-5 lg:size-6" />
               </Link> */}
-                  <Link
-                    href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
-                  >
-                    <FaInstagram className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://x.com/tikitravelagenc"
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
-                  >
-                    <FaXTwitter className="size-5" />
-                  </Link>
+                <Link
+                  href="https://www.instagram.com/tikitravelagency/?igsh=anpaYWJtbXNnNxpk&utm_source=qr# "
+                  target="_blank"
+                  className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
+                >
+                  <FaInstagram className="size-5 lg:size-6" />
+                </Link>
+                <Link
+                  href="https://x.com/tikitravelagenc"
+                  target="_blank"
+                  className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary   duration-300"
+                >
+                  <FaXTwitter className="size-5 lg:size-6" />
+                </Link>
 
-                  <Link
-                    href="https://www.youtube.com/@TikiTravelAgency "
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
-                  >
-                    <FaYoutube className="size-5" />
-                  </Link>
-                  <Link
-                    href="https://www.pinterest.com/tikitravelagency/ "
-                    target="_blank"
-                    className="inline-block p-3  rounded-full bg-transparent border-2 border-gray-300 hover:text-secondary hover:border-secondary duration-300"
-                  >
-                    <FaPinterestP className="size-5" />
-                  </Link>
-                </div>
+                <Link
+                  href="https://www.youtube.com/@TikiTravelAgency "
+                  target="_blank"
+                  className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary duration-300"
+                >
+                  <FaYoutube className="size-5 lg:size-6" />
+                </Link>
+                <Link
+                  href="https://www.pinterest.com/tikitravelagency/ "
+                  target="_blank"
+                  className="inline-block p-3  lg:p-4 rounded-full bg-transparent border border-gray-300 hover:text-primary hover:border-primary duration-300"
+                >
+                  <FaPinterestP className="size-5 lg:size-6" />
+                </Link>
               </div>
             </ScrollMotionEffect>
           </div>
@@ -122,25 +82,23 @@ const AboutUsSection = () => {
                   </h2>
                 </div>
                 <p className="text-lg lg:text-xl font-normal text-secondary">
-                  Aloha! I’m April Espinosa, the heart and soul behind Tiki
-                  Travel Agency. My journey into the world of travel began with
-                  a leap of faith – my husband and I sold everything and moved
-                  to Hawaii in pursuit of a life filled with spontaneity and
-                  adventure.
+                  Aloha! I’m April Espinosa, the heart behind Tiki Travel
+                  Agency. My journey started when my husband and I sold
+                  everything to move to Hawaii, chasing a life full of adventure
+                  and spontaneity.
                 </p>
                 <p className="text-lg lg:text-xl font-normal text-secondary">
-                  From there, fueled by a deep-seated passion for unveiling the
-                  beauty of Hawaii, our travels have carried us across the vast
-                  expanse of the Pacific, from the enchanting shores of
-                  Australia and New Zealand to the bustling streets of Japan,
-                  with Vietnam next on our horizon.
+                  Since living in Hawaii, my travels have taken me from the
+                  stunning shores of Australia and New Zealand to the
+                  cultural-rich countries of Japan, Vietnam, and Bali. I’ve also
+                  explored the colorful streets and ancient wonders of Mexico
+                  from the ruins of Chichen Itza to the lively markets of
+                  Oaxaca.
                 </p>
                 <p className="text-lg lg:text-xl font-normal text-secondary">
-                  But my wanderlust doesn’t end there. I’ve also explored the
-                  pristine beaches of the Caribbean and the vibrant culture of
-                  Mexico. Whether it’s soaking in the allure of a new
-                  destination or diving into an exhilarating adventure, I’m
-                  always eager to embrace the unknown.
+                  This love for travel inspired me to create Tiki Travel Agency,
+                  where we specialize in crafting personalized experiences that
+                  reflect your unique desires.
                 </p>
                 <div>
                   <RippleButton
@@ -155,7 +113,7 @@ const AboutUsSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 lg:bottom-10 right-10 w-[200px] lg:w-[400px]">
+      {/* <div className="absolute bottom-0 lg:bottom-10 right-10 w-[200px] lg:w-[400px]">
         <ScrollMotionEffect effect="fade-in" duration="2000">
           <Image
             src="/assets/homepage/paper-plane-2nd.png"
@@ -165,7 +123,7 @@ const AboutUsSection = () => {
             className=""
           ></Image>
         </ScrollMotionEffect>
-      </div>
+      </div> */}
     </section>
   );
 };

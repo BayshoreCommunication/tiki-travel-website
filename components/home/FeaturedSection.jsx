@@ -23,7 +23,7 @@ const featuredData = [
     text: "Turn your travel dreams into reality with experiences that combine breathtaking views, cultural immersion, and unforgettable memories.",
   },
   {
-    bgImage: "/assets/homepage/featured-4.png",
+    bgImage: "/assets/homepage/featured8.png",
     icon: "/assets/homepage/icon-4.png",
     title: "From Peaks to Paradise",
     text: "Journey across diverse terrains, from towering summits to idyllic beaches, where every destination feels like paradise.",
@@ -47,7 +47,7 @@ const featuredData = [
     text: "Follow the horizon to destinations where vast skies and endless vistas offer peace, adventure, and inspiration.",
   },
   {
-    bgImage: "/assets/homepage/featured8.png",
+    bgImage: "/assets/homepage/featured4.png",
     icon: "/assets/homepage/icon-8.png",
     title: "Your Gateway to Endless Exploration",
     text: "Unlock the door to a world of adventures, from thrilling expeditions to peaceful escapes, designed to ignite your inner explorer.",
