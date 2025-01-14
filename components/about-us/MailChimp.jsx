@@ -3,32 +3,32 @@ import React, { useState } from "react";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 
 const Mailchimp = () => {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [status, setStatus] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+  //   try {
+  //     const response = await fetch("/api/subscribe", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ email }),
+  //     });
 
-      if (response.ok) {
-        setStatus("Successfully subscribed!");
-        setEmail("");
-      } else {
-        const errorData = await response.json();
-        setStatus(`Error: ${errorData.message}`);
-      }
-    } catch (error) {
-      setStatus("An unexpected error occurred.");
-    }
-  };
+  //     if (response.ok) {
+  //       setStatus("Successfully subscribed!");
+  //       setEmail("");
+  //     } else {
+  //       const errorData = await response.json();
+  //       setStatus(`Error: ${errorData.message}`);
+  //     }
+  //   } catch (error) {
+  //     setStatus("An unexpected error occurred.");
+  //   }
+  // };
 
   return (
     <div className="container py-8 md:py-10">
@@ -42,7 +42,7 @@ const Mailchimp = () => {
             </h4>
             <form
               className="w-full lg:max-w-[80%] mx-auto pt-4"
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit}
             >
               <div className="relative">
                 <input
@@ -50,7 +50,7 @@ const Mailchimp = () => {
                   className="block w-full py-2.5 lg:py-3 px-4  text-base lg:text-lg text-gray-900 border-gray-600 rounded-lg outline-none bg-slate-200"
                   placeholder="example@gmail.com"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  // onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <button
@@ -61,7 +61,7 @@ const Mailchimp = () => {
                 </button>
               </div>
             </form>
-            {status && <p className="mt-4 text-sm text-red-500">{status}</p>}
+            {/* {status && <p className="mt-4 text-sm text-red-500">{status}</p>} */}
           </div>
         </ScrollMotionEffect>
       </div>
