@@ -27,7 +27,7 @@ const AboutDetails = () => {
             <div className="relative">
               <ScrollMotionEffect effect="fade-left" duration="2000">
                 <Image
-                  src="/assets/homepage/about2.png "
+                  src="/assets/homepage/about2.png"
                   alt="April Espinosa"
                   width={800}
                   height={770}
