@@ -33,9 +33,9 @@ const BlogMainSection = async () => {
           <div className="w-full lg:w-[56%] bg-white">
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <p className="text-base lg:text-lg text-center lg:text-start">
-                Welcome to Tiki Travel Agency! We’re here to help you “Travel
-                the world, your way.” From tips to guides and stories, our blog
-                has all you need. Let’s make travel easy and
+                Welcome to Tiki Travel Agency! We’re excited to assist you in
+                exploring the world on your own terms.” From tips to guides and
+                stories, our blog has all you need. Let’s make travel easy and
                 unforgettable—explore with us!
               </p>
             </ScrollMotionEffect>
@@ -104,17 +104,17 @@ const BlogMainSection = async () => {
             </div>
             <div className="mt-4">
               <p className="mb-3">
-                Aloha! I’m April Espinosa, the heart and soul behind Tiki Travel
-                Agency. My journey into the world of travel began with a leap of
-                faith – my husband and I sold everything and moved to Hawaii in
-                pursuit of a life filled with spontaneity and adventure.
+                Why do I love traveling to Japan? It’s such a unique mix of old
+                and new. One day you’re wandering through peaceful temples in
+                Kyoto, and the next, you’re exploring Tokyo’s vibrant
+                neighborhoods filled with lights, energy, and life.
               </p>
               <p>
-                From there, fueled by a deep-seated passion for unveiling the
-                beauty of Hawaii, our travels have carried us across the vast
-                expanse of the Pacific, from the enchanting shores of Australia
-                and New Zealand to the bustling streets of Japan, with Vietnam
-                next on our horizon.
+                And the food? It’s everywhere, and there’s always something new
+                to try—whether it’s a steaming bowl of ramen or a creamy matcha
+                dessert. The people are kind, the scenery is stunning, and every
+                day feels like a new adventure. Japan has a way of surprising
+                you at every turn.
               </p>
             </div>
           </div>

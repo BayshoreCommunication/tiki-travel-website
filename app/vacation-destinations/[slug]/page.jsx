@@ -217,6 +217,8 @@ const page = () => {
                 <RippleButton
                   buttonText="Book Your Adventure Today"
                   rippleDuration={1000}
+                  href="https://calendly.com/espinosa-april/30min?month=2025-01"
+                  target="_blank"
                 />
               </div>
             </div>

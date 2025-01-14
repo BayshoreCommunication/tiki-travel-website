@@ -26,7 +26,7 @@ const AboutUsSection = () => {
                 height={770}
               ></Image>
 
-              <div className="flex justify-evenly items-center gap-3 pt-8">
+              <div className="flex justify-between items-center gap-3 pt-8">
                 <Link
                   href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
                   target="_blank"

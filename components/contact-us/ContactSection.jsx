@@ -35,7 +35,7 @@ const ContactSection = () => {
               <div className="flex flex-col gap-4 my-8">
                 <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
                   <IoCall />
-                  <Link href="tel:9545290695">(954)-529-0695</Link>
+                  <Link href="tel:9545290695">(616) 335-4823</Link>
                 </div>
                 <div className="hover:text-primary duration-300 flex items-center gap-1 hover:underline">
                   <IoMail />

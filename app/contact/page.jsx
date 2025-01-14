@@ -26,7 +26,7 @@ const page = () => {
         title={"Contact Us"}
       />
       <ContactSection />
-      <GoogleMapSection />
+      {/* <GoogleMapSection /> */}
       <FAQ />
     </>
   );

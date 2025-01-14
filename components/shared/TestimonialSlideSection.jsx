@@ -62,9 +62,8 @@ const TestimonialSlideSection = ({ className }) => {
                     ))}
                 </div>
                 <p className="text-sm md:text-xl font-normal  text-white">
-                  "Words cannot express the gratitude I have for you and your
-                  team. As soon as you took over my case, you and your team
-                  worked diligently on a resolution."
+                  April at Tiki Travel Agency is amazing! She listens to what
+                  you want and turns it into an unforgettable vacation.
                 </p>
                 <div className="">
                   <h4 className="font-bold text-white text-center text-2xl">

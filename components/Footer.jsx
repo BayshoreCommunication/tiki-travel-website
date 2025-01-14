@@ -58,7 +58,7 @@ const Footer = () => {
                     />
                     <button
                       type="submit"
-                      className="text-white absolute end-0 bottom-0 bg-primary hover:text-primary duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
+                      className="text-white absolute end-0 bottom-0 bg-primary  duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
                     >
                       Subscribe Now
                     </button>
@@ -144,15 +144,15 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-wrap gap-x-3 gap-y-1">
                       <Link
-                        href="tel:(954)-529-0695"
+                        href="tel:(616) 335-4823"
                         className="hover:underline font-light duration-300 text-base "
                       >
-                        {`(954)-529-0695`}
+                        {`(616) 335-4823`}
                       </Link>
                     </div>
                   </li>
 
-                  <li className="mb-4">
+                  <li className="mb-10 lg:mb-20">
                     <div className="flex items-center gap-x-1">
                       <MdMarkEmailUnread className="size-6 text-white" />
 

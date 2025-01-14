@@ -39,10 +39,10 @@ const VacationPackages = () => {
             Vacation with our tailored packages
           </h1>
           <p className="text-center text-xl md:max-w-6xl mt-3">
-            Aloha! I’m April Espinosa, the heart and soul behind Tiki Travel
-            Agency. My journey into the world of travel began with a leap of
-            faith – my husband and I sold everything and moved to Hawaii in
-            pursuit of a life filled with spontaneity and adventure.
+            Aloha! I am April Espinosa and I started Tiki Travel Agency because
+            I believe travel has the power to transform lives. Tiki Travel
+            Agency creates unforgettable journeys that inspire adventure and
+            connection.
           </p>
         </div>
         <div>
@@ -60,7 +60,7 @@ const VacationPackages = () => {
                     height={280}
                     className="group-hover:scale-105 duration-300 w-full"
                   />
-                  <div className="flex items-center gap-4 absolute bottom-5 left-5">
+                  {/* <div className="flex items-center gap-4 absolute bottom-5 left-5">
                     <button
                       onClick={() => handleImageGalleryOpen(index)}
                       className="flex items-center gap-2 py-1 px-4 text-white bg-secondary hover:bg-primary hover:bg-opacity-85 duration-300 bg-opacity-70 rounded-full"
@@ -68,14 +68,14 @@ const VacationPackages = () => {
                       <FaImage />
                       <span>Gallery</span>
                     </button>
-                    {/* <button
+                    <button
                       onClick={() => handleVideoGalleryOpen(index)}
                       className="flex items-center gap-2 py-1 px-4 text-white bg-secondary hover:bg-primary hover:bg-opacity-85 duration-300 bg-opacity-70 rounded-full"
                     >
                       <FaPlayCircle />
                       <span>Video</span>
-                    </button> */}
-                  </div>
+                    </button>
+                  </div> */}
                 </div>
                 <div className="p-4 md:p-5 lg:p-6">
                   <div className="flex items-center gap-4">

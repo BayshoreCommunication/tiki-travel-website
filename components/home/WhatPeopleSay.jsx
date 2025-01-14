@@ -24,11 +24,11 @@ const WhatPeopleSay = () => {
             </h1>
           </ScrollMotionEffect>
 
-          <ScrollMotionEffect effect="fade-left" duration="2000">
+          {/* <ScrollMotionEffect effect="fade-left" duration="2000">
             <p className="text-md text-white max-w-[700px] text-center mt-6">
               {`Professionally handling Property Damage Claims, we’re committed to protecting both your space and your peace of mind in times of need.`}
             </p>
-          </ScrollMotionEffect>
+          </ScrollMotionEffect> */}
 
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="mx-0 flex justify-center items-center my-10 px-2 sm:px-6 lg:px-8">
