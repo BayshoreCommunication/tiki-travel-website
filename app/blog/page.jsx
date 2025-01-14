@@ -23,7 +23,7 @@ const page = async () => {
   return (
     <>
       <BreadcrumbSection
-        bgImage={"/assets/shared/blog-breadcrumb-bg.png"}
+        bgImage={"/assets/shared/blog-breadcrumb-bg-1.png"}
         title={"Blogs"}
       />
 

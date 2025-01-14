@@ -1,6 +1,7 @@
 // import Clients from "@/components/shared/Clients";
 
 import AboutUsSection from "@/components/about-us/AboutUsSection";
+import Mailchimp from "@/components/about-us/Mailchimp";
 import OurValues from "@/components/about-us/OurValues";
 import Partners from "@/components/about-us/Partners";
 import WhatPeopleSay from "@/components/home/WhatPeopleSay";
@@ -25,7 +26,7 @@ const page = () => {
   return (
     <>
       <BreadcrumbSection
-        bgImage={"/assets/shared/breadcrumb-bg.png"}
+        bgImage={"/assets/shared/about-breadcrumb.png"}
         title={"About Us"}
       />
       <AboutUsSection />
@@ -33,6 +34,7 @@ const page = () => {
       <Partners />
       <WhatPeopleSay />
       <CallToAction />
+      <Mailchimp />
     </>
   );
 };

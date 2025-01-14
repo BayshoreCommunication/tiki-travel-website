@@ -22,7 +22,7 @@ const page = () => {
   return (
     <>
       <BreadcrumbSection
-        bgImage={"/assets/shared/contact-breadcrumb-bg.png"}
+        bgImage={"/assets/shared/contact-breadcrumb-bg-1.png"}
         title={"Contact Us"}
       />
       <ContactSection />

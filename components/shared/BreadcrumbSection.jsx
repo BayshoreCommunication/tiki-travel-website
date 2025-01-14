@@ -1,23 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import CardMotion from "../motion/CardMotion";
-import Image from "next/image";
 
-const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
+const BreadcrumbSection = ({
+  bgImage = "/assets/shared/about-breadcrumb.png",
+  title,
+  subTitle,
+}) => {
   return (
-    <>
-      <div className=" container">
-        <div className="relative bg-opacity-85">
-          <Image
-            src={bgImage ? bgImage : "/assets/shared/breadcrumb-bg.png"}
-            alt={title}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top center"
-            className="z-0"
-            priority
-          />
-
+    <div className="container">
+      <div
+        className="relative bg-opacity-85 w-full h-[500px] overflow-hidden"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 flex items-center justify-start  z-10 bg-gradient-to-r from-[#070707]/70 to-transparent">
           <CardMotion
             whileInView={{
               opacity: 1,
@@ -31,58 +31,52 @@ const BreadcrumbSection = ({ bgImage, title, subTitle }) => {
               x: -100,
             }}
           >
-            <div>
-              <div className="relative z-10 gap-10 py-28 ">
-                <h1
-                  className={`text-white font-bold text-3xl lg:text-5xl text-center mb-2 `}
-                >
-                  {title}
-                </h1>
+            {" "}
+            <div className="w-full px-20">
+              <h1 className="text-white font-bold text-3xl lg:text-5xl mb-3">
+                {title}
+              </h1>
 
-                <nav
-                  className="flex items-center justify-center mt-8 md:mt-1"
-                  aria-label="Breadcrumb"
-                >
-                  <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
-                    <li className="inline-flex items-center">
-                      <Link
-                        href="/"
-                        className="inline-flex items-center text-lg font-medium text-stone-200 hover:text-primary"
-                      >
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <div className="flex items-center">
-                        <svg
-                          className="w-3 h-3 mx-1 rtl:rotate-180 text-stone-50"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 6 10"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="m1 9 4-4-4-4"
-                          />
-                        </svg>
-
-                        <span className="text-lg font-medium text-primary ms-1 md:ms-2">
-                          {subTitle ? subTitle : title}
-                        </span>
-                      </div>
-                    </li>
-                  </ol>
-                </nav>
-              </div>
+              <nav
+                className="flex items-center mt-8 md:mt-1"
+                aria-label="Breadcrumb"
+              >
+                <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                  <li>
+                    <Link
+                      href="/"
+                      className="text-lg font-medium text-stone-200 hover:text-primary"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li className="flex items-center">
+                    <svg
+                      className="w-3 h-3 mx-1 rtl:rotate-180 text-stone-50"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 6 10"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m1 9 4-4-4-4"
+                      />
+                    </svg>
+                    <span className="text-lg font-medium text-primary ms-1 md:ms-2">
+                      {subTitle || title}
+                    </span>
+                  </li>
+                </ol>
+              </nav>
             </div>
           </CardMotion>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
