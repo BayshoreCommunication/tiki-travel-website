@@ -49,7 +49,7 @@ const Mailchimp = () => {
                   type="email"
                   className="block w-full py-2.5 lg:py-3 px-4  text-base lg:text-lg text-gray-900 border-gray-600 rounded-lg outline-none bg-slate-200"
                   placeholder="example@gmail.com"
-                  value={email}
+                  // value={email}
                   // onChange={(e) => setEmail(e.target.value)}
                   required
                 />
