@@ -232,10 +232,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="text-[18px] font-normal text-center text-white">
               <span> © 2024</span>{" "}
-              <Link
-                href="javascript:void(0)"
-                className="hover:underline  text-primary"
-              >
+              <Link href=" " className="hover:underline  text-primary">
                 Tiki Travel Agency
               </Link>{" "}
               All Rights Reserved.
