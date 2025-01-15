@@ -64,7 +64,7 @@ const Footer = () => {
                     </button>
                   </div>
                 </form>
-                <div className="py-5 text-[18px] font-light text-center text-white md:text-left max-w-[450px] leading-8 space-y-2">
+                <div className="pt-5 text-[18px] font-light  text-white text-left max-w-[450px] leading-8  flex flex-col gap-3">
                   <p>FL Seller of Travel #T11133781</p>
                   <p>FL Seller of Travel #T11133781</p>
                   <p>FL Seller of Travel #T11133781</p>
@@ -110,71 +110,75 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div className="col-span-2 md:col-span-1">
-                <h2 className="font-semibold text-white text-[22px]">
-                  Contact us
-                </h2>
-                <hr className="w-24 mt-2 mb-6 border-primary" />
-                <ul className="ml-0 text-[18px] font-normal text-white list-none">
-                  <li className="mb-5">
-                    <div className="flex items-center gap-x-1">
-                      <IoLocationSharp className="size-6 text-white" />
+              <div className="col-span-2 md:col-span-1 h-full flex flex-col justify-between">
+                <div>
+                  <h2 className="font-semibold text-white text-[22px]">
+                    Contact us
+                  </h2>
+                  <hr className="w-24 mt-2 mb-6 border-primary" />
+                  <ul className="ml-0 text-[18px] font-normal text-white list-none">
+                    <li className="mb-5">
+                      <div className="flex items-center gap-x-1">
+                        <IoLocationSharp className="size-6 text-white" />
 
-                      <h3 className="font-semibold text-white text-[20px]">
-                        Location
-                      </h3>
-                    </div>
-                    <Link
-                      href="https://maps.app.goo.gl/BxuNRwy3CHg2ykCd7"
-                      className=" hover:underline font-light duration-300 "
-                      target="_blank"
-                    >
-                      <div className="w-full">
-                        <p className="text-base">Tampa, Florida</p>
+                        <h3 className="font-semibold text-white text-[20px]">
+                          Location
+                        </h3>
                       </div>
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <div className="flex items-center gap-x-1">
-                      <RiPhoneFill className="size-6 text-white" />
-
-                      <h3 className="font-semibold text-white text-[20px]">
-                        Contact
-                      </h3>
-                    </div>
-                    <div className="flex flex-wrap gap-x-3 gap-y-1">
                       <Link
-                        href="tel:(616) 335-4823"
-                        className="hover:underline font-light duration-300 text-base "
+                        href="https://maps.app.goo.gl/BxuNRwy3CHg2ykCd7"
+                        className=" hover:underline font-light duration-300 "
+                        target="_blank"
                       >
-                        {`(616) 335-4823`}
+                        <div className="w-full">
+                          <p className="text-base">Tampa, Florida</p>
+                        </div>
                       </Link>
-                    </div>
-                  </li>
+                    </li>
+                    <li className="mb-4">
+                      <div className="flex items-center gap-x-1">
+                        <RiPhoneFill className="size-6 text-white" />
 
-                  <li className="mb-10 lg:mb-20">
-                    <div className="flex items-center gap-x-1">
-                      <MdMarkEmailUnread className="size-6 text-white" />
+                        <h3 className="font-semibold text-white text-[20px]">
+                          Contact
+                        </h3>
+                      </div>
+                      <div className="flex flex-wrap gap-x-3 gap-y-1">
+                        <Link
+                          href="tel:(616) 335-4823"
+                          className="hover:underline font-light duration-300 text-base "
+                        >
+                          {`(616) 335-4823`}
+                        </Link>
+                      </div>
+                    </li>
 
-                      <h3 className="font-semibold text-white text-[20px]">
-                        Email
-                      </h3>
-                    </div>
-                    <div className="flex flex-col gap-px">
-                      <Link
-                        href="mailto:april@tikitravelagency.com"
-                        className="hover:underline font-light duration-300 text-base"
-                      >
-                        april@tikitravelagency.com
-                      </Link>
-                      {/* <Link
+                    <li className="">
+                      <div className="flex items-center gap-x-1">
+                        <MdMarkEmailUnread className="size-6 text-white" />
+
+                        <h3 className="font-semibold text-white text-[20px]">
+                          Email
+                        </h3>
+                      </div>
+                      <div className="flex flex-col gap-px">
+                        <Link
+                          href="mailto:april@tikitravelagency.com"
+                          className="hover:underline font-light duration-300 text-base"
+                        >
+                          april@tikitravelagency.com
+                        </Link>
+                        {/* <Link
                         href="mailto:myra@ .com"
                         className="hover:underline font-light duration-300"
                       >
                         myra@ .com
                       </Link> */}
-                    </div>
-                  </li>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <ul className="ml-0 text-[18px] font-normal text-white list-none">
                   <li className="flex justify-start items-center gap-3 pt-2">
                     <Link
                       href="https://www.facebook.com/people/Tiki-Travel-Agency/61555648056008/ "
