@@ -40,7 +40,6 @@ const EmailSubscription = () => {
     <form className="w-full lg:max-w-[80%] me-auto " onSubmit={handleSubmit}>
       <div className="relative">
         <input
-          type="search"
           id="default-search"
           className="block w-full p-2.5 lg:p-3 md:ps-12 text-base lg:text-lg text-gray-900  border-gray-600 rounded-lg outline-none bg-white"
           placeholder="example@gmail.com"
