@@ -41,8 +41,8 @@ const NewsLetter = () => {
       <div className="flex flex-col justify-center items-center gap-6 lg:gap-12 text-secondary text-center p-6 lg:px-20 lg:py-24">
         <ScrollMotionEffect effect="fade-up" duration="1000">
           <div className="max-w-[1024px] flex flex-col justify-center items-center gap-8">
-            <h4 className="text-3xl md:text-5xl font-semibold leading-tight">
-              Plan Your Next Adventure With Confidence By Joining Our Monthly
+            <h4 className="text-3xl md:text-5xl font-semibold leading-tight ">
+              Plan your next adventure with confidence by joining our monthly
               Newsletter
             </h4>
             <form
