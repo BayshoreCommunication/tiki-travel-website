@@ -98,7 +98,7 @@ const BlogMainSection = async () => {
                 height={400}
                 className="w-full"
               />
-              <h2 className="text-3xl font-mono mt-4 text-center">
+              <h2 className="text-3xl  mt-4 text-center font-semibold">
                 Shinjuku, Japan
               </h2>
             </div>

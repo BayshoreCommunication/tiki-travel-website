@@ -19,7 +19,7 @@ const page = () => {
   return (
     <>
       <BreadcrumbSection
-        bgImage={"/assets/vacation-destinations/vd-breadcrumb-bg.png"}
+        bgImage={"/assets/vacation-destinations/vd-breadcrumb-bg1.png"}
         title={"Vacation Destinations"}
       />
       <VacationPackages />
