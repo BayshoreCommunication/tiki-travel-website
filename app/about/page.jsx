@@ -1,12 +1,12 @@
 // import Clients from "@/components/shared/Clients";
 
-import AboutUsSection from "@/components/about-us/AboutUsSection";
-import NewsLetter from "@/components/about-us/NewsLetter";
-import OurValues from "@/components/about-us/OurValues";
-import Partners from "@/components/about-us/Partners";
-import WhatPeopleSay from "@/components/home/WhatPeopleSay";
-import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
-import CallToAction from "@/components/shared/CallToAction";
+import AboutUsSection from "@/components/about-us/AboutUsSection.jsx";
+import NewsLetter from "@/components/about-us/NewsLetter.jsx";
+import OurValues from "@/components/about-us/OurValues.jsx";
+import Partners from "@/components/about-us/Partners.jsx";
+import WhatPeopleSay from "@/components/home/WhatPeopleSay.jsx";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection.jsx";
+import CallToAction from "@/components/shared/CallToAction.jsx";
 
 export const metadata = {
   title: "",

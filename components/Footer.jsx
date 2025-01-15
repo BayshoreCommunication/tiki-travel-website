@@ -13,6 +13,7 @@ import { FaInstagramSquare, FaPinterestP } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
+import EmailSubscription from "./subscribe/EmailSubscription.tsx";
 
 import {
   FaFacebookF,
@@ -46,24 +47,7 @@ const Footer = () => {
                   escapes, or cultural immersions, we offer tailor-made travel
                   experiences that ignite your passion for adventure.
                 </p>
-
-                <form className="w-full lg:max-w-[80%] me-auto ">
-                  <div className="relative">
-                    <input
-                      type="search"
-                      id="default-search"
-                      className="block w-full p-2.5 lg:p-3 md:ps-12 text-base lg:text-lg text-gray-900  border-gray-600 rounded-lg outline-none bg-white"
-                      placeholder="example@gmail.com"
-                      required
-                    />
-                    <button
-                      type="submit"
-                      className="text-white absolute end-0 bottom-0 bg-primary  duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
-                    >
-                      Subscribe Now
-                    </button>
-                  </div>
-                </form>
+                <EmailSubscription />
                 <div className="pt-5 text-[18px] font-light  text-white text-left max-w-[450px] leading-8  flex flex-col gap-3">
                   <p>FL Seller of Travel #T11133781</p>
                   <p>FL Seller of Travel #T11133781</p>
