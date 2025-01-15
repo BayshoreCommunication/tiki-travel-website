@@ -12,11 +12,11 @@ const WhatPeopleSay = () => {
         className="absolute inset-0 object-cover bg-center w-full h-full"
         width={2400}
         height={700}
-        src="/assets/homepage/home-banner-b1.jpg"
+        src="/assets/homepage/home-banner-b.jpg"
         alt="Header background"
       />
 
-      <div className="container pt-10 md:pt-14 md:pb-6">
+      <div className="container pt-10 md:pt-14 md:pb-6 ">
         <div className="relative flex flex-col items-center justify-center w-full h-full z-40">
           <ScrollMotionEffect effect="fade-right" duration="2000">
             <h1 className="font-semibold text-3xl md:text-5xl text-white text-center md:text-left">
@@ -31,8 +31,8 @@ const WhatPeopleSay = () => {
           </ScrollMotionEffect> */}
 
           <ScrollMotionEffect effect="fade-up" duration="2000">
-            <div className="mx-0 flex justify-center items-center my-10 px-2 sm:px-6 lg:px-8">
-              <div className="bg-primary w-full max-w-[400px] md:max-w-[800px] lg:max-w-[1000px]  rounded-lg p-4 ">
+            <div className="mx-0 flex justify-center items-center my-10 px-4 sm:px-6 lg:px-8">
+              <div className="bg-primary w-full max-w-[350px] md:max-w-[800px] lg:max-w-[1000px]  rounded-lg p-4 ">
                 <TestimonialSlideSection />
               </div>
             </div>

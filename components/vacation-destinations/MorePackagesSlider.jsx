@@ -70,7 +70,7 @@ const MorePackagesSlider = ({ className }) => {
                 height={280}
                 className="group-hover:scale-105 duration-300 w-full"
               />
-              <div className="flex items-center gap-4 absolute bottom-5 left-5">
+              {/* <div className="flex items-center gap-4 absolute bottom-5 left-5">
                 <button
                   onClick={() => handleImageGalleryOpen(index)}
                   className="flex items-center gap-2 py-1 px-4 text-white bg-secondary hover:bg-primary hover:bg-opacity-85 duration-300 bg-opacity-70 rounded-full"
@@ -78,7 +78,7 @@ const MorePackagesSlider = ({ className }) => {
                   <FaImage />
                   <span>Gallery</span>
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="p-4 md:p-5 lg:p-6">
               <div className="flex items-center gap-4">
@@ -86,13 +86,13 @@ const MorePackagesSlider = ({ className }) => {
                   <FaMapMarkerAlt />
                   <p>{packages?.location}</p>
                 </div>
-                <Link
+                {/* <Link
                   href={packages?.locationLink}
                   target="_blank"
                   className="py-px px-4 border border-primary text-primary hover:bg-primary hover:text-white duration-300 text-base"
                 >
                   View
-                </Link>
+                </Link> */}
               </div>
               <h4 className="text-2xl font-medium text-secondary mt-3">
                 {packages?.title}

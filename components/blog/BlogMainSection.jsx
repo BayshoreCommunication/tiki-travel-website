@@ -45,7 +45,7 @@ const BlogMainSection = async () => {
         {/* Blog Posts Section */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Blog Grid */}
-          <div className="flex flex-col gap-8 w-[66%] shrink-0">
+          <div className="flex flex-col gap-8 w-full lg:w-[66%] shrink-0">
             {blogPostData?.data
               ?.filter((pub) => pub.published === true)
               ?.map((blogs, index) => (
@@ -59,7 +59,7 @@ const BlogMainSection = async () => {
                       priority
                     />
                   </div>
-                  <div className="px-10 py-10">
+                  <div className="px-6 lg:px-10 py-6 lg:py-10">
                     <div className="text-sm text-gray-500 flex items-center justify-between">
                       <div className="flex items-center gap-1 text-base">
                         <MdOutlineDateRange />
@@ -99,7 +99,7 @@ const BlogMainSection = async () => {
                 className="w-full"
               />
               <h2 className="text-3xl font-mono mt-4 text-center">
-                Shinjuku April
+                Shinjuku, Japan
               </h2>
             </div>
             <div className="mt-4">

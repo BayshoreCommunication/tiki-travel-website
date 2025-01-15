@@ -17,7 +17,7 @@ const BreadcrumbSection = ({
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 flex items-center justify-start  z-10 bg-gradient-to-r from-[#070707]/70 to-transparent">
+        <div className="absolute inset-0 flex items-center justify-center lg:justify-start  z-10 bg-gradient-to-r from-[#070707]/70 to-transparent">
           <CardMotion
             whileInView={{
               opacity: 1,
@@ -32,16 +32,13 @@ const BreadcrumbSection = ({
             }}
           >
             {" "}
-            <div className="w-full px-20">
-              <h1 className="text-white font-bold text-3xl lg:text-5xl mb-3">
+            <div className="w-full px-8 lg:px-20 text-center lg:text-start">
+              <h1 className="text-white font-bold text-3xl lg:text-5xl mb-1 lg:mb-3">
                 {title}
               </h1>
 
-              <nav
-                className="flex items-center mt-8 md:mt-1"
-                aria-label="Breadcrumb"
-              >
-                <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+              <nav className="flex items-center" aria-label="Breadcrumb">
+                <ol className="flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                   <li>
                     <Link
                       href="/"

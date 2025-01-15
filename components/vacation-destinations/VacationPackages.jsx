@@ -83,13 +83,13 @@ const VacationPackages = () => {
                       <FaMapMarkerAlt />
                       <p>{packages?.location}</p>
                     </div>
-                    <Link
+                    {/* <Link
                       href={packages?.locationLink}
                       target="_blank"
                       className="py-px px-4 border border-primary text-primary hover:bg-primary hover:text-white duration-300 text-base"
                     >
                       View
-                    </Link>
+                    </Link> */}
                   </div>
                   <h4 className="text-2xl font-medium text-secondary mt-3">
                     {packages?.title}
