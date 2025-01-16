@@ -1,61 +1,63 @@
 "use client";
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
-import Swal from "sweetalert2";
-import RippleButton from "../shared/RippleButton";
 import { Button } from "@nextui-org/react";
 
 const EmailSubscription = () => {
-  const [formData, setFormData] = useState({
-    // name: "",
-    email: "",
-    // phone: "",
-    // subject: "",
-    // message: "",
-  });
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-  const handleSubmit = async (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    const url = "/api/subscribe";
+    setIsLoading(true);
+    setMessage("");
+
     try {
-      const response = await fetch(url, {
+      const response = await fetch("/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email: formData.email,
-        }),
+        body: JSON.stringify({ email }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("Successfully subscribed to the newsletter!");
+        setEmail("");
+      } else {
+        setMessage(data.message || "An error occurred. Please try again.");
+      }
     } catch (error) {
-      //console.error("Error:", error);
+      setMessage("Something went wrong. Please try again later.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <form className="w-full lg:max-w-[80%] me-auto " onSubmit={handleSubmit}>
+    <form className="w-full lg:max-w-[80%] me-auto" onSubmit={handleSubscribe}>
       <div className="relative">
         <input
-          id="default-search"
-          className="block w-full p-2.5 lg:p-3 md:ps-12 text-base lg:text-lg text-gray-900  border-gray-600 rounded-lg outline-none bg-white"
-          placeholder="example@gmail.com"
-          required
           type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
+          className="block w-full py-2.5 lg:py-3 px-4 text-base lg:text-lg text-gray-900 border-gray-600 rounded-lg outline-none bg-slate-200"
+          placeholder="example@gmail.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <button
           type="submit"
-          className="text-white absolute end-0 bottom-0 bg-primary  duration-300  font-medium rounded-e-lg  h-full px-2 md:px-6 text-base lg:text-lg "
+          className="text-white absolute end-0 bottom-0 bg-primary duration-300 font-medium rounded-e-lg h-full px-2 md:px-6 text-base lg:text-lg"
+          disabled={isLoading}
         >
-          Subscribe Now
+          {isLoading ? "Subscribing..." : "Subscribe Now"}
         </button>
       </div>
+      {message && (
+        <p className="pt-4 text-sm text-center text-gray-200">{message}</p>
+      )}
     </form>
   );
 };
