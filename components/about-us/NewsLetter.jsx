@@ -43,7 +43,7 @@ const NewsLetter = () => {
           <div className="max-w-[1024px] flex flex-col justify-center items-center gap-8">
             <h4 className="text-3xl md:text-5xl font-semibold leading-tight ">
               Plan your next adventure with confidence by joining our monthly
-              Newsletter
+              newsletter
             </h4>
             <form
               className="w-full lg:max-w-[80%] mx-auto pt-4"
