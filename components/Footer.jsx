@@ -14,6 +14,7 @@ import { FaInstagram } from "react-icons/fa";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { IoMdHome } from "react-icons/io";
 import EmailSubscription from "./subscribe/EmailSubscription.tsx";
+import NewsLetter from "@/components/about-us/NewsLetter.jsx";
 
 import {
   FaFacebookF,
@@ -48,6 +49,7 @@ const Footer = () => {
                   experiences that ignite your passion for adventure.
                 </p>
                 <EmailSubscription />
+
                 <div className="pt-5 text-[18px] font-light  text-white text-left max-w-[450px] leading-8  flex flex-col gap-3">
                   <p>FL Seller of Travel #T11133781</p>
                   <p>FL Seller of Travel #T11133781</p>
