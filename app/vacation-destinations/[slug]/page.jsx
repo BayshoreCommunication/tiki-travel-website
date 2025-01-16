@@ -50,13 +50,13 @@ const page = () => {
                       <FaMapMarkerAlt />
                       <p className="text-base md:text-lg">Kyoto, Japan</p>
                     </div>
-                    <Link
+                    {/* <Link
                       href="https://maps.google.com/?q=Kyoto,Japan"
                       target="_blank"
                       className="py-px px-6 border border-primary text-primary hover:bg-primary hover:text-white duration-300 text-base md:text-lg"
                     >
                       View
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="w-full h-[600px] overflow-hidden relative mt-4">

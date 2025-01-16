@@ -53,13 +53,15 @@ const VacationPackages = () => {
                 className="bg-white rounded-lg shadow-lg text-start border overflow-hidden group"
               >
                 <div className="overflow-hidden relative">
-                  <Image
-                    src={packages?.image}
-                    alt={packages?.title}
-                    width={480}
-                    height={280}
-                    className="group-hover:scale-105 duration-300 w-full"
-                  />
+                  <Link href={`/vacation-destinations/${packages?.slug}`}>
+                    <Image
+                      src={packages?.image}
+                      alt={packages?.title}
+                      width={480}
+                      height={280}
+                      className="group-hover:scale-105 duration-300 w-full"
+                    />
+                  </Link>
                   {/* <div className="flex items-center gap-4 absolute bottom-5 left-5">
                     <button
                       onClick={() => handleImageGalleryOpen(index)}
