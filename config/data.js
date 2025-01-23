@@ -132,110 +132,190 @@ export const blogsData = [
 export const vacationPackagesData = [
   {
     image: "/assets/vacation-destinations/cherry-blossoms-japan.png",
-    video: "/public/assets/vacation-destinations/april-bali-swing.mp4",
+    video: "/assets/vacation-destinations/april-bali-swing.mp4",
     location: "Kyoto, Japan",
     locationLink: "https://maps.google.com/?q=Kyoto,Japan",
     title: "Cherry Blossoms in Japan",
     slug: "cherry-blossoms-japan",
     shortDesc:
       "Experience Kyoto’s iconic cherry blossoms during springtime, surrounded by ancient temples and serene gardens.",
-    content: `
-    <div className="w-full flex flex-col gap-2 lg:gap-4">
-                  <h2 className="text-stone-950 font-semibold text-3xl md:text-4xl lg:text-5xl">
-                    Death Claims
-                  </h2>
-                  <img
-                    src="/assets/vacation-destinations/cherry-blossoms-japan.png"
-                    alt="Overexertion and Overuse Injuries "
-                    className="w-full py-3"
-                  />
+    content: `<div className="w-full flex flex-col gap-4 md:gap-6 lg:gap-10">
+              <div className="flex flex-col">
+                <h1 className="font-semibold text-3xl md:text-4xl lg:text-4xl text-secondary">
+                  Cherry Blossoms Adventure in Japan 🌸
+                </h1>
+                <div className="flex flex-col lg:flex-row gap-4 lg:gap-10 justify-start lg:justify-between border-b pb-4 pt-2 items-start lg:items-center">
                   <p className="text-base md:text-lg">
-                    The loss of a loved one is always a tragic experience, but
-                    when their death is caused by someone else’s negligence or
-                    wrongful actions, the grief can feel even more unbearable.
-                    In Florida, surviving family members may have the option to
-                    pursue a wrongful death claim to seek justice and
-                    compensation for their loss. A wrongful death claim is a
-                    civil lawsuit filed when a person’s death is caused by
-                    another party’s negligence, misconduct, or reckless
-                    behavior.
+                    Discover Japan's breathtaking cherry blossoms during
+                    spring—an unforgettable journey through culture, beauty, and
+                    nature.
                   </p>
-                  <div>
-                    <p className="text-base md:text-lg font-bold mb-1 pl-5">
-                      Who Should File a Claim and Why Having an Attorney Is
-                      Essential
-                    </p>
-                    <p className="text-base md:text-lg">
-                      <ul className="list-disc pl-5">
-                        <li>
-                          <span className="font-bold pr-1">
-                            Benefits of Filing:
-                          </span>
-                          Surviving family members who were financially
-                          dependent on the deceased or who suffered emotional
-                          distress from their loss can benefit from a wrongful
-                          death claim. This includes spouses, children, parents,
-                          and sometimes other close relatives.
-                        </li>
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1 text-base">
+                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"   width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
+                    </svg>
 
-                        <li>
-                          <span className="font-bold pr-1">
-                            Consequences Without Representation:
-                          </span>
-                          Without the guidance of an experienced attorney, the
-                          process of filing a wrongful death claim can be
-                          challenging.In Florida, the statute of limitations for
-                          death claims, such as wrongful death, is governed by
-                          Florida Statutes § 95.11(4). This statute sets a time
-                          limit of two years from the date of death to file a
-                          wrongful death lawsuit.
-                        </li>
-                        <p>
-                          The legal complexities, tight deadlines, and emotional
-                          strain of managing the process can lead to missed
-                          opportunities for compensation. An attorney ensures
-                          that the case is properly handled, helping secure fair
-                          compensation for the loss and easing the burden during
-                          a difficult time.
-                        </p>
-                      </ul>
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-base md:text-lg font-bold mb-1 pl-5">
-                      Carter Injury Law: Committed to Securing the Justice You
-                      Deserve
-                    </p>
-                    <p className="text-base md:text-lg">
-                      <ul className="list-disc pl-5">
-                        <li>
-                          We provide clear, step-by-step assistance in filing
-                          your claim and making sure you meet all deadlines,
-                          including the two-year statute of limitations.
-                        </li>
-
-                        <li>
-                          We will carefully assess the details of your case to
-                          help you understand the potential damages you may be
-                          entitled to, including medical bills, funeral
-                          expenses, and lost wages.
-                        </li>
-
-                        <li>
-                          We fight for the compensation you deserve, whether
-                          through negotiation or in-court representation.
-                        </li>
-
-                        <li>
-                          With our no-win, no-fee policy, you can focus on
-                          healing and taking care of your family, while we
-                          handle the legal side without any upfront costs.
-                        </li>
-                      </ul>
-                    </p>
+                      <p className="text-base md:text-lg">Kyoto, Japan</p>
+                    </div>
+                 
                   </div>
                 </div>
-    `,
+             
+              </div>
+
+              <p className="text-base md:text-lg">
+                Japan transforms into a wonderland of pink and white blossoms
+                during the iconic cherry blossom (sakura) season. Whether you're
+                exploring Tokyo's vibrant parks, Kyoto's historic temples, or
+                Hokkaido's serene landscapes, the blossoms provide a mesmerizing
+                backdrop to the country's rich cultural heritage. This trip
+                offers a perfect mix of nature, tradition, and local
+                experiences.
+              </p>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  Tour Highlights
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        🌸 Tokyo's Ueno Park:
+                      </span>
+                      Witness the stunning cherry blossoms in one of Tokyo's
+                      most popular parks.
+                    </li>
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        🏯 Kyoto's Philosopher's Path:
+                      </span>
+                      Walk through tranquil pathways lined with cherry trees and
+                      visit stunning temples.
+                    </li>
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        🚂 Train Journey to Mt. Fuji:
+                      </span>
+                      Ride scenic trains with views of cherry blossoms and
+                      majestic Mt. Fuji.
+                    </li>
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        🎎 Traditional Experiences:
+                      </span>
+                      Take part in tea ceremonies, wear a kimono, and experience
+                      cultural delights.
+                    </li>
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        🌄 Hokkaido's Late Blooms:
+                      </span>
+                      Visit Hokkaido for fewer crowds and extended cherry
+                      blossom seasons.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  What's Included?
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      Guided tours across top cherry blossom destinations.
+                    </li>
+                    <li>
+                      5-star accommodations with breakfast and themed dinners.
+                    </li>
+                    <li>
+                      Scenic train rides, entrance fees, and local
+                      transportation.
+                    </li>
+                    <li>Professional guides fluent in Japanese and English.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  Best Time to Visit
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        Mid-March to Early April:
+                      </span>
+                      Southern and central Japan (Tokyo, Kyoto).
+                    </li>
+                    <li>
+                      <span className="font-medium pr-1 text-secondary">
+                        Late April to Early May:
+                      </span>
+                      Northern regions like Hokkaido.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  Who is This Tour For?
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      Perfect for nature lovers, photographers, couples, and
+                      anyone eager to experience Japan’s cultural charm during
+                      its magical season.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  Price
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      Starting from
+                      <span className="text-primary font-semibold mx-1">$3,200</span>
+                      per person. (Includes all guided tours, meals, and
+                      accommodation.)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-xl md:text-2xl font-bold mb-4 text-secondary">
+                  Book Your Spot Today!
+                </p>
+                <div className="text-base md:text-lg">
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      Embrace the beauty of Japan's sakura season and create
+                      lifelong memories. 🌸
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <RippleButton
+                  buttonText="Book Your Adventure Today"
+                  rippleDuration={1000}
+                  href="https://calendly.com/espinosa-april/30min?month=2025-01"
+                  target="_blank"
+                />
+              </div>
+            </div>`,
   },
   {
     image: "/assets/vacation-destinations/visit-thailand.png",
@@ -246,6 +326,7 @@ export const vacationPackagesData = [
     slug: "visit-thailand",
     shortDesc:
       "Explore Thailand’s vibrant culture, golden temples, bustling markets, and pristine beaches on this unforgettable adventure.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/honeymoons-hawaii.png",
@@ -256,6 +337,7 @@ export const vacationPackagesData = [
     slug: "honeymoons-hawaii",
     shortDesc:
       "Celebrate your love with a luxurious Hawaiian honeymoon featuring stunning beaches, waterfalls, and tropical sunsets.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/island-hopping-hawaii.png",
@@ -266,6 +348,7 @@ export const vacationPackagesData = [
     slug: "island-hopping-hawaii",
     shortDesc:
       "Discover the magic of Hawaii by island-hopping across Oahu, Maui, Kauai, and the Big Island for diverse experiences.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/maldives.png",
@@ -276,6 +359,7 @@ export const vacationPackagesData = [
     slug: "luxury-escape-maldives",
     shortDesc:
       "Relax in stunning overwater villas surrounded by crystal-clear waters, coral reefs, and endless island luxury in the Maldives.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/asia-by-cruise.png",
@@ -286,6 +370,7 @@ export const vacationPackagesData = [
     slug: "asia-by-cruise",
     shortDesc:
       "Sail through iconic Southeast Asian cities like Singapore, Bangkok, and Hanoi on a luxurious cruise.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/romantic-getaway-greece.png",
@@ -296,6 +381,7 @@ export const vacationPackagesData = [
     slug: "romantic-getaway-greece",
     shortDesc:
       "Escape to Santorini’s whitewashed villages, blue-domed churches, and captivating sunsets over the Aegean Sea.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/venetian-gondola-experience.png",
@@ -306,6 +392,7 @@ export const vacationPackagesData = [
     slug: "venetian-gondola-experience",
     shortDesc:
       "Glide through Venice’s romantic canals on a gondola ride while soaking in centuries-old architecture and culture.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/explore-canadian-rockies.png",
@@ -316,6 +403,7 @@ export const vacationPackagesData = [
     slug: "explore-canadian-rockies",
     shortDesc:
       "Adventure through Banff’s stunning landscapes with turquoise lakes, snowy peaks, and unforgettable hiking trails.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/bali.png",
@@ -326,6 +414,7 @@ export const vacationPackagesData = [
     slug: "bali-paradise-retreat",
     shortDesc:
       "Discover the serene beauty of Bali with its lush rice terraces, stunning beaches, and vibrant cultural heritage.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/trek-through-patagonia.png",
@@ -336,6 +425,7 @@ export const vacationPackagesData = [
     slug: "trek-through-patagonia",
     shortDesc:
       "Embark on a thrilling adventure through Patagonia’s glaciers, mountains, and vast landscapes.",
+    content: ``,
   },
   {
     image: "/assets/vacation-destinations/adventure-capital-new-zealand.png",
@@ -346,6 +436,7 @@ export const vacationPackagesData = [
     slug: "adventure-capital-new-zealand",
     shortDesc:
       "Discover Queenstown’s adrenaline-fueled activities, from bungee jumping to scenic hikes and fjord cruises.",
+    content: ``,
   },
 ];
 
