@@ -31,7 +31,6 @@ const BreadcrumbSection = ({
               x: -100,
             }}
           >
-            {" "}
             <div className="w-full px-8 lg:px-20 text-center lg:text-start">
               <h1 className="text-white font-bold text-3xl lg:text-5xl mb-1 lg:mb-3 max-w-3xl w-full  ">
                 {title}

@@ -31,7 +31,7 @@ const ContactForm = () => {
     const templateParams = {
       name: formData.name,
       email: formData.email,
-      phone: formData.phone, // This maps to the phone field in the EmailJS template
+      phone: formData.phone,
       subject: formData.subject,
       message: formData.message,
     };
