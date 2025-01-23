@@ -108,8 +108,6 @@ const page = async ({ params }) => {
 
   // Get the first blog detail for dynamic data
   const currentBlog = blogDetails[0];
-  // const bgImage =
-  //   currentBlog?.featuredImage?.image?.url || "/default-breadcrumb-bg.png";
   const title = currentBlog?.title;
 
   return (
