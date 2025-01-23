@@ -58,7 +58,7 @@ h1 {
   transform: translateY(-50%);
 }
 
-/* Animations */
+/* Animation */
 .anim-typewriter {
   animation:
     typewriter 4s steps(44) 1s 1 normal both,
