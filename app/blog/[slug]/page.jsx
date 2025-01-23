@@ -37,54 +37,7 @@ ul {
 
 `;
 
-// function extractTextFromHtml(htmlString) {
-//   // Use regex to strip HTML tags and extract plain text
-//   const plainText = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
-//   return plainText;
-// }
-
-// function truncateText(text, wordLimit) {
-//   const words = text.split(/\s+/);
-//   if (words.length > wordLimit) {
-//     return words.slice(0, wordLimit).join(" ") + "...";
-//   }
-//   return text;
-// }
-
-// export async function generateMetadata({ params }) {
-//   const blogPostData = await GetAllPostData();
-
-//   const blogDetails = blogPostData?.data?.find(
-//     (blogs) => blogs.slug === params.slug
-//   );
-
-//   if (!blogDetails) {
-//     return {
-//       title: "Blog not found",
-//       description: "No blog post available.",
-//     };
-//   }
-
-//   const rawDescription = blogDetails?.body || "";
-//   const plainTextDescription = extractTextFromHtml(rawDescription);
-//   const shortDescription = truncateText(plainTextDescription, 120);
-//   console.log(blogDetails?.title);
-//   return {
-//     title: blogDetails?.title,
-//     description: shortDescription,
-//     openGraph: {
-//       title: blogDetails?.title,
-//       description: shortDescription,
-//       images: blogDetails?.featuredImage?.image?.url,
-//       url: `https://tiki-travel-website.vercel.app/blog/${blogDetails?.slug}`,
-//       type: "article",
-//       site_name: "tiki-travel-website.com",
-//     },
-//   };
-// }
-
 function extractTextFromHtml(htmlString) {
-  // Use regex to strip HTML tags and extract plain text
   const plainText = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
   return plainText;
 }
@@ -136,6 +89,14 @@ const page = async ({ params }) => {
     (blogs) => blogs.slug === params.slug
   );
 
+  if (!blogDetails || blogDetails.length === 0) {
+    return (
+      <div>
+        <h1>Blog not found</h1>
+      </div>
+    );
+  }
+
   const postDate = (date) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
       year: "numeric",
@@ -145,13 +106,19 @@ const page = async ({ params }) => {
     return formattedDate;
   };
 
+  // Get the first blog detail for dynamic data
+  const currentBlog = blogDetails[0];
+  // const bgImage =
+  //   currentBlog?.featuredImage?.image?.url || "/default-breadcrumb-bg.png";
+  const title = currentBlog?.title;
+
   return (
     <>
       <style>{css}</style>
       <BreadcrumbSection
-        bgImage={"/assets/shared/blog-breadcrumb-bg.png"}
-        title={"Blog Details"}
-        // title={blogDetails[0]?.title}
+        bgImage={"/assets/shared/blog-breadcrumb-bg-1.png"} // Dynamic Breadcrumb Background
+        title={title} // Dynamic Title
+        subTitle={"Blog Details"}
       />
 
       <SectionLayout bg="bg-white">
@@ -170,7 +137,7 @@ const page = async ({ params }) => {
         >
           <div className="grid gap-12 mb-10 gird-col-1 sm:grid-cols-3">
             {blogDetails?.map((blogs, index) => (
-              <div className="col-span-2">
+              <div className="col-span-2" key={index}>
                 <div className="flex items-center justify-between">
                   <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
                     {blogs?.category || "Blog Post"}
@@ -201,7 +168,7 @@ const page = async ({ params }) => {
                 Recent Cases
               </h2>
               {blogPostData?.data
-                ?.filter((pub, no) => pub.published === true)
+                ?.filter((pub) => pub.published === true)
                 ?.map((blogs, index) => (
                   <Link
                     className="flex md:flex-col xl:flex-row items-start xl:items-center gap-3 py-4  border-gray-200 border-b-1"
