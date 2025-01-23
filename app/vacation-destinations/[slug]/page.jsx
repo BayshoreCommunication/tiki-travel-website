@@ -1,26 +1,50 @@
 import parse from "html-react-parser";
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 import CallToAction from "@/components/shared/CallToAction";
-import RippleButton from "@/components/shared/RippleButton";
 import MorePackages from "@/components/vacation-destinations/MorePackages";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { vacationPackagesData } from "@/config/data";
 
-export const metadata = {
-  title: "",
-  description: "",
-  alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-USA",
+export async function generateMetadata({ params }) {
+  // Find the package details dynamically based on the slug
+  const packageDetails = vacationPackagesData?.find(
+    (service) => service.slug === params.slug
+  );
+
+  if (!packageDetails) {
+    return {
+      title: "Package not found",
+      description: "The requested package does not exist.",
+    };
+  }
+
+  // Extract dynamic values for metadata
+  const { title, shortDesc, image, slug } = packageDetails;
+
+  return {
+    title: title || "Vacation Package", // Fallback title
+    description:
+      shortDesc ||
+      "Discover our exciting vacation packages for unforgettable experiences.", // Fallback description
+    openGraph: {
+      title: title || "Vacation Package",
+      description:
+        shortDesc ||
+        "Discover our exciting vacation packages for unforgettable experiences.",
+      images: [
+        {
+          url: image || "/default-og-image.jpg", // Fallback image
+          width: 1200,
+          height: 600,
+          alt: title || "Vacation Package Image",
+        },
+      ],
+      url: `https://tiki-travel-website.vercel.app/vacation-destinations/${slug}`,
+      type: "article",
+      site_name: "Tiki Travel Website",
     },
-  },
-  openGraph: {
-    images: "/opengraph-image.jpg",
-  },
-};
+  };
+}
 
 const page = async ({ params }) => {
   const packageDetails = vacationPackagesData?.filter(
