@@ -52,8 +52,8 @@ const Footer = () => {
 
                 <div className="pt-5 text-[18px] font-light  text-white text-left max-w-[450px] leading-8  flex flex-col gap-3">
                   <p>FL Seller of Travel #T11133781</p>
-                  <p>FL Seller of Travel #T11133781</p>
-                  <p>FL Seller of Travel #T11133781</p>
+                  <p>WA Seller of Travel #604118560</p>
+                  <p>CA Seller of Travel #2130335-70</p>
                 </div>
               </div>
               <div className="">
