@@ -4,6 +4,7 @@ import CallToAction from "@/components/shared/CallToAction";
 import MorePackages from "@/components/vacation-destinations/MorePackages";
 import React from "react";
 import { vacationPackagesData } from "@/config/data";
+import RippleButton from "@/components/shared/RippleButton";
 
 export async function generateMetadata({ params }) {
   // Find the package details dynamically based on the slug
@@ -66,11 +67,19 @@ const page = async ({ params }) => {
         subTitle={"Vacation Destinations"}
       />
       {/* Main Content */}
-      <div className="py-10 md:py-24">
+      <div className="py-10 md:py-14">
         <div className="container">
           {packageDetails?.map((packages, index) => (
             <div className="col-span-3 lg:col-span-2" key={index}>
               <div className="mt-5 text-base">{parse(packages?.content)}</div>
+              <div className="mt-6">
+                <RippleButton
+                  buttonText="Book Your Adventure Today"
+                  rippleDuration={1000}
+                  href="https://calendly.com/espinosa-april/30min?month=2025-01"
+                  target="_blank"
+                />
+              </div>
             </div>
           ))}
         </div>
