@@ -22,12 +22,12 @@ const TestimonialSlideSection = ({ className }) => {
   return (
     <div className={`my-3 md:my-4  ${className}`}>
       <div className="flex items-center">
-        <button
+        {/* <button
           ref={prevButtonRef}
           className=" text-white hover:text-gray-100 p-3 border-1 border-white rounded-full"
         >
           <FaArrowLeft size={14} />
-        </button>
+        </button> */}
         <Swiper
           cssMode={true}
           mousewheel={true}
@@ -69,20 +69,20 @@ const TestimonialSlideSection = ({ className }) => {
                   <h4 className="font-bold text-white text-center text-2xl">
                     Diane F.
                   </h4>
-                  <p className="text-md  text-white mt-1">
+                  {/* <p className="text-md  text-white mt-1">
                     Words cannot express
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <button
+        {/* <button
           className=" text-white hover:text-gray-100 p-3 border-1 border-white rounded-full"
           ref={nextButtonRef}
         >
           <FaArrowRight size={14} />
-        </button>
+        </button> */}
       </div>
     </div>
   );
