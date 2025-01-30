@@ -49,7 +49,7 @@ const MainNavbar = () => {
       { title: "Blog", slug: "/blog" },
       { title: "Contact Us", slug: "/contact" },
     ],
-    []
+    [],
   );
 
   const navLogoList = useMemo(
@@ -60,27 +60,62 @@ const MainNavbar = () => {
       { title: "Blog", slug: "" },
       { title: "Contact Us", slug: "" },
     ],
-    []
+    [],
   );
 
   const handleScroll = useCallback(
     debounce(() => {
       setNavbarColor(window.scrollY >= 100);
     }, 100),
-    []
+    [],
   );
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      console.log("cleanup");
     };
   }, [handleScroll]);
+  useEffect(() => {
+    window.onscroll = function () {
+      console.log(window.scrollY);
+      if (window.scrollY >= 60) {
+        document.querySelector(".navbar").classList.add("top-2");
+        document.querySelector(".navbar").classList.remove("top-24");
+        if (window.scrollY == 0) {
+          document.querySelector(".navbar").classList.add("top-24");
+        }
+      }
+      if (window.scrollY < 60) {
+        document.querySelector(".navbar").classList.remove("top-2");
+        document.querySelector(".navbar").classList.add("top-24");
+        if (window.scrollY == 0) {
+          document.querySelector(".navbar").classList.add("top-24");
+        }
+      }
+      if (window.scrollY >= 60) {
+        document.querySelector(".xlnavbar").classList.add("top-2");
+        document.querySelector(".xlnavbar").classList.remove("top-32");
+        if (window.scrollY == 0) {
+          document.querySelector(".xlnavbar").classList.add("top-32");
+        }
+      }
+      if (window.scrollY < 60) {
+        document.querySelector(".xlnavbar").classList.remove("top-2");
+        document.querySelector(".xlnavbar").classList.add("top-32");
+
+        if (window.scrollY == 0) {
+          document.querySelector(".xlnavbar").classList.add("top-32");
+        }
+      }
+    };
+  }, []);
 
   return (
-    <section className={"relative z-50 py-2 lg:py-5"}>
-      <div className="bg-primary">
-        <div className="bg-white hidden md:block">
+    <section className={"relative z-50"}>
+      <div className="bg-primary ">
+        <div className="bg-white hidden md:block pt-2 md:pt-5 md:py-5 h-[171px] xl:h-[206px]">
           <div className="flex flex-col gap-y-3  items-center container  justify-center">
             <div className=" flex items-center gap-x-10 2xl:gap-x-16">
               <Link href={"/"}>
@@ -94,7 +129,7 @@ const MainNavbar = () => {
               </Link>
             </div>
 
-            <div className="px-12 py-3 border rounded-full">
+            <div className="px-12 py-3 border rounded-full fixed bg-white xlnavbar transition-all ease-in-out duration-0 hidden xl:block top-32 ">
               <div className="flex items-center justify-stretch gap-y-10 gap-x-8  xl:gap-x-8">
                 {menuItems.map((el) => (
                   <Link
@@ -102,7 +137,20 @@ const MainNavbar = () => {
                     href={el.slug}
                     className={`nav-item text-base md:text-lg font-semibold text-white ${pathname === el.slug ? "!text-primary border-b-2 border-primary" : ""} hover:text-primary`}
                   >
-                    {el.title}
+                    {el.title}{" "}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="px-12 py-3 border rounded-full fixed bg-white navbar transition-all ease-in-out duration-0   xl:hidden top-24">
+              <div className="flex items-center justify-stretch gap-y-10 gap-x-8  xl:gap-x-8">
+                {menuItems.map((el) => (
+                  <Link
+                    key={el.slug}
+                    href={el.slug}
+                    className={`nav-item text-base md:text-lg font-semibold text-white ${pathname === el.slug ? "!text-primary border-b-2 border-primary" : ""} hover:text-primary`}
+                  >
+                    {el.title}{" "}
                   </Link>
                 ))}
               </div>
