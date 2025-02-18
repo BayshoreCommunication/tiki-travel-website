@@ -1,7 +1,7 @@
 // import HeroSection from "@/components/home/HeroSection";
 import HeroSection from "@/components/home/HeroSection";
 import CallToAction from "@/components/shared/CallToAction";
-import TermsOfService from "@/components/terms-of-service/TermsOfService";
+import TermsAndConditions from "@/components/terms-and-conditions/TermsAndConditions";
 import React from "react";
 
 export const metadata = {
@@ -21,7 +21,7 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <TermsOfService />
+      <TermsAndConditions />
       <CallToAction />
     </>
   );

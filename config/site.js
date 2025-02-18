@@ -26,8 +26,8 @@ export const SITECONFIG = {
       },
 
       {
-        title: "Terms of Service",
-        slug: "/terms-of-service",
+        title: "Terms And Conditions",
+        slug: "/terms-and-conditions",
       },
       {
         title: "Cookie Policy",
