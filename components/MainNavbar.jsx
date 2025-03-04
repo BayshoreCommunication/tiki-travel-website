@@ -49,7 +49,7 @@ const MainNavbar = () => {
       { title: "Blog", slug: "/blog" },
       { title: "Contact Us", slug: "/contact" },
     ],
-    [],
+    []
   );
 
   const navLogoList = useMemo(
@@ -60,14 +60,14 @@ const MainNavbar = () => {
       { title: "Blog", slug: "" },
       { title: "Contact Us", slug: "" },
     ],
-    [],
+    []
   );
 
   const handleScroll = useCallback(
     debounce(() => {
       setNavbarColor(window.scrollY >= 100);
     }, 100),
-    [],
+    []
   );
 
   useEffect(() => {
@@ -79,7 +79,7 @@ const MainNavbar = () => {
   }, [handleScroll]);
   useEffect(() => {
     window.onscroll = function () {
-      console.log(window.scrollY);
+      //console.log(window.scrollY);
       if (window.scrollY >= 60) {
         document.querySelector(".navbar").classList.add("top-2");
         document.querySelector(".navbar").classList.remove("top-24");
