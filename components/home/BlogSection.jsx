@@ -49,7 +49,11 @@ const BlogMainSection = async () => {
                 ?.filter((pub) => pub.published === true)
                 ?.slice(-3) // Slices the last 3 blog posts
                 ?.map((blogs, index) => (
-                  <div key={index} className="group border block bg-white  ">
+                  <Link
+                    href={`/blog/${blogs?.slug}`}
+                    key={index}
+                    className="group border block bg-white  "
+                  >
                     <div className="w-full h-[250px] overflow-hidden relative">
                       <Image
                         src={blogs?.featuredImage?.image?.url}
@@ -84,7 +88,7 @@ const BlogMainSection = async () => {
                         </Link>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
             </div>
           </div>

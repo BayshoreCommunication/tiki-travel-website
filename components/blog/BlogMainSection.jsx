@@ -49,7 +49,11 @@ const BlogMainSection = async () => {
             {blogPostData?.data
               ?.filter((pub) => pub.published === true)
               ?.map((blogs, index) => (
-                <div key={index} className="group border block bg-white  ">
+                <Link
+                  href={`/blog/${blogs?.slug}`}
+                  key={index}
+                  className="group border block bg-white  "
+                >
                   <div className="w-full h-[400px] overflow-hidden relative">
                     <Image
                       src={blogs?.featuredImage?.image?.url}
@@ -84,7 +88,7 @@ const BlogMainSection = async () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
           </div>
 

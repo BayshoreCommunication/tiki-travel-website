@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <div className="overflow-x-hidden text-secondary bg-white">
             <MainNavbar />
+            {/* <StickyNavbar /> */}
             {children}
             <Footer />
             <ScrollToTopButton />
