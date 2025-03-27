@@ -94,7 +94,13 @@ import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { testimonialsData } from "@/config/data";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Autoplay,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -125,17 +131,15 @@ const TestimonialSlideSection = ({ className }) => {
         </button>
         <Swiper
           ref={swiperRef}
-          // cssMode={true}
-          // mousewheel={true}
           keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          // navigation
-          className="mySwiper w-full"
           spaceBetween={20}
           slidesPerView={1}
-          autoplay={true}
+          autoplay={{ delay: 2000, disableOnInteraction: false }} // Correct way to enable autoplay
           loop={true}
           grabCursor={true}
+          centeredSlides={true}
+          modules={[Autoplay, Navigation, Mousewheel, Keyboard]}
+          className="mySwiper w-full"
         >
           {[...testimonialsData].reverse().map((testimonial, index) => (
             <SwiperSlide key={index}>
