@@ -1798,52 +1798,19 @@ export const vacationPackagesData = [
 ];
 
 export const testimonialsData = [
+  // 1
   {
     name: "Diane F.",
     review:
       "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case great hands. Thank you so much!!",
     rating: 5,
   },
+  // 2
   {
-    name: "Arlene McCoy",
+    name: "Emilio",
     review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you",
+      "April is an amazing travel agent. She booked a vacation for my wife and me with a full package; she thought on every little detail of our vacation and she always kept us updated about everything, emailing us and making sure we had a great time, we didn't have to do anything, just show up for our vacation. I truly recommend her for your vacation destination.",
     rating: 5,
   },
-  {
-    name: "Robert Fox",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
-  {
-    name: "Devon Lane",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
-  {
-    name: "Jane Cooper",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
-  {
-    name: "Theresa Webb",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
-  {
-    name: "Wade Warren",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
-  {
-    name: "Albert Flores",
-    review:
-      "Words can not express the gratitude I have for you and your team. As soon as you took over my case, you and your team worked diligently on a resolution. Thank you so much for treating me as a person and showing so much care. You definitely made me feel at ease that my case was in great hands. Thank you so much!!",
-    rating: 5,
-  },
+  // 3
 ];
