@@ -125,7 +125,7 @@ const TestimonialSlideSection = ({ className }) => {
       <div className="flex items-center gap-4">
         <button
           ref={prevButtonRef}
-          className="text-white hover:text-gray-100 p-3 border border-white rounded-full"
+          className="text-white hover:text-gray-100 p-3 border border-white rounded-full hidden lg:block"
         >
           <FaArrowLeft size={20} />
         </button>
@@ -134,7 +134,7 @@ const TestimonialSlideSection = ({ className }) => {
           keyboard={true}
           spaceBetween={20}
           slidesPerView={1}
-          autoplay={{ delay: 2000, disableOnInteraction: false }} // Correct way to enable autoplay
+          autoplay={{ delay: 5000, disableOnInteraction: false }} // Correct way to enable autoplay
           loop={true}
           grabCursor={true}
           centeredSlides={true}
@@ -143,8 +143,8 @@ const TestimonialSlideSection = ({ className }) => {
         >
           {[...testimonialsData].reverse().map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="p-6 md:p-8 lg:p-10  text-center  ">
-                <p className="text-base md:text-lg font-semibold text-white mb-4">
+              <div className="px-2 md:p-8 lg:p-10  text-center  ">
+                <p className="text-base md:text-lg font-normal md:font-semibold text-white mb-4">
                   {testimonial.review}
                 </p>
                 <div className="text-yellow-500 mb-2 text-xl">
@@ -159,7 +159,7 @@ const TestimonialSlideSection = ({ className }) => {
         </Swiper>
         <button
           ref={nextButtonRef}
-          className="text-white hover:text-gray-100 p-3 border border-white rounded-full"
+          className="text-white hover:text-gray-100 p-3 border border-white rounded-full hidden lg:block"
         >
           <FaArrowRight size={20} />
         </button>
