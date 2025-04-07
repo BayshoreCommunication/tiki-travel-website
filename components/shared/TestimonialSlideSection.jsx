@@ -144,7 +144,7 @@ const TestimonialSlideSection = ({ className }) => {
           {[...testimonialsData].reverse().map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="px-2 md:p-8 lg:p-10  text-center  ">
-                <p className="text-base md:text-lg font-normal md:font-semibold text-white mb-4">
+                <p className="text-base md:text-lg font-normal md:font-semibold text-white mb-4 text-justify">
                   {testimonial.review}
                 </p>
                 <div className="text-yellow-500 mb-2 text-xl">
