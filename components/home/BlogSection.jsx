@@ -26,7 +26,7 @@ const BlogMainSection = async () => {
             <div>
               <ScrollMotionEffect effect="fade-up" duration="2000">
                 <h2 className="text-3xl md:text-5xl font-semibold">
-                  See our latest blog!
+                  Recent Published Blog
                 </h2>
               </ScrollMotionEffect>
             </div>
