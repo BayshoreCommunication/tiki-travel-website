@@ -33,8 +33,8 @@ const BlogMainSection = async () => {
           <div className="w-full lg:w-[56%] bg-white">
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <p className="text-base lg:text-lg text-center lg:text-start">
-                Welcome to Tiki Travel Agency! We’re excited to assist you in
-                exploring the world on your own terms.” From tips to guides and
+                Welcome to Tiki Travel Agency! We're excited to assist you in
+                exploring the world on you own 'terms'. From tips to guides and
                 stories, our blog has all you need. Let’s make travel easy and
                 unforgettable—explore with us!
               </p>

@@ -29,13 +29,13 @@ const FAQ = () => {
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="How do I prepare my itinerary as per my needs?"
+                title="Can you customize an itinerary to meet my needs?"
                 answer="Absolutely! We design personalized journeys to suit your desires and requirements."
               />
             </ScrollMotionEffect>
             <ScrollMotionEffect effect="fade-up" duration="2000">
               <Accordion
-                title="What kind of trips can you plan with it?"
+                title="What type of trips do you plan?"
                 answer="Depending on your chosen destination, we can arrange family vacations, honeymoons, luxury getaways, adventure trips, group tours and more."
               />
             </ScrollMotionEffect>

@@ -89,8 +89,8 @@ export default function FeaturedSection() {
                   />
                 </div>
                 <div className="absolute bottom-0 top-0 flex w-full items-center justify-center bg-black/50 p-6 text-white duration-500 hover:bg-[#0BB4AC]">
-                  <div className="flex flex-col justify-center items-center">
-                    <div>
+                  <div className="flex flex-col justify-center items-center mt-36">
+                    {/* <div>
                       <Image
                         src={item.icon}
                         alt={item.title}
@@ -101,11 +101,11 @@ export default function FeaturedSection() {
                           filter: "brightness(0) saturate(100%) invert(100%)",
                         }}
                       ></Image>
-                    </div>
-                    <h3 className="mt-4 mb-2 text-center text-xl font-semibold 2xl:text-2xl">
+                    </div> */}
+                    <h3 className="mt-4 mb-2 text-center text-xl font-semibold ">
                       {item.title}
                     </h3>
-                    <p className=" text-center text-base opacity-70 2xl:text-xl">
+                    <p className=" text-center text-base opacity-70 ">
                       {item.text}
                     </p>
                   </div>

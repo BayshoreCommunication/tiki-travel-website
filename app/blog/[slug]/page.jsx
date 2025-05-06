@@ -163,7 +163,7 @@ const page = async ({ params }) => {
 
             <div className="col-span-2 sm:col-span-1 h-[100%] md:h-[1000px] overflow-y-scroll overflow-x-hidden  p-3 rounded-lg">
               <h2 className="font-medium text-3xl text-secondary border-b-2 border-gray-200 pb-4 mb-6">
-                Recent Cases
+                Recent Blogs
               </h2>
               {blogPostData?.data
                 ?.filter((pub) => pub.published === true)
