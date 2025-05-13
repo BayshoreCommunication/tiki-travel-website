@@ -217,7 +217,7 @@ const Footer = () => {
           <hr className="my-6 border-white opacity-10 sm:mx-auto lg:my-8" />
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="text-[18px] font-normal text-center text-white">
-              <span> © 2024</span>{" "}
+              <span>© {new Date().getFullYear()}</span>{" "}
               <Link href=" " className="hover:underline  text-primary">
                 Tiki Travel Agency
               </Link>{" "}

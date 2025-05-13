@@ -17,7 +17,7 @@ const WhatPeopleSay = () => {
       />
 
       <div className="container pt-10 md:pt-14 md:pb-6 ">
-        <div className="relative flex flex-col items-center justify-center w-full h-full z-40">
+        <div className="relative flex flex-col items-center justify-center w-full h-full z-20">
           <ScrollMotionEffect effect="fade-right" duration="2000">
             <h1 className="font-semibold text-3xl md:text-5xl text-white text-center md:text-left">
               What People Say

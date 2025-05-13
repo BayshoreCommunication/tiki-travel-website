@@ -157,7 +157,7 @@ const MainNavbar = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden fixed top-0 w-full  border-b">
+        <div className="md:hidden fixed top-0 w-full  border-b  z-[50]">
           <Navbar
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
