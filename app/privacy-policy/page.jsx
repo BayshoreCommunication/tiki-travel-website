@@ -3,8 +3,9 @@ import PrivacyPolicy from "@/components/privacy-policy/PrivacyPolicy";
 import CallToAction from "@/components/shared/CallToAction";
 
 export const metadata = {
-  title: "",
-  description: "",
+  title: "Tiki Travel Agency",
+  description:
+    "Tiki Travel Agency creates customized vacation itineraries for travel to Hawaii and Asia. Tiki Travel Agency believes that travel should be more than just a vacation; it should be an immersive adventure. ",
   alternates: {
     canonical: "/",
     languages: {
@@ -12,10 +13,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    url: "https://tikitravelagency.com",
     images: "/opengraph-image.jpg",
-    locale: "en_US",
-    type: "website",
   },
 };
 
