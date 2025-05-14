@@ -75,7 +75,7 @@ export async function generateMetadata({ params }) {
       title: blogDetails?.title,
       description: shortDescription,
       images: blogDetails?.featuredImage?.image?.url,
-      url: `https://www.tikitravelagency.com//blog/${blogDetails?.slug}`,
+      url: `https://www.tikitravelagency.com/blog/${blogDetails?.slug}`,
       type: "article",
       site_name: "milwaukeelegalpros.com",
     },

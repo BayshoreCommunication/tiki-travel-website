@@ -14,7 +14,10 @@ export const metadata = {
     },
   },
   openGraph: {
+    url: "https://www.tikitravelagency.com",
     images: "/opengraph-image.jpg",
+    locale: "en_US",
+    type: "website",
   },
 };
 
