@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
           alt: title || "Vacation Package Image",
         },
       ],
-      url: `https://www.tikitravelagency.com/vacation-destinations/${slug}`,
+      url: `https://tikitravelagency.com/vacation-destinations/${slug}`,
       type: "article",
       site_name: "Tiki Travel Website",
     },
