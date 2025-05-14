@@ -10,7 +10,7 @@ const rubik = Rubik({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.tikitravelagency.com"),
+  metadataBase: new URL("https://tikitravelagency.com"),
 };
 export default function RootLayout({ children }) {
   return (
