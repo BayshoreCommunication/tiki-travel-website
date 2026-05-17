@@ -3,11 +3,16 @@ import React from "react";
 import Link from "next/link";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import GetAllPostData from "@/lib/GetAllPostData";
-import parse from "html-react-parser";
 import { MdOutlineDateRange } from "react-icons/md";
+import {
+  getBlogExcerpt,
+  getBlogImage,
+  getPublishedBlogPosts,
+} from "@/lib/blogHelpers";
 
 const BlogMainSection = async () => {
   const blogPostData = await GetAllPostData();
+  const publishedBlogs = getPublishedBlogPosts(blogPostData?.data);
 
   const postDate = (date) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -46,9 +51,10 @@ const BlogMainSection = async () => {
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Blog Grid */}
           <div className="flex flex-col gap-8 w-full lg:w-[66%] shrink-0">
-            {blogPostData?.data
-              ?.filter((pub) => pub.published === true)
-              ?.map((blogs, index) => (
+            {publishedBlogs?.map((blogs, index) => {
+              const image = getBlogImage(blogs);
+
+              return (
                 <Link
                   href={`/blog/${blogs?.slug}`}
                   key={index}
@@ -56,11 +62,13 @@ const BlogMainSection = async () => {
                 >
                   <div className="w-full h-[400px] overflow-hidden relative">
                     <Image
-                      src={blogs?.featuredImage?.image?.url}
-                      alt={blogs?.featuredImage?.altText}
-                      layout="fill"
+                      src={image.url}
+                      alt={image.alt}
+                      title={image.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 66vw"
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                      priority
+                      priority={index < 2}
                     />
                   </div>
                   <div className="px-6 lg:px-10 py-6 lg:py-10">
@@ -76,20 +84,18 @@ const BlogMainSection = async () => {
                       {blogs?.title}
                     </h1>
                     <p className="text-base md:text-lg text-start mt-3 line-clamp-3">
-                      {parse(blogs?.body)}
+                      {getBlogExcerpt(blogs)}
                     </p>
 
                     <div className="mt-5 flex justify-start">
-                      <Link
-                        href={`/blog/${blogs?.slug}`}
-                        className="text-primary font-medium text-lg py-px border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
-                      >
+                      <span className="text-primary font-medium text-lg py-px border-b-2 border-primary group-hover:text-secondary group-hover:border-secondary transition-all duration-500">
                         Read More
-                      </Link>
+                      </span>
                     </div>
                   </div>
                 </Link>
-              ))}
+              );
+            })}
           </div>
 
           {/* Sidebar Section */}

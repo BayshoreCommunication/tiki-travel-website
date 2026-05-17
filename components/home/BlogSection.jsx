@@ -4,10 +4,15 @@ import Link from "next/link";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 import { MdOutlineDateRange } from "react-icons/md";
 import GetAllPostData from "@/lib/GetAllPostData";
-import parse from "html-react-parser";
+import {
+  getBlogExcerpt,
+  getBlogImage,
+  getPublishedBlogPosts,
+} from "@/lib/blogHelpers";
 
 const BlogMainSection = async () => {
   const blogPostData = await GetAllPostData();
+  const latestBlogs = getPublishedBlogPosts(blogPostData?.data, 3);
 
   const postDate = (date) => {
     const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -45,10 +50,10 @@ const BlogMainSection = async () => {
           </div>
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8  justify-center text-center h-full">
-              {blogPostData?.data
-                ?.filter((pub) => pub.published === true)
-                ?.slice(-3) // Slices the last 3 blog posts
-                ?.map((blogs, index) => (
+              {latestBlogs?.map((blogs, index) => {
+                const image = getBlogImage(blogs);
+
+                return (
                   <Link
                     href={`/blog/${blogs?.slug}`}
                     key={index}
@@ -56,11 +61,13 @@ const BlogMainSection = async () => {
                   >
                     <div className="w-full h-[250px] overflow-hidden relative">
                       <Image
-                        src={blogs?.featuredImage?.image?.url}
-                        alt={blogs?.featuredImage?.altText}
-                        layout="fill"
+                        src={image.url}
+                        alt={image.alt}
+                        title={image.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        priority
+                        priority={index < 3}
                       />
                     </div>
                     <div className="px-6 py-6">
@@ -76,26 +83,24 @@ const BlogMainSection = async () => {
                         {blogs?.title}
                       </h1>
                       <p className="text-base md:text-lg text-start mt-2 line-clamp-3">
-                        {parse(blogs?.body)}
+                        {getBlogExcerpt(blogs)}
                       </p>
 
                       <div className="mt-3 flex justify-start">
-                        <Link
-                          href={`/blog/${blogs?.slug}`}
-                          className="text-primary font-medium text-lg py-px border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
-                        >
+                        <span className="text-primary font-medium text-lg py-px border-b-2 border-primary group-hover:text-secondary group-hover:border-secondary transition-all duration-500">
                           Read More
-                        </Link>
+                        </span>
                       </div>
                     </div>
                   </Link>
-                ))}
+                );
+              })}
             </div>
           </div>
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="flex justify-center  md:hidden visible md:invisible mt-10">
               <Link
-                href={"#"}
+                href="/blog"
                 className="text-primary font-medium text-base lg:text-xl py-2 px-6 border-2 border-primary hover:text-white hover:bg-primary transition-all duration-500 "
               >
                 Read All Blogs

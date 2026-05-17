@@ -5,57 +5,48 @@ import SectionLayout from "@/components/shared/SectionLayout";
 import CardMotion from "@/components/motion/CardMotion";
 import Link from "next/link";
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
+import {
+  getBlogBySlug,
+  getBlogExcerpt,
+  getBlogImage,
+  getPublishedBlogPosts,
+} from "@/lib/blogHelpers";
 
-const css = `
- h1, h2, p, br, nav {
+const richTextCss = `
+.blog-rich-text h1,
+.blog-rich-text h2,
+.blog-rich-text p,
+.blog-rich-text br,
+.blog-rich-text nav {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: normal;
 }
 
-h1, h2 {
-  font-style: blog;
-}
-
-h1 {
+.blog-rich-text h1 {
   font-size: 40px;
 }
 
-h2 {
+.blog-rich-text h2 {
   font-size: 25px;
 }
 
-p {
+.blog-rich-text p {
   font-size: 17px;
   padding-top: 6px;
   padding-bottom: 6px;
 }
 
-ul {
+.blog-rich-text ul {
   list-style-type: disc;
 }
 
 `;
 
-function extractTextFromHtml(htmlString) {
-  const plainText = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
-  return plainText;
-}
-
-function truncateText(text, wordLimit) {
-  const words = text.split(/\s+/);
-  if (words.length > wordLimit) {
-    return words.slice(0, wordLimit).join(" ") + "...";
-  }
-  return text;
-}
-
 export async function generateMetadata({ params }) {
   const blogPostData = await GetAllPostData();
 
-  const blogDetails = blogPostData?.data?.find(
-    (blogs) => blogs.slug === params.slug
-  );
+  const blogDetails = getBlogBySlug(blogPostData?.data, params.slug);
 
   if (!blogDetails) {
     return {
@@ -64,20 +55,35 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const rawDescription = blogDetails?.body || "";
-  const plainTextDescription = extractTextFromHtml(rawDescription);
-  const shortDescription = truncateText(plainTextDescription, 120);
+  const pageTitle = blogDetails?.metaTitle || blogDetails?.title;
+  const shortDescription =
+    blogDetails?.metaDescription || getBlogExcerpt(blogDetails, 220);
+  const image = getBlogImage(blogDetails);
 
   return {
-    title: blogDetails?.title,
+    title: pageTitle,
     description: shortDescription,
+    alternates: {
+      canonical: `/blog/${blogDetails?.slug}`,
+    },
     openGraph: {
-      title: blogDetails?.title,
+      title: pageTitle,
       description: shortDescription,
-      images: blogDetails?.featuredImage?.image?.url,
+      images: [
+        {
+          url: image.url,
+          alt: image.alt,
+        },
+      ],
       url: `https://tikitravelagency.com/blog/${blogDetails?.slug}`,
       type: "article",
-      site_name: "milwaukeelegalpros.com",
+      siteName: "Tiki Travel Agency",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageTitle,
+      description: shortDescription,
+      images: [image.url],
     },
   };
 }
@@ -85,11 +91,10 @@ export async function generateMetadata({ params }) {
 const page = async ({ params }) => {
   const blogPostData = await GetAllPostData();
 
-  const blogDetails = blogPostData?.data?.filter(
-    (blogs) => blogs.slug === params.slug
-  );
+  const currentBlog = getBlogBySlug(blogPostData?.data, params.slug);
+  const recentBlogs = getPublishedBlogPosts(blogPostData?.data);
 
-  if (!blogDetails || blogDetails.length === 0) {
+  if (!currentBlog) {
     return (
       <div>
         <h1>Blog not found</h1>
@@ -106,13 +111,12 @@ const page = async ({ params }) => {
     return formattedDate;
   };
 
-  // Get the first blog detail for dynamic data
-  const currentBlog = blogDetails[0];
   const title = currentBlog?.title;
+  const ContentComponent = currentBlog?.ContentComponent;
 
   return (
     <>
-      <style>{css}</style>
+      <style>{richTextCss}</style>
       <BreadcrumbSection
         bgImage={"/assets/shared/blog-breadcrumb-bg-1.png"} // Dynamic Breadcrumb Background
         title={title} // Dynamic Title
@@ -134,68 +138,48 @@ const page = async ({ params }) => {
           }}
         >
           <div className="grid gap-12 mb-10 gird-col-1 sm:grid-cols-3">
-            {blogDetails?.map((blogs, index) => (
-              <div className="col-span-2" key={index}>
-                <div className="flex items-center justify-between">
-                  <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
-                    {blogs?.category || "Blog Post"}
-                  </p>
-                  <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
-                    {postDate(blogs?.createdAt)}
-                  </p>
-                </div>
-                <h2
-                  className={`mb-0 md:mb-4 text-2xl md:text-4xl font-bold tracking-normal text-left text-[#1B2639]`}
-                >
-                  {blogs?.title}
-                </h2>
-                <Image
-                  width={1000}
-                  height={300}
-                  src={blogs?.featuredImage?.image?.url}
-                  alt={blogs?.featuredImage?.altText}
-                  className="w-full h-auto bg-center bg-cover"
-                />
-
-                <div className="mt-2 text-md">{parse(blogs?.body)}</div>
-              </div>
-            ))}
+            <div className="col-span-2">
+              {ContentComponent ? (
+                <ContentComponent post={currentBlog} />
+              ) : (
+                <DefaultBlogContent blog={currentBlog} postDate={postDate} />
+              )}
+            </div>
 
             <div className="col-span-2 sm:col-span-1 h-[100%] md:h-[1000px] overflow-y-scroll overflow-x-hidden  p-3 rounded-lg">
               <h2 className="font-medium text-3xl text-secondary border-b-2 border-gray-200 pb-4 mb-6">
                 Recent Blogs
               </h2>
-              {blogPostData?.data
-                ?.filter((pub) => pub.published === true)
-                ?.map((blogs, index) => (
+              {recentBlogs?.map((blogs, index) => {
+                const image = getBlogImage(blogs);
+
+                return (
                   <Link
-                    className="flex md:flex-col xl:flex-row items-start xl:items-center gap-3 py-4  border-gray-200 border-b-1"
+                    className="flex md:flex-col xl:flex-row items-start xl:items-center gap-3 py-4 border-gray-200 border-b"
                     key={index}
                     href={`/blog/${blogs?.slug}`}
                   >
-                    <Image
-                      width={180}
-                      height={180}
-                      src={blogs?.featuredImage?.image?.url}
-                      alt={blogs?.featuredImage?.altText}
-                      className="w-[100px] lg:w-[130px]  h-auto bg-center bg-cover"
-                    />
+                    <div className="relative h-[88px] w-[112px] shrink-0 overflow-hidden bg-slate-100 lg:w-[130px]">
+                      <Image
+                        fill
+                        sizes="130px"
+                        src={image.url}
+                        alt={image.alt}
+                        title={image.title}
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="flex flex-col gap-px">
-                      <h4 className="text-base lg:text-lg font-medium text-black text-left leading-tight hidden md:block">
-                        {blogs?.title.slice(0, 60)}
+                      <h4 className="text-base lg:text-lg font-medium text-black text-left leading-tight line-clamp-2">
+                        {blogs?.title}
                       </h4>
-                      <h4 className="text-base lg:text-lg font-medium text-black text-left leading-tight  md:hidden">
-                        {blogs?.title.slice(0, 20)}
-                      </h4>
-                      <div className="py-0 text-sm hidden md:block">
-                        {parse(blogs?.body?.slice(0, 60))}
-                      </div>
-                      <div className="py-0 text-sm md:hidden">
-                        {parse(blogs?.body?.slice(0, 26))}
-                      </div>
+                      <p className="py-0 text-sm line-clamp-2">
+                        {getBlogExcerpt(blogs, 80)}
+                      </p>
                     </div>
                   </Link>
-                ))}
+                );
+              })}
             </div>
           </div>
         </CardMotion>
@@ -205,3 +189,42 @@ const page = async ({ params }) => {
 };
 
 export default page;
+
+function DefaultBlogContent({ blog, postDate }) {
+  const image = getBlogImage(blog);
+
+  return (
+    <>
+      <div className="flex items-center justify-between">
+        <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
+          {blog?.category || "Blog Post"}
+        </p>
+        <p className="text-[.9rem] md:text-[1rem] text-secondary text-left italic mt-4 ">
+          {postDate(blog?.createdAt)}
+        </p>
+      </div>
+      <h2
+        className={`mb-0 md:mb-4 text-2xl md:text-4xl font-bold tracking-normal text-left text-[#1B2639]`}
+      >
+        {blog?.title}
+      </h2>
+      <figure>
+        <Image
+          width={1000}
+          height={300}
+          src={image.url}
+          alt={image.alt}
+          title={image.title}
+          className="w-full h-auto bg-center bg-cover"
+        />
+        {image.caption ? (
+          <figcaption className="mt-2 text-sm italic text-secondary/70">
+            {image.caption}
+          </figcaption>
+        ) : null}
+      </figure>
+
+      <div className="mt-2 text-md blog-rich-text">{parse(blog?.body || "")}</div>
+    </>
+  );
+}
