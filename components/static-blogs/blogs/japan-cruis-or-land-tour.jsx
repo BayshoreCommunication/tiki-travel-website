@@ -224,18 +224,20 @@ const landBestFor = [
 function GuidePage({ children }) {
   return (
     <section className="overflow-hidden border border-slate-200 bg-white shadow-sm">
-      <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary/75 sm:px-6">
+      <div className="flex flex-col gap-2 items-start justify-between border-b border-slate-200 bg-slate-50 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-secondary/75 sm:flex-row sm:items-center sm:px-6 sm:py-3 md:text-[11px]">
         <span>Japan Travel Guide</span>
         <span>Tiki Travel Agency</span>
       </div>
-      <div className="px-4 py-6 sm:px-6 lg:px-8">{children}</div>
+      <div className="px-3 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+        {children}
+      </div>
     </section>
   );
 }
 
 function SectionTitle({ children }) {
   return (
-    <h2 className="border-l-4 border-primary pl-4 text-2xl font-semibold leading-tight text-secondary md:text-3xl">
+    <h2 className="border-l-4 border-primary pl-3 text-xl font-semibold leading-tight text-secondary sm:pl-4 sm:text-2xl md:text-3xl">
       {children}
     </h2>
   );
@@ -254,14 +256,21 @@ function StatGrid() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-px overflow-hidden border border-slate-200 bg-slate-200 md:grid-cols-4">
+    <div className="grid grid-cols-2 gap-px overflow-hidden border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-4">
       {stats.map(([number, title, text]) => (
-        <div key={title} className="bg-white px-4 py-5 text-center">
-          <p className="text-3xl font-bold text-primary">{number}</p>
-          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-secondary">
+        <div
+          key={title}
+          className="bg-white px-2 py-3 text-center sm:px-4 sm:py-5"
+        >
+          <p className="text-2xl font-bold text-primary sm:text-3xl">
+            {number}
+          </p>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-[0.08em] text-secondary sm:mt-2 sm:text-sm">
             {title}
           </p>
-          <p className="mt-2 text-sm text-secondary/70">{text}</p>
+          <p className="mt-1 text-xs text-secondary/70 sm:mt-2 sm:text-sm">
+            {text}
+          </p>
         </div>
       ))}
     </div>
@@ -282,11 +291,11 @@ function TravelerGrid() {
   ];
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
       {travelers.map((traveler) => (
         <div
           key={traveler}
-          className="border border-slate-200 bg-slate-50 px-4 py-3 text-center text-sm font-semibold text-secondary"
+          className="border border-slate-200 bg-slate-50 px-3 py-2 text-center text-xs font-semibold text-secondary sm:px-4 sm:py-3 sm:text-sm"
         >
           {traveler}
         </div>
@@ -300,12 +309,15 @@ function ComparisonTable({
   headings = ["Category", "Japan Cruise", "Land Tour"],
 }) {
   return (
-    <div className="overflow-x-auto border border-slate-200">
-      <table className="w-full min-w-[620px] border-collapse text-left text-sm">
-        <thead className="bg-secondary text-white">
+    <div className="overflow-x-auto border border-slate-200 -mx-3 sm:mx-0">
+      <table className="w-full border-collapse text-left text-sm">
+        <thead className="bg-secondary text-white sticky top-0">
           <tr>
             {headings.map((heading) => (
-              <th key={heading} className="px-4 py-3 font-semibold">
+              <th
+                key={heading}
+                className="px-2 py-2 font-semibold text-xs sm:px-4 sm:py-3 sm:text-sm whitespace-nowrap"
+              >
                 {heading}
               </th>
             ))}
@@ -317,13 +329,13 @@ function ComparisonTable({
               key={category}
               className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
             >
-              <td className="border-t border-slate-200 px-4 py-3 font-semibold text-secondary">
+              <td className="border-t border-slate-200 px-2 py-2 font-semibold text-secondary text-xs sm:px-4 sm:py-3 sm:text-sm">
                 {category}
               </td>
-              <td className="border-t border-slate-200 px-4 py-3 text-secondary/80">
+              <td className="border-t border-slate-200 px-2 py-2 text-secondary/80 text-xs sm:px-4 sm:py-3 sm:text-sm">
                 {cruise}
               </td>
-              <td className="border-t border-slate-200 px-4 py-3 text-secondary/80">
+              <td className="border-t border-slate-200 px-2 py-2 text-secondary/80 text-xs sm:px-4 sm:py-3 sm:text-sm">
                 {land}
               </td>
             </tr>
@@ -336,12 +348,14 @@ function ComparisonTable({
 
 function BenefitBlock({ title, points }) {
   return (
-    <div className="border border-slate-200 bg-slate-50 p-4">
-      <h3 className="text-lg font-semibold text-secondary">{title}</h3>
-      <ul className="mt-3 space-y-2 text-sm text-secondary/80">
+    <div className="border border-slate-200 bg-slate-50 p-3 sm:p-4">
+      <h3 className="text-base font-semibold text-secondary sm:text-lg">
+        {title}
+      </h3>
+      <ul className="mt-2 space-y-1.5 text-xs text-secondary/80 sm:mt-3 sm:space-y-2 sm:text-sm">
         {points.map((point) => (
           <li key={point} className="flex gap-2">
-            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary sm:mt-2" />
             <span>{point}</span>
           </li>
         ))}
@@ -352,18 +366,20 @@ function BenefitBlock({ title, points }) {
 
 function DestinationBlock({ destination }) {
   return (
-    <div className="border-b border-slate-200 pb-6 last:border-b-0 last:pb-0">
-      <h3 className="text-xl font-semibold text-secondary">
+    <div className="border-b border-slate-200 pb-4 last:border-b-0 last:pb-0 sm:pb-6">
+      <h3 className="text-lg font-semibold text-secondary sm:text-xl">
         {destination.title}
       </h3>
-      <p className="mt-2 text-secondary/80">{destination.description}</p>
-      <div className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+      <p className="mt-1.5 text-xs text-secondary/80 sm:mt-2 sm:text-sm">
+        {destination.description}
+      </p>
+      <div className="mt-3 grid gap-x-4 gap-y-2 grid-cols-1 sm:grid-cols-2 sm:gap-x-6 sm:mt-4">
         {destination.points.map((point) => (
           <div
             key={point}
-            className="flex gap-2 text-sm font-medium text-secondary/80"
+            className="flex gap-2 text-xs font-medium text-secondary/80 sm:text-sm"
           >
-            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary sm:mt-2" />
             <span>{point}</span>
           </div>
         ))}
@@ -378,15 +394,15 @@ function BestForList({ title, items, accent = "primary" }) {
   return (
     <div className="border border-slate-200 bg-white">
       <h3
-        className={`${colorClass} px-4 py-3 text-lg font-semibold uppercase tracking-[0.08em] text-white`}
+        className={`${colorClass} px-3 py-2.5 text-base font-semibold uppercase tracking-[0.08em] text-white sm:px-4 sm:py-3 sm:text-lg`}
       >
         {title}
       </h3>
-      <ul className="space-y-3 p-4 text-secondary/85">
+      <ul className="space-y-2 p-3 text-secondary/85 text-xs sm:space-y-3 sm:p-4 sm:text-sm">
         {items.map((item) => (
-          <li key={item} className="flex gap-3">
+          <li key={item} className="flex gap-2 sm:gap-3">
             <span
-              className={`mt-2 h-2 w-2 shrink-0 rounded-full ${colorClass}`}
+              className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${colorClass} sm:mt-2`}
             />
             <span>{item}</span>
           </li>
@@ -403,18 +419,18 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
     <article className="space-y-6 text-secondary">
       <GuidePage page="1">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary sm:text-sm">
             A complete comparison guide by Tiki Travel Agency
           </p>
-          <h1 className="mt-3 text-4xl font-bold leading-tight text-secondary md:text-5xl">
+          <h1 className="mt-2 text-2xl font-bold leading-tight text-secondary sm:mt-3 sm:text-3xl md:text-4xl lg:text-5xl">
             Japan Cruise or Land Tour?
           </h1>
-          <p className="mt-2 text-xl font-medium text-secondary/75">
+          <p className="mt-2 text-base font-medium text-secondary/75 sm:text-lg md:text-xl">
             The Best Choice for First-Time Visitors
           </p>
         </div>
 
-        <figure className="mt-6 -mx-4 sm:-mx-6 lg:mx-0">
+        <figure className="mt-4 -mx-3 sm:-mx-6 sm:mt-6 lg:mx-0 lg:mt-6">
           <div className="relative aspect-[16/9] w-full overflow-hidden border border-slate-200 bg-slate-100">
             <Image
               src={featuredImage.image.url}
@@ -429,7 +445,7 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           </div>
           <figcaption
             id="japan-feature-image-caption"
-            className="border-x border-b border-slate-200 bg-slate-50 px-4 py-3 text-sm italic text-secondary/70 mx-4 sm:mx-6 lg:mx-0"
+            className="border-x border-b border-slate-200 bg-slate-50 px-3 py-2 text-xs italic text-secondary/70 mx-3 sm:mx-6 sm:px-4 sm:py-3 sm:text-sm lg:mx-0"
           >
             {featuredImage.caption}
           </figcaption>
@@ -438,7 +454,7 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           </p>
         </figure>
 
-        <p className="mt-6 text-base leading-7 text-secondary/85">
+        <p className="mt-4 text-sm leading-6 text-secondary/85 sm:mt-6 sm:text-base sm:leading-7">
           Japan is one of the most fascinating and unforgettable destinations in
           the world, but it is not a beginner do-it-yourself destination. The
           biggest question for first-time visitors is whether to explore by
@@ -450,11 +466,11 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           <StatGrid />
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
           <SectionTitle>
             Why Japan Has Become One of the World's Top Bucket List Destination
           </SectionTitle>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             Japan offers a travel experience unlike anywhere else. Ancient
             temples beside futuristic skyscrapers. Centuries-old traditions
             blending seamlessly with cutting-edge technology. Every city feels
@@ -462,11 +478,11 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           </p>
         </div>
 
-        <div className="mt-8 space-y-4">
-          <h3 className="text-xl font-semibold text-secondary">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
+          <h3 className="text-base font-semibold text-secondary sm:text-lg md:text-xl">
             A Country for Every Kind of Traveler
           </h3>
-          <ul className="space-y-2 text-secondary/85">
+          <ul className="space-y-1.5 text-xs text-secondary/85 sm:space-y-2 sm:text-sm">
             <li>
               Walk through quiet bamboo forests in Kyoto, then stand under giant
               neon signs in Tokyo.
@@ -485,26 +501,26 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
       </GuidePage>
 
       <GuidePage page="2">
-        <div className="space-y-5">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-5">
           <SectionTitle>
             Cruise vs. Land Tour: Side-by-Side Comparison
           </SectionTitle>
           <ComparisonTable rows={cruiseLandRows} />
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
           <SectionTitle>Exploring Japan by Cruise</SectionTitle>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             Japan cruises have grown tremendously in popularity, especially
             among first-time visitors who want an easier and more comfortable
             way to see multiple destinations. Cruising allows travelers to
             unpack once while visiting several cities throughout Japan and even
             nearby countries like South Korea.
           </p>
-          <h3 className="text-xl font-semibold text-secondary">
+          <h3 className="text-base font-semibold text-secondary sm:text-lg md:text-xl">
             Benefits of Cruising Japan
           </h3>
-          <div className="grid gap-4">
+          <div className="grid gap-3 sm:gap-4">
             <BenefitBlock
               title="Convenience and Simplicity"
               points={[
@@ -534,11 +550,11 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
       </GuidePage>
 
       <GuidePage page="3">
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <SectionTitle>
             Best Destinations Commonly Seen on Japan Cruises
           </SectionTitle>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {cruiseDestinations.map((destination) => (
               <DestinationBlock
                 key={destination.title}
@@ -550,19 +566,19 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
       </GuidePage>
 
       <GuidePage page="4">
-        <div className="space-y-5">
+        <div className="space-y-3 sm:space-y-5">
           <SectionTitle>Exploring Japan by Land</SectionTitle>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             Land-based travel offers a much deeper connection to Japan's
             culture, food, traditions, and daily life. Travelers ride the famous
             Shinkansen bullet trains, explore local neighborhoods, stay in
             traditional inns, and spend enough time in each city to truly absorb
             the atmosphere.
           </p>
-          <h3 className="text-xl font-semibold text-secondary">
+          <h3 className="text-base font-semibold text-secondary sm:text-lg md:text-xl">
             Must-Visit Destinations for a Japan Land Tour
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {landDestinations.map((destination) => (
               <DestinationBlock
                 key={destination.title}
@@ -574,11 +590,11 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
       </GuidePage>
 
       <GuidePage page="5">
-        <div className="space-y-5">
+        <div className="space-y-3 sm:space-y-5">
           <SectionTitle>
             Food, Culture and Entertainment: Which Experience Is Better?
           </SectionTitle>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             One of the biggest differences between cruises and land tours is the
             level of immersion. Cruises provide wonderful convenience and allow
             travelers to sample different destinations. However, land travel
@@ -590,9 +606,9 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           />
         </div>
 
-        <div className="mt-8 space-y-5">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-5">
           <SectionTitle>Which Style of Travel Is Right for You?</SectionTitle>
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-3 sm:gap-5 lg:grid-cols-2">
             <BestForList title="Cruise Is Best If..." items={cruiseBestFor} />
             <BestForList
               title="Land Tour Is Best If..."
@@ -604,9 +620,9 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
       </GuidePage>
 
       <GuidePage page="6">
-        <div className="space-y-5">
+        <div className="space-y-3 sm:space-y-5">
           <SectionTitle>The Best of Both Worlds</SectionTitle>
-          <ul className="space-y-3 leading-7 text-secondary/85">
+          <ul className="space-y-2 text-xs leading-6 text-secondary/85 sm:space-y-3 sm:text-sm sm:leading-7">
             <li>
               Some travelers combine both styles, spending several days in Tokyo
               and Kyoto before boarding a Japan cruise.
@@ -621,35 +637,35 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           </ul>
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
           <SectionTitle>Final Thoughts from Tiki Travel Agency</SectionTitle>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             There is no wrong way to experience Japan. Both cruises and
             land-based itineraries can create unforgettable memories and
             incredible cultural experiences. The key is choosing the style of
             travel that best matches your comfort level, interests, mobility
             needs, and travel goals.
           </p>
-          <p className="leading-7 text-secondary/85">
+          <p className="text-xs leading-6 text-secondary/85 sm:text-sm sm:leading-7">
             Whether you want to experience Japan through a relaxing cruise
             itinerary or an immersive land-based adventure, we help make the
             planning process seamless and stress-free.
           </p>
-          <p className="text-center text-lg font-semibold italic text-secondary">
+          <p className="text-center text-base font-semibold italic text-secondary sm:text-lg">
             Once you visit Japan, it often becomes the first of many trips back.
           </p>
         </div>
 
-        <div className="mt-8 border border-primary bg-primary/10 px-5 py-6 text-center">
-          <h2 className="text-2xl font-bold uppercase tracking-[0.1em] text-secondary">
+        <div className="mt-6 border border-primary bg-primary/10 px-3 py-4 text-center sm:mt-8 sm:px-5 sm:py-6">
+          <h2 className="text-lg font-bold uppercase tracking-[0.1em] text-secondary sm:text-2xl">
             Plan Your Japan Adventure
           </h2>
-          <p className="mx-auto mt-3 max-w-2xl leading-7 text-secondary/85">
+          <p className="mx-auto mt-2 max-w-2xl text-xs leading-6 text-secondary/85 sm:mt-3 sm:text-sm sm:leading-7">
             At Tiki Travel Agency, we specialize in helping travelers create
             personalized Japan vacations designed around their travel style and
             dream experiences.
           </p>
-          <p className="mt-4 font-semibold text-primary">
+          <p className="mt-3 text-xs font-semibold text-primary sm:mt-4 sm:text-sm">
             www.tikitravelagency.com
           </p>
         </div>
