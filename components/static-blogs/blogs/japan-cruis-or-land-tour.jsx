@@ -34,25 +34,69 @@ export const japanCruiseOrLandTourPost = {
 };
 
 const cruiseLandRows = [
-  ["Accommodation", "Unpack once. The ship is your hotel", "Multiple hotels, different each city"],
-  ["Transportation", "The cruise ship handles city transfers", "Shinkansen, local trains, taxis"],
-  ["Pacing", "Relaxed, organized port days", "Flexible. Fast or slow, as you like"],
-  ["Cultural Depth", "Highlights and shore excursions", "Deep neighborhood immersion"],
-  ["Food Experience", "Ship dining plus port tastings", "Full access to Japan's food culture"],
-  ["Best For", "Families, retirees, first-timers", "Foodies, adventurers, culture seekers"],
-  ["Physical Demand", "Low. Ship amenities available", "Walking, train stations"],
+  [
+    "Accommodation",
+    "Unpack once. The ship is your hotel",
+    "Multiple hotels, different each city",
+  ],
+  [
+    "Transportation",
+    "The cruise ship handles city transfers",
+    "Shinkansen, local trains, taxis",
+  ],
+  [
+    "Pacing",
+    "Relaxed, organized port days",
+    "Flexible. Fast or slow, as you like",
+  ],
+  [
+    "Cultural Depth",
+    "Highlights and shore excursions",
+    "Deep neighborhood immersion",
+  ],
+  [
+    "Food Experience",
+    "Ship dining plus port tastings",
+    "Full access to Japan's food culture",
+  ],
+  [
+    "Best For",
+    "Families, retirees, first-timers",
+    "Foodies, adventurers, culture seekers",
+  ],
+  [
+    "Physical Demand",
+    "Low. Ship amenities available",
+    "Walking, train stations",
+  ],
   ["Cost Structure", "All-inclusive per night", "Pay as you go"],
 ];
 
 const foodCultureRows = [
-  ["Local Restaurants", "Limited to port hours", "Full access any time, any neighborhood"],
+  [
+    "Local Restaurants",
+    "Limited to port hours",
+    "Full access any time, any neighborhood",
+  ],
   ["Nightlife", "Ship entertainment", "Tokyo bars, karaoke, themed cafes"],
   ["Regional Cuisine", "Introduction level", "Region-by-region deep dives"],
-  ["Cultural Activities", "Organized excursions", "Spontaneous and independent"],
+  [
+    "Cultural Activities",
+    "Organized excursions",
+    "Spontaneous and independent",
+  ],
   ["Hidden Gems", "Harder to discover", "Wander off the beaten path freely"],
   ["Seasonal Festivals", "Depends on schedule", "Plan your trip around them"],
-  ["Shopping Districts", "Port areas only", "Ginza, Akihabara, Nishiki Market and more"],
-  ["Local Interaction", "Brief shore encounters", "Days spent in neighborhoods"],
+  [
+    "Shopping Districts",
+    "Port areas only",
+    "Ginza, Akihabara, Nishiki Market and more",
+  ],
+  [
+    "Local Interaction",
+    "Brief shore encounters",
+    "Days spent in neighborhoods",
+  ],
 ];
 
 const cruiseDestinations = [
@@ -201,7 +245,11 @@ function StatGrid() {
   const stats = [
     ["#1", "Top Bucket List Destination", "in Asia for global travelers"],
     ["26", "UNESCO World Heritage Sites", "temples, parks and historic zones"],
-    ["200+", "Michelin-Starred Restaurants", "more than any other city (Tokyo)"],
+    [
+      "200+",
+      "Michelin-Starred Restaurants",
+      "more than any other city (Tokyo)",
+    ],
     ["320", "km/h Bullet Train Speed", "Shinkansen top speed"],
   ];
 
@@ -247,7 +295,10 @@ function TravelerGrid() {
   );
 }
 
-function ComparisonTable({ rows, headings = ["Category", "Japan Cruise", "Land Tour"] }) {
+function ComparisonTable({
+  rows,
+  headings = ["Category", "Japan Cruise", "Land Tour"],
+}) {
   return (
     <div className="overflow-x-auto border border-slate-200">
       <table className="w-full min-w-[620px] border-collapse text-left text-sm">
@@ -302,11 +353,16 @@ function BenefitBlock({ title, points }) {
 function DestinationBlock({ destination }) {
   return (
     <div className="border-b border-slate-200 pb-6 last:border-b-0 last:pb-0">
-      <h3 className="text-xl font-semibold text-secondary">{destination.title}</h3>
+      <h3 className="text-xl font-semibold text-secondary">
+        {destination.title}
+      </h3>
       <p className="mt-2 text-secondary/80">{destination.description}</p>
       <div className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
         {destination.points.map((point) => (
-          <div key={point} className="flex gap-2 text-sm font-medium text-secondary/80">
+          <div
+            key={point}
+            className="flex gap-2 text-sm font-medium text-secondary/80"
+          >
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
             <span>{point}</span>
           </div>
@@ -321,13 +377,17 @@ function BestForList({ title, items, accent = "primary" }) {
 
   return (
     <div className="border border-slate-200 bg-white">
-      <h3 className={`${colorClass} px-4 py-3 text-lg font-semibold uppercase tracking-[0.08em] text-white`}>
+      <h3
+        className={`${colorClass} px-4 py-3 text-lg font-semibold uppercase tracking-[0.08em] text-white`}
+      >
         {title}
       </h3>
       <ul className="space-y-3 p-4 text-secondary/85">
         {items.map((item) => (
           <li key={item} className="flex gap-3">
-            <span className={`mt-2 h-2 w-2 shrink-0 rounded-full ${colorClass}`} />
+            <span
+              className={`mt-2 h-2 w-2 shrink-0 rounded-full ${colorClass}`}
+            />
             <span>{item}</span>
           </li>
         ))}
@@ -354,7 +414,7 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           </p>
         </div>
 
-        <figure className="mt-6">
+        <figure className="mt-6 -mx-4 sm:-mx-6 lg:mx-0">
           <div className="relative aspect-[16/9] w-full overflow-hidden border border-slate-200 bg-slate-100">
             <Image
               src={featuredImage.image.url}
@@ -363,13 +423,13 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
               fill
               priority
               aria-describedby="japan-feature-image-caption japan-feature-image-description"
-              sizes="(max-width: 1024px) 100vw, 760px"
-              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 800px"
+              className="object-contain object-center"
             />
           </div>
           <figcaption
             id="japan-feature-image-caption"
-            className="border-x border-b border-slate-200 bg-slate-50 px-4 py-3 text-sm italic text-secondary/70"
+            className="border-x border-b border-slate-200 bg-slate-50 px-4 py-3 text-sm italic text-secondary/70 mx-4 sm:mx-6 lg:mx-0"
           >
             {featuredImage.caption}
           </figcaption>
@@ -407,9 +467,18 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
             A Country for Every Kind of Traveler
           </h3>
           <ul className="space-y-2 text-secondary/85">
-            <li>Walk through quiet bamboo forests in Kyoto, then stand under giant neon signs in Tokyo.</li>
-            <li>Experience world-class food culture: sushi, ramen, Kobe beef, matcha desserts, and street food.</li>
-            <li>Japan is incredibly clean, safe, organized, and welcoming to international visitors.</li>
+            <li>
+              Walk through quiet bamboo forests in Kyoto, then stand under giant
+              neon signs in Tokyo.
+            </li>
+            <li>
+              Experience world-class food culture: sushi, ramen, Kobe beef,
+              matcha desserts, and street food.
+            </li>
+            <li>
+              Japan is incredibly clean, safe, organized, and welcoming to
+              international visitors.
+            </li>
           </ul>
           <TravelerGrid />
         </div>
@@ -417,7 +486,9 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
 
       <GuidePage page="2">
         <div className="space-y-5">
-          <SectionTitle>Cruise vs. Land Tour: Side-by-Side Comparison</SectionTitle>
+          <SectionTitle>
+            Cruise vs. Land Tour: Side-by-Side Comparison
+          </SectionTitle>
           <ComparisonTable rows={cruiseLandRows} />
         </div>
 
@@ -464,10 +535,15 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
 
       <GuidePage page="3">
         <div className="space-y-6">
-          <SectionTitle>Best Destinations Commonly Seen on Japan Cruises</SectionTitle>
+          <SectionTitle>
+            Best Destinations Commonly Seen on Japan Cruises
+          </SectionTitle>
           <div className="space-y-6">
             {cruiseDestinations.map((destination) => (
-              <DestinationBlock key={destination.title} destination={destination} />
+              <DestinationBlock
+                key={destination.title}
+                destination={destination}
+              />
             ))}
           </div>
         </div>
@@ -478,17 +554,20 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           <SectionTitle>Exploring Japan by Land</SectionTitle>
           <p className="leading-7 text-secondary/85">
             Land-based travel offers a much deeper connection to Japan's
-            culture, food, traditions, and daily life. Travelers ride the
-            famous Shinkansen bullet trains, explore local neighborhoods, stay
-            in traditional inns, and spend enough time in each city to truly
-            absorb the atmosphere.
+            culture, food, traditions, and daily life. Travelers ride the famous
+            Shinkansen bullet trains, explore local neighborhoods, stay in
+            traditional inns, and spend enough time in each city to truly absorb
+            the atmosphere.
           </p>
           <h3 className="text-xl font-semibold text-secondary">
             Must-Visit Destinations for a Japan Land Tour
           </h3>
           <div className="space-y-6">
             {landDestinations.map((destination) => (
-              <DestinationBlock key={destination.title} destination={destination} />
+              <DestinationBlock
+                key={destination.title}
+                destination={destination}
+              />
             ))}
           </div>
         </div>
@@ -500,10 +579,10 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
             Food, Culture and Entertainment: Which Experience Is Better?
           </SectionTitle>
           <p className="leading-7 text-secondary/85">
-            One of the biggest differences between cruises and land tours is
-            the level of immersion. Cruises provide wonderful convenience and
-            allow travelers to sample different destinations. However, land
-            travel generally offers a much deeper cultural experience.
+            One of the biggest differences between cruises and land tours is the
+            level of immersion. Cruises provide wonderful convenience and allow
+            travelers to sample different destinations. However, land travel
+            generally offers a much deeper cultural experience.
           </p>
           <ComparisonTable
             rows={foodCultureRows}
@@ -529,16 +608,15 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
           <SectionTitle>The Best of Both Worlds</SectionTitle>
           <ul className="space-y-3 leading-7 text-secondary/85">
             <li>
-              Some travelers combine both styles, spending several days in
-              Tokyo and Kyoto before boarding a Japan cruise.
+              Some travelers combine both styles, spending several days in Tokyo
+              and Kyoto before boarding a Japan cruise.
             </li>
             <li>
               This hybrid approach provides cultural depth on land and the ease
               of multi-port cruise travel.
             </li>
             <li>
-              Ask your travel advisor about customized hybrid Japan
-              itineraries.
+              Ask your travel advisor about customized hybrid Japan itineraries.
             </li>
           </ul>
         </div>
@@ -571,7 +649,9 @@ function JapanCruiseOrLandTour({ post = japanCruiseOrLandTourPost }) {
             personalized Japan vacations designed around their travel style and
             dream experiences.
           </p>
-          <p className="mt-4 font-semibold text-primary">www.tikitravelagency.com</p>
+          <p className="mt-4 font-semibold text-primary">
+            www.tikitravelagency.com
+          </p>
         </div>
       </GuidePage>
     </article>

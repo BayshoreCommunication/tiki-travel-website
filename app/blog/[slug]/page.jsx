@@ -166,7 +166,7 @@ const page = async ({ params }) => {
                         src={image.url}
                         alt={image.alt}
                         title={image.title}
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                     <div className="flex flex-col gap-px">
@@ -208,23 +208,29 @@ function DefaultBlogContent({ blog, postDate }) {
       >
         {blog?.title}
       </h2>
-      <figure>
-        <Image
-          width={1000}
-          height={300}
-          src={image.url}
-          alt={image.alt}
-          title={image.title}
-          className="w-full h-auto bg-center bg-cover"
-        />
+      <figure className="my-6 -mx-4 sm:mx-0">
+        <div className="relative w-full overflow-hidden bg-gray-100 h-auto min-h-[300px] md:min-h-[450px]">
+          <Image
+            src={image.url}
+            alt={image.alt}
+            title={image.title}
+            width={800}
+            height={500}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px"
+            className="w-full h-auto object-contain"
+            priority
+          />
+        </div>
         {image.caption ? (
-          <figcaption className="mt-2 text-sm italic text-secondary/70">
+          <figcaption className="mt-3 px-4 sm:px-0 text-sm italic text-secondary/70">
             {image.caption}
           </figcaption>
         ) : null}
       </figure>
 
-      <div className="mt-2 text-md blog-rich-text">{parse(blog?.body || "")}</div>
+      <div className="mt-2 text-md blog-rich-text">
+        {parse(blog?.body || "")}
+      </div>
     </>
   );
 }
