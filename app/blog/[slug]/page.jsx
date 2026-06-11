@@ -59,12 +59,13 @@ export async function generateMetadata({ params }) {
   const shortDescription =
     blogDetails?.metaDescription || getBlogExcerpt(blogDetails, 220);
   const image = getBlogImage(blogDetails);
+  const canonicalUrl = `https://www.tikitravelagency.com/blog/${blogDetails?.slug}`;
 
   return {
     title: pageTitle,
     description: shortDescription,
     alternates: {
-      canonical: `/blog/${blogDetails?.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: pageTitle,
@@ -75,7 +76,7 @@ export async function generateMetadata({ params }) {
           alt: image.alt,
         },
       ],
-      url: `https://tikitravelagency.com/blog/${blogDetails?.slug}`,
+      url: canonicalUrl,
       type: "article",
       siteName: "Tiki Travel Agency",
     },
