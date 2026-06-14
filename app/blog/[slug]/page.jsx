@@ -210,15 +210,14 @@ function DefaultBlogContent({ blog, postDate }) {
         {blog?.title}
       </h2>
       <figure className="my-6 -mx-4 sm:mx-0">
-        <div className="relative w-full overflow-hidden bg-gray-100 h-auto min-h-[300px] md:min-h-[450px]">
+        <div className="relative w-full aspect-[16/9] overflow-hidden bg-gray-100">
           <Image
             src={image.url}
             alt={image.alt}
             title={image.title}
-            width={800}
-            height={500}
+            fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 800px"
-            className="w-full h-auto object-contain"
+            className="object-contain object-center"
             priority
           />
         </div>

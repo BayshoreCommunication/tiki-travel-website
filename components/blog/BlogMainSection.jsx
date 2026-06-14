@@ -60,13 +60,13 @@ const BlogMainSection = async () => {
                   key={index}
                   className="group border block bg-white  "
                 >
-                  <div className="w-full h-[400px] overflow-hidden relative">
+                  <div className="w-full aspect-[16/9] overflow-hidden relative">
                     <Image
                       src={image.url}
                       alt={image.alt}
                       title={image.title}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 66vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 66vw"
                       className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       priority={index < 2}
                     />
