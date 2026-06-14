@@ -258,19 +258,18 @@ function WhyWorkingWithATravelAdvisor({
           </p>
         </div>
 
-        <figure className="mt-5 overflow-hidden border border-slate-200 bg-slate-100 sm:mt-6">
-          <div className="relative aspect-[2/1] w-full">
-            <Image
-              src={featuredImage.image.url}
-              alt={featuredImage.altText}
-              title={featuredImage.title}
-              fill
-              priority
-              aria-describedby="travel-advisor-image-caption travel-advisor-image-description"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px"
-              className="object-cover object-center"
-            />
-          </div>
+        <figure className="mt-5 overflow-visible border border-slate-200 bg-slate-100 sm:mt-6">
+          <Image
+            src={featuredImage.image.url}
+            alt={featuredImage.altText}
+            title={featuredImage.title}
+            layout="responsive"
+            width={1200}
+            height={600}
+            aria-describedby="travel-advisor-image-caption travel-advisor-image-description"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 800px"
+            className="object-contain object-center"
+          />
           <figcaption
             id="travel-advisor-image-caption"
             className="border-t border-slate-200 bg-white px-3 py-2 text-xs italic text-secondary/70 sm:px-4 sm:py-3 sm:text-sm"
