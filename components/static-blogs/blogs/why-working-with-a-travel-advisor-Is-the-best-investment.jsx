@@ -4,7 +4,7 @@ import React from "react";
 
 const FEATURE_IMAGE = {
   image: {
-    url: "/assets/static-blogs/travel-advisor-stress-free-vacation-planning-guide.webp",
+    url: "/assets/static-blogs/travel-advisor-stress-free-vacation-planning-guide.jpg",
   },
   altText:
     "Luxury tropical vacation destination highlighting the benefits of working with a travel advisor for stress-free trip planning and personalized travel experiences.",
