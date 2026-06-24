@@ -5,6 +5,7 @@ import MorePackages from "@/components/vacation-destinations/MorePackages";
 import React from "react";
 import { vacationPackagesData } from "@/config/data";
 import RippleButton from "@/components/shared/RippleButton";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   // Find the package details dynamically based on the slug
@@ -27,6 +28,9 @@ export async function generateMetadata({ params }) {
     description:
       shortDesc ||
       "Discover our exciting vacation packages for unforgettable experiences.", // Fallback description
+    alternates: {
+      canonical: `/vacation-destinations/${slug}`,
+    },
     openGraph: {
       title: title || "Vacation Package",
       description:
