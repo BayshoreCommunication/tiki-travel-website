@@ -16,7 +16,7 @@ const AboutDetails = () => {
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/assets/homepage/cruise.mp4" type="video/mp4" />
+        <source src="/assets/homepage/Cruise.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
