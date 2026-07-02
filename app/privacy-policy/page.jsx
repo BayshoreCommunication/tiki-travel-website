@@ -7,10 +7,7 @@ export const metadata = {
   description:
     "Tiki Travel Agency creates customized vacation itineraries for travel to Hawaii and Asia. Tiki Travel Agency believes that travel should be more than just a vacation; it should be an immersive adventure. ",
   alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-USA",
-    },
+    canonical: "/privacy-policy",
   },
   openGraph: {
     images: "/opengraph-image.jpg",
