@@ -8,13 +8,13 @@ import RippleButton from "../shared/RippleButton";
 const WhatPeopleSay = () => {
   return (
     <div className="relative w-full overflow-hidden ">
-      <Image
+      {/* <Image
         className="absolute inset-0 object-cover bg-center w-full h-full"
         width={2400}
         height={700}
         src="/assets/homepage/home-banner-b.jpg"
         alt="Header background"
-      />
+      /> */}
 
       <div className="container pt-10 md:pt-14 md:pb-6 ">
         <div className="relative flex flex-col items-center justify-center w-full h-full z-20">

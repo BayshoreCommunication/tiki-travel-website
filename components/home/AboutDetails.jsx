@@ -1,139 +1,102 @@
 "use client";
-import React, { useState } from "react";
-import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+
 import Image from "next/image";
-import { FaPlay } from "react-icons/fa6";
 import { Link } from "@nextui-org/react";
+import ScrollMotionEffect from "../motion/ScrollMotionEffect";
 
 const AboutDetails = () => {
-  const [videoSrc, setVideoSrc] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = (src) => {
-    setVideoSrc(src);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setVideoSrc("");
-    setIsModalOpen(false);
-  };
-
   return (
-    <section className="relative">
-      <div className="container py-10 md:pb-24">
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-14">
-          <div className="w-full lg:w-[40%] shrink-0">
-            <div className="relative">
-              <ScrollMotionEffect effect="fade-left" duration="2000">
-                <Image
-                  src="/assets/homepage/about2.png"
-                  alt="April Espinosa"
-                  width={800}
-                  height={770}
-                />
-              </ScrollMotionEffect>
-              {/* <div className="absolute left-[4%] md:-left-[8%] bottom-3 md:bottom-10 z-10">
-                <ScrollMotionEffect effect="fade-left" duration="2000">
-                  <button
-                    className="group relative w-[100px] h-[100px]"
-                    // onClick={() => openModal("youtube video link")}
-                  >
-                    <div className="p-1 border-3 border-primary rounded-full border-dotted animate-spin duration-[10s] absolute inset-0 m-auto w-[100px] h-[100px]"></div>
-                    <div className="absolute inset-0 m-auto w-[90px] h-[90px] bg-primary group-hover:bg-secondary group-hover:!bg-opacity-100 flex items-center justify-center rounded-full">
-                      <FaPlay className="text-white text-3xl" />
-                    </div>
-                  </button>
-                </ScrollMotionEffect>
-              </div> */}
-            </div>
-          </div>
-          <div>
-            <ScrollMotionEffect effect="fade-right" duration="2000">
-              <div className="flex flex-col gap-4 w-full ">
-                <h2 className="text-secondary font-semibold text-3xl lg:text-5xl leading-tight mb-3">
-                  Let's Book Your Next Cruise with Tiki Travel
-                </h2>
-                <ul className="space-y-5 text-gray-500 list-none list-inside dark:text-gray-400">
-                  <li>
-                    <p className="text-xl lg:text-2xl mb-2 font-medium text-secondary">
-                      01. All-Inclusive Luxury:
-                    </p>
-                    <p className="text-lg lg:text-xl">
-                      Indulge in gourmet dining, entertainment, and stunning
-                      views – all in one place.
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-xl lg:text-2xl mb-2 font-medium text-secondary">
-                      02. Variety of Destinations:
-                    </p>
-                    <p className="text-lg lg:text-xl">
-                      From tropical islands to historic cities, there is a
-                      cruise for every traveler.
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-xl lg:text-2xl mb-2 font-medium text-secondary">
-                      03. Endless Entertainment:
-                    </p>
-                    <p className="text-lg lg:text-xl">
-                      Enjoy Broadway shows, water slides, and more – there is
-                      something for everyone.
-                    </p>
-                  </li>
-                  <li>
-                    <p className="text-xl lg:text-2xl mb-2 font-medium text-secondary">
-                      04. Convenience:
-                    </p>
-                    <p className="text-lg lg:text-xl">
-                      Unpack once and let the adventure begin, with easy
-                      departure ports worldwide.
-                    </p>
-                  </li>
-                </ul>
-                <div className="mt-3">
-                  <Link
-                    href="https://calendly.com/espinosa-april/30min?month=2025-01"
-                    target="_blank"
-                    className="text-primary font-medium text-xl py-2 border-b-2 border-primary hover:text-secondary hover:border-secondary transition-all duration-500"
-                  >
-                    Let's get ready to sail!
-                  </Link>
-                </div>
-              </div>
-            </ScrollMotionEffect>
-          </div>
-        </div>
-      </div>
+    <section className="relative overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/assets/homepage/cruise.mp4" type="video/mp4" />
+      </video>
 
-      {/* Modal */}
-      {/* {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-          onClick={closeModal}
-        >
-          <div
-            className="relative bg-white rounded-lg overflow-hidden max-w-[800px] w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="absolute top-4 right-4 text-white text-2xl font-bold z-10"
-              onClick={closeModal}
-            >
-              ×
-            </button>
-            <iframe
-              id="video"
-              src={`${videoSrc}?autoplay=1&modestbranding=1&showinfo=0`}
-              title="YouTube video"
-              className="w-full h-[450px]"
-              allow="autoplay"
-              frameBorder="0"
-            ></iframe>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/55"></div>
+
+      {/* Content */}
+      <div className="relative z-10 container py-20 lg:py-32">
+        <ScrollMotionEffect effect="fade-up" duration="2000">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-white font-bold text-4xl md:text-6xl leading-tight">
+              Let's Book Your Next Cruise
+              <br />
+              with Tiki Travel
+            </h2>
+
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-white/80 leading-8">
+              Sail to breathtaking destinations, enjoy luxury accommodations,
+              world-class dining, and unforgettable entertainment—all with one
+              seamless booking experience.
+            </p>
           </div>
-        </div>
-      )} */}
+        </ScrollMotionEffect>
+
+        <ScrollMotionEffect effect="fade-up" duration="2200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
+            {[
+              {
+                image: "/assets/homepage/Cruise-1.png",
+                title: "All-Inclusive Luxury",
+                desc: "Indulge in gourmet dining, entertainment, and stunning ocean views—all in one place.",
+              },
+              {
+                image: "/assets/homepage/Cruise-2.png",
+                title: "Variety of Destinations",
+                desc: "From tropical islands to historic cities, discover unforgettable journeys worldwide.",
+              },
+              {
+                image: "/assets/homepage/Cruise-3.png",
+                title: "Endless Entertainment",
+                desc: "Enjoy live shows, pools, water slides, nightlife, and activities for every traveler.",
+              },
+              {
+                image: "/assets/homepage/Cruise-4.png",
+                title: "Stress-Free Travel",
+                desc: "Unpack once and let your floating resort take you from destination to destination.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 text-center text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-2"
+              >
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full border border-white/30 bg-white/5">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={42}
+                    height={42}
+                  />
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+
+                <p className="text-white/80 leading-7">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollMotionEffect>
+
+        <ScrollMotionEffect effect="fade-up" duration="2400">
+          <div className="flex justify-center mt-14">
+            <Link
+              href="https://calendly.com/espinosa-april/30min?month=2025-01"
+              target="_blank"
+              className="rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-secondary hover:scale-105"
+            >
+              Let's Get Ready to Sail →
+            </Link>
+          </div>
+        </ScrollMotionEffect>
+      </div>
     </section>
   );
 };
