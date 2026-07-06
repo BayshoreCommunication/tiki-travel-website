@@ -50,7 +50,7 @@ const VacationPackages = () => {
             {vacationPackagesData.map((packages, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-lg text-start border overflow-hidden group"
+                className="bg-white shadow-lg text-start border overflow-hidden group"
               >
                 <div className="overflow-hidden relative">
                   <Link href={`/vacation-destinations/${packages?.slug}`}>

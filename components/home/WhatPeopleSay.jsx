@@ -32,7 +32,7 @@ const WhatPeopleSay = () => {
 
           <ScrollMotionEffect effect="fade-up" duration="2000">
             <div className="mx-0 flex justify-center items-center my-10 px-4 sm:px-6 lg:px-8">
-              <div className="bg-primary w-full max-w-[350px] md:max-w-[800px] lg:max-w-[1000px]  rounded-lg p-4 ">
+              <div className="bg-primary w-full max-w-[350px] md:max-w-[800px] lg:max-w-[1000px]  p-4 ">
                 <TestimonialSlideSection />
               </div>
             </div>

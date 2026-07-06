@@ -1,6 +1,3 @@
-import React from "react";
-import ScrollMotionEffect from "../motion/ScrollMotionEffect";
-
 const features = [
   {
     id: 1,
@@ -57,7 +54,7 @@ const OurValues = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
           {features.map((feature, index) => (
             <div key={index}>
-              <div className="p-5 md:p-8 shadow-md rounded-lg bg-white text-gray-700 hover:scale-105 duration-500 flex flex-col h-full">
+              <div className="p-5 md:p-8 shadow-md bg-white text-gray-700 hover:scale-105 duration-500 flex flex-col h-full">
                 <h3 className="text-xl font-semibold text-primary mb-1">
                   {feature.id.toString().padStart(2, "0")}
                 </h3>

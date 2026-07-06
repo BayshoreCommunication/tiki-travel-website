@@ -66,7 +66,7 @@ const AboutDetails = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 text-center text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-2"
+                className="border border-white/20 bg-white/10 backdrop-blur-xl p-8 text-center text-white transition-all duration-300 hover:bg-white/20 hover:-translate-y-2"
               >
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full border border-white/30 bg-white/5">
                   <Image
