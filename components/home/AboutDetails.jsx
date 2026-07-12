@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Link } from "@nextui-org/react";
 import ScrollMotionEffect from "../motion/ScrollMotionEffect";
+import RippleButton from "../shared/RippleButton";
 
 const AboutDetails = () => {
   return (
@@ -87,13 +87,13 @@ const AboutDetails = () => {
 
         <ScrollMotionEffect effect="fade-up" duration="2400">
           <div className="flex justify-center mt-14">
-            <Link
+            <RippleButton
+              buttonText="Let's Get Ready to Sail →"
+              rippleDuration={2000}
               href="https://calendly.com/espinosa-april/30min?month=2025-01"
               target="_blank"
-              className="rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-secondary hover:scale-105"
-            >
-              Let's Get Ready to Sail →
-            </Link>
+              className="rounded-full px-10 py-4 text-lg font-semibold hover:scale-105"
+            />
           </div>
         </ScrollMotionEffect>
       </div>

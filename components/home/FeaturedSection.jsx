@@ -88,7 +88,7 @@ export default function FeaturedSection() {
                     className="w-full"
                   />
                 </div>
-                <div className="absolute bottom-0 top-0 flex w-full items-center justify-center bg-black/50 p-6 text-white duration-500 hover:bg-[#0BB4AC]">
+                <div className="absolute bottom-0 top-0 flex w-full items-center justify-center bg-black/25 p-6 text-white duration-500 hover:bg-[#0BB4AC]">
                   <div className="flex flex-col justify-center items-center mt-36">
                     {/* <div>
                       <Image
