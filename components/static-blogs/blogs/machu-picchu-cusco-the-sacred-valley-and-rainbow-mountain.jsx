@@ -1,25 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-const FEATURE_IMAGE = {
-  image: {
-    url: "/assets/static-blogs/7-day-peru-itinerary-machu-picchu-cusco-guide.webp",
-  },
-  altText:
-    "Llama overlooking Machu Picchu ruins with inset photos of Cusco, the Sacred Valley, and Rainbow Mountain.",
-  title: "7 Day Peru Itinerary: Machu Picchu, Cusco & More",
-  description:
-    "Explore a complete 7-day Peru itinerary covering Machu Picchu, historic Cusco, the Sacred Valley, and Rainbow Mountain for an unforgettable South American adventure.",
-  caption:
-    "Plan the ultimate 7-day Peru adventure visiting Machu Picchu, Cusco, the Sacred Valley, and Rainbow Mountain.",
-};
-
-const SLUG = "7-day-peru-itinerary-machu-picchu-cusco-guide";
-const CANONICAL_URL = `https://www.tikitravelagency.com/blog/${SLUG}`;
-const META_TITLE = "7 Day Peru Itinerary: Machu Picchu, Cusco & More";
-const META_DESCRIPTION =
-  "Explore a complete 7-day Peru itinerary covering Machu Picchu, historic Cusco, the Sacred Valley, and Rainbow Mountain with luxury stays and travel tips.";
+import {
+  aguasCalientesStays,
+  CANONICAL_URL,
+  cuscoStays,
+  externalResources,
+  FEATURE_IMAGE,
+  itineraryOverviewRows,
+  KEYWORDS,
+  limaRestaurants,
+  META_DESCRIPTION,
+  META_TITLE,
+  peruFaqs,
+  peruSeasonRows,
+  sacredValleyStays,
+  SLUG,
+} from "@/components/static-blogs/data/peru-itinerary-data";
+import {
+  BodyParagraph,
+  ComparisonTable,
+  ExternalLink,
+  GuidePage,
+  RecommendationBlock,
+  SacredValleyHighlightsGrid,
+  SectionTitle,
+  StatGrid,
+  StructuredData,
+  TipCallout,
+} from "@/components/static-blogs/peru-guide/PeruGuideBlocks";
 
 export const peruItineraryPost = {
   slug: SLUG,
@@ -32,15 +41,7 @@ export const peruItineraryPost = {
     "7 Day Peru Itinerary: Machu Picchu, Cusco, the Sacred Valley & Rainbow Mountain",
   metaTitle: META_TITLE,
   metaDescription: META_DESCRIPTION,
-  keywords: [
-    "7 day peru itinerary",
-    "peru itinerary",
-    "machu picchu itinerary",
-    "cusco travel guide",
-    "sacred valley peru",
-    "rainbow mountain vinicunca",
-    "tiki travel agency",
-  ],
+  keywords: KEYWORDS,
   category: "Peru Travel Guide",
   createdAt: "2026-11-18T12:00:00.000Z",
   updatedAt: "2026-11-18T12:00:00.000Z",
@@ -53,245 +54,10 @@ export const peruItineraryPost = {
   ContentComponent: MachuPicchuCuscoPeruItinerary,
 };
 
-const tripStats = [
-  ["7 Days", "Complete Peru Itinerary", "Lima, Sacred Valley, Machu Picchu & Cusco"],
-  ["11,150 ft", "Cusco Elevation", "Start in Sacred Valley to acclimatize"],
-  ["16,500 ft", "Rainbow Mountain Peak", "High-altitude Vinicunca Andean trek"],
-  ["May-Sep", "Best Dry Season", "Clear skies across the Peruvian Andes"],
-];
-
-const itineraryOverviewRows = [
-  [
-    "Day 1",
-    "Lima (Miraflores)",
-    "Cliffside walk on the Malecón, Parque del Amor & world-class dining",
-  ],
-  [
-    "Day 2",
-    "Lima to Sacred Valley",
-    "1 hr 20 min flight to Cusco; private transfer to lower-elevation resort",
-  ],
-  [
-    "Day 3",
-    "Sacred Valley",
-    "Pisac, Ollantaytambo, Maras Salt Mines, Moray, Chinchero & alpacas",
-  ],
-  [
-    "Day 4",
-    "Aguas Calientes",
-    "Scenic train along the Urubamba River & cloud-forest hotel stay",
-  ],
-  [
-    "Day 5",
-    "Machu Picchu & Cusco",
-    "Private guided tour of the Inca citadel & evening transfer to Cusco",
-  ],
-  [
-    "Day 6",
-    "Cusco",
-    "Historic walking tour, San Pedro Market, cooking class & San Blas",
-  ],
-  [
-    "Day 7",
-    "Rainbow Mountain",
-    "Early Andean excursion to Vinicunca & final evening in Cusco",
-  ],
-];
-
-const limaRestaurants = [
-  {
-    name: "Maido",
-    description:
-      "A fantastic choice for Japanese-Peruvian fusion, known as Nikkei cuisine.",
-  },
-  {
-    name: "Central",
-    description:
-      "One of the world's most celebrated dining experiences, featuring ingredients inspired by Peru's incredible range of landscapes and elevations.",
-  },
-  {
-    name: "La Mar",
-    description:
-      "A favorite for fresh seafood and traditional Peruvian ceviche.",
-  },
-  {
-    name: "Astrid y Gastón",
-    description:
-      "A wonderful introduction to contemporary Peruvian cooking.",
-  },
-];
-
-const sacredValleyStays = [
-  {
-    name: "Tambo del Inka, a Luxury Collection Resort & Spa",
-    description:
-      "A beautiful resort with mountain views, a wonderful spa, indoor pool and its own train station.",
-  },
-  {
-    name: "Rio Sagrado, A Belmond Hotel",
-    description:
-      "An intimate luxury retreat surrounded by gardens and the peaceful Urubamba River.",
-  },
-  {
-    name: "Inkaterra Hacienda Urubamba",
-    description:
-      "A lovely countryside property where traditional Andean architecture meets modern comfort.",
-  },
-];
-
-const sacredValleyHighlights = [
-  {
-    title: "Pisac",
-    description:
-      "Visit the impressive Inca ruins overlooking the valley and explore the colorful artisan market. This is a wonderful place to shop for handmade jewelry, textiles, pottery and souvenirs.",
-  },
-  {
-    title: "Ollantaytambo",
-    description:
-      "One of the most fascinating historic towns in Peru. Walk along its original cobblestone streets and visit the impressive Inca fortress.",
-  },
-  {
-    title: "Maras Salt Mines",
-    description:
-      "Thousands of small salt pools cascade down the mountainside, creating one of the most unusual and photogenic landscapes in the region.",
-  },
-  {
-    title: "Moray",
-    description:
-      "See the remarkable circular agricultural terraces believed to have been used by the Incas for experimenting with different crops and growing conditions.",
-  },
-  {
-    title: "Chinchero",
-    description:
-      "Visit a traditional Andean village known for its beautiful textiles and weaving traditions.",
-  },
-];
-
-const aguasCalientesStays = [
-  {
-    name: "Inkaterra Machu Picchu Pueblo Hotel",
-    description:
-      "A beautiful property surrounded by lush gardens and tropical vegetation. It feels like a peaceful retreat in the middle of the cloud forest.",
-  },
-  {
-    name: "Sumaq Machu Picchu Hotel",
-    description:
-      "An upscale hotel with comfortable accommodations, excellent dining and personalized service.",
-  },
-  {
-    name: "Sanctuary Lodge, A Belmond Hotel",
-    description:
-      "An extraordinary location right beside the entrance to Machu Picchu. If you want to be as close as possible to the ruins, this is a wonderful option.",
-  },
-];
-
-const cuscoStays = [
-  {
-    name: "Palacio Nazarenas, A Belmond Hotel",
-    description:
-      "An elegant luxury hotel featuring beautiful courtyards, exceptional service and an outdoor heated swimming pool.",
-  },
-  {
-    name: "Monasterio, A Belmond Hotel",
-    description:
-      "A former monastery with a wonderful historic atmosphere and beautiful architecture.",
-  },
-  {
-    name: "JW Marriott El Convento Cusco",
-    description:
-      "A beautifully restored convent combining history with modern luxury.",
-  },
-];
-
-const peruSeasonRows = [
-  [
-    "May - June",
-    "Dry Season (Early)",
-    "Favorable weather, lush green scenery & comfortable sightseeing",
-  ],
-  [
-    "July - August",
-    "Peak Dry Season",
-    "Popular clear skies; reserve hotels, trains & Machu Picchu tickets well ahead",
-  ],
-  [
-    "September - October",
-    "Shoulder Season",
-    "Great balance of pleasant weather and lighter crowds",
-  ],
-  [
-    "November - March",
-    "Rainy Season",
-    "More frequent showers; classic Inca Trail closes every February for maintenance",
-  ],
-];
-
-const peruFaqs = [
-  {
-    question: "How many days should I spend in Peru?",
-    answer:
-      "I recommend seven sightseeing days for a wonderful introduction to Lima, Cusco, the Sacred Valley, Machu Picchu and Rainbow Mountain. You'll also need an additional departure day. If you prefer a slower pace or want to hike the Inca Trail, consider extending your vacation.",
-  },
-  {
-    question: "Is Peru a good destination for luxury travelers?",
-    answer:
-      "Absolutely! Peru has some beautiful luxury hotels, exceptional restaurants, private guides and unique experiences. You can enjoy the adventure and culture of the country while still having comfortable accommodations and wonderful service.",
-  },
-  {
-    question: "Do I need to purchase Machu Picchu tickets in advance?",
-    answer:
-      "Yes! Tickets are limited and should be purchased well ahead of time. Your entrance tickets, train reservations, bus transportation and private guide should all be coordinated together.",
-  },
-  {
-    question: "Can I see alpacas in Peru?",
-    answer:
-      "Definitely! Alpacas and llamas are common throughout the Andes. The Sacred Valley and surrounding mountain communities offer wonderful opportunities to see these animals, learn about their wool and experience traditional weaving.",
-  },
-  {
-    question: "Is Rainbow Mountain difficult to hike?",
-    answer:
-      "Rainbow Mountain is a challenging high-altitude excursion. The elevation reaches approximately 16,500 feet, so proper acclimatization is essential. It may not be suitable for everyone, but alternative excursions can be arranged.",
-  },
-  {
-    question: "Can Tiki Travel Agency arrange a private Peru vacation?",
-    answer:
-      "Yes! We can help customize your trip with luxury hotels, private transportation, local guides, cultural experiences, scenic train reservations, Machu Picchu tickets and sightseeing excursions.",
-  },
-];
-
-const externalResources = [
-  {
-    href: "https://tuboleto.cultura.pe/llaqta_machupicchu",
-    label: "Official Machu Picchu Government Ticket Portal",
-  },
-  {
-    href: "https://www.perurail.com/",
-    label: "PeruRail Vistadome & Hiram Bingham Trains",
-  },
-  {
-    href: "https://www.peru.travel/en",
-    label: "Official Peru Tourism Portal (PROMPERÚ)",
-  },
-  {
-    href: "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/peru-travel-advisory.html",
-    label: "U.S. State Department Peru Travel Advisory",
-  },
-  {
-    href: "https://wwwnc.cdc.gov/travel/destinations/traveler/none/peru",
-    label: "CDC Travelers' Health: Peru Guidance",
-  },
-];
-
 function formatAmericanDate(value, fallback = "November 18, 2026") {
-  if (!value) {
-    return fallback;
-  }
-
+  if (!value) return fallback;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) {
-    return fallback;
-  }
-
+  if (Number.isNaN(parsed.getTime())) return fallback;
   return parsed.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -301,283 +67,18 @@ function formatAmericanDate(value, fallback = "November 18, 2026") {
 }
 
 function toIsoDate(value, fallback = "2026-11-18") {
-  if (!value) {
-    return fallback;
-  }
-
+  if (!value) return fallback;
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) {
-    return fallback;
-  }
-
+  if (Number.isNaN(parsed.getTime())) return fallback;
   return parsed.toISOString().slice(0, 10);
-}
-
-function GuidePage({ children }) {
-  return (
-    <section className="overflow-hidden border border-slate-200 bg-white shadow-sm">
-      <div className="flex flex-col items-start justify-between gap-2 border-b border-slate-200 bg-slate-50 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-secondary/75 sm:flex-row sm:items-center sm:px-6 sm:py-3 md:text-[11px]">
-        <span>Peru Travel Guide</span>
-        <span>Tiki Travel Agency</span>
-      </div>
-      <div className="px-3 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-        {children}
-      </div>
-    </section>
-  );
-}
-
-function SectionTitle({ children, id }) {
-  return (
-    <h2
-      id={id}
-      className="border-l-4 border-primary pl-3 text-left text-xl font-semibold leading-tight text-secondary sm:pl-4 sm:text-2xl md:text-3xl"
-    >
-      {children}
-    </h2>
-  );
-}
-
-function BodyParagraph({ children, className = "" }) {
-  return (
-    <p
-      className={`text-left text-sm leading-6 text-secondary/85 sm:text-base sm:leading-7 ${className}`}
-    >
-      {children}
-    </p>
-  );
-}
-
-function ExternalLink({ href, children }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:text-secondary"
-    >
-      {children}
-    </a>
-  );
-}
-
-function StatGrid() {
-  return (
-    <div className="grid grid-cols-2 gap-px overflow-hidden border border-slate-200 bg-slate-200 lg:grid-cols-4">
-      {tripStats.map(([number, title, text]) => (
-        <div
-          key={title}
-          className="bg-white px-2 py-3 text-center sm:px-4 sm:py-5"
-        >
-          <p className="text-xl font-bold text-primary sm:text-2xl md:text-3xl">
-            {number}
-          </p>
-          <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-secondary sm:mt-2 sm:text-xs md:text-sm">
-            {title}
-          </p>
-          <p className="mt-1 text-xs text-secondary/70 sm:mt-2 sm:text-sm">
-            {text}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ComparisonTable({ headings, rows }) {
-  return (
-    <div className="w-full overflow-x-auto border border-slate-200">
-      <table className="w-full min-w-[540px] border-collapse text-left text-sm">
-        <thead className="bg-secondary text-white">
-          <tr>
-            {headings.map((heading) => (
-              <th
-                key={heading}
-                className="whitespace-nowrap px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.06em] sm:px-4 sm:py-3 sm:text-sm"
-              >
-                {heading}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, index) => (
-            <tr
-              key={row[0]}
-              className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
-            >
-              {row.map((cell, cellIndex) => (
-                <td
-                  key={`${row[0]}-${cellIndex}`}
-                  className={`border-t border-slate-200 px-3 py-2.5 align-top text-xs leading-5 sm:px-4 sm:py-3 sm:text-sm sm:leading-6 ${
-                    cellIndex === 0
-                      ? "whitespace-nowrap font-semibold text-secondary"
-                      : "text-secondary/80"
-                  }`}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-function RecommendationBlock({ title, items }) {
-  return (
-    <div className="border border-slate-200 bg-slate-50 p-3 text-left sm:p-5">
-      <h3 className="text-base font-semibold text-secondary sm:text-lg">
-        {title}
-      </h3>
-      <ul className="mt-2.5 space-y-2 text-left text-sm leading-6 text-secondary/85 sm:mt-3 sm:space-y-2.5 sm:text-base sm:leading-7">
-        {items.map((item) => (
-          <li key={item.name} className="flex items-start gap-2.5">
-            <span
-              className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-              aria-hidden="true"
-            />
-            <span>
-              <strong className="font-semibold text-secondary">
-                {item.name}:
-              </strong>{" "}
-              {item.description}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function TipCallout({ title, children }) {
-  return (
-    <div className="border-l-4 border-primary bg-primary/10 px-3 py-3 text-left sm:px-5 sm:py-4">
-      {title ? (
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-secondary sm:text-sm">
-          {title}
-        </p>
-      ) : null}
-      <div className={title ? "mt-1.5 space-y-2" : "space-y-2"}>{children}</div>
-    </div>
-  );
-}
-
-function SacredValleyHighlightsGrid() {
-  return (
-    <div className="divide-y divide-slate-200 border border-slate-200 bg-white">
-      {sacredValleyHighlights.map((highlight) => (
-        <div key={highlight.title} className="p-3 text-left sm:p-4">
-          <h3 className="flex items-center gap-2 text-base font-semibold text-secondary sm:text-lg">
-            <span
-              className="h-2 w-2 shrink-0 rounded-full bg-primary"
-              aria-hidden="true"
-            />
-            <span>{highlight.title}</span>
-          </h3>
-          <BodyParagraph className="mt-1.5">{highlight.description}</BodyParagraph>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function StructuredData({ post, featuredImage, publishedIso, updatedIso }) {
-  const imageUrl = featuredImage.image.url.startsWith("http")
-    ? featuredImage.image.url
-    : `https://www.tikitravelagency.com${featuredImage.image.url}`;
-
-  const graph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        headline: post.title,
-        description: post.metaDescription,
-        image: [imageUrl],
-        datePublished: publishedIso,
-        dateModified: updatedIso,
-        author: {
-          "@type": "Organization",
-          name: "Tiki Travel Agency",
-          url: "https://www.tikitravelagency.com",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "Tiki Travel Agency",
-          url: "https://www.tikitravelagency.com",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://www.tikitravelagency.com/assets/site-logo/logo.png",
-          },
-        },
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": CANONICAL_URL,
-        },
-      },
-      {
-        "@type": "FAQPage",
-        mainEntity: peruFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://www.tikitravelagency.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blog",
-            item: "https://www.tikitravelagency.com/blog",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: post.title,
-            item: CANONICAL_URL,
-          },
-        ],
-      },
-    ],
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
-    />
-  );
 }
 
 function MachuPicchuCuscoPeruItinerary({ post = peruItineraryPost }) {
   const featuredImage = post.featuredImage || FEATURE_IMAGE;
-  const publishedDate = formatAmericanDate(
-    post?.createdAt,
-    "November 18, 2026"
-  );
-  const updatedDate = formatAmericanDate(
-    post?.updatedAt || post?.createdAt,
-    publishedDate
-  );
+  const publishedDate = formatAmericanDate(post?.createdAt, "November 18, 2026");
+  const updatedDate = formatAmericanDate(post?.updatedAt || post?.createdAt, publishedDate);
   const publishedIso = toIsoDate(post?.createdAt, "2026-11-18");
-  const updatedIso = toIsoDate(
-    post?.updatedAt || post?.createdAt,
-    publishedIso
-  );
+  const updatedIso = toIsoDate(post?.updatedAt || post?.createdAt, publishedIso);
 
   return (
     <article className="space-y-6 text-left text-secondary">
