@@ -59,11 +59,15 @@ export async function generateMetadata({ params }) {
   const shortDescription =
     blogDetails?.metaDescription || getBlogExcerpt(blogDetails, 220);
   const image = getBlogImage(blogDetails);
-  const canonicalUrl = `https://www.tikitravelagency.com/blog/${blogDetails?.slug}`;
+  const canonicalUrl =
+    blogDetails?.canonicalUrl ||
+    `https://www.tikitravelagency.com/blog/${blogDetails?.slug}`;
 
   return {
     title: pageTitle,
     description: shortDescription,
+    ...(blogDetails?.keywords ? { keywords: blogDetails.keywords } : {}),
+    authors: [{ name: "Tiki Travel Agency" }],
     alternates: {
       canonical: canonicalUrl,
     },
@@ -79,6 +83,12 @@ export async function generateMetadata({ params }) {
       url: canonicalUrl,
       type: "article",
       siteName: "Tiki Travel Agency",
+      ...(blogDetails?.createdAt
+        ? { publishedTime: blogDetails.createdAt }
+        : {}),
+      ...(blogDetails?.updatedAt || blogDetails?.createdAt
+        ? { modifiedTime: blogDetails.updatedAt || blogDetails.createdAt }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -108,6 +118,7 @@ const page = async ({ params }) => {
       year: "numeric",
       month: "long",
       day: "numeric",
+      timeZone: "UTC",
     });
     return formattedDate;
   };
@@ -138,8 +149,8 @@ const page = async ({ params }) => {
             y: 100,
           }}
         >
-          <div className="grid gap-12 mb-10 gird-col-1 sm:grid-cols-3">
-            <div className="col-span-2">
+          <div className="grid grid-cols-1 gap-8 mb-10 md:grid-cols-3 lg:gap-12">
+            <div className="col-span-1 min-w-0 md:col-span-2">
               {ContentComponent ? (
                 <ContentComponent post={currentBlog} />
               ) : (
@@ -147,7 +158,7 @@ const page = async ({ params }) => {
               )}
             </div>
 
-            <div className="col-span-2 sm:col-span-1 h-[100%] md:h-[1000px] overflow-y-scroll overflow-x-hidden  p-3 rounded-lg">
+            <div className="col-span-1 min-w-0 h-auto md:h-[1000px] overflow-y-auto overflow-x-hidden p-3 rounded-lg">
               <h2 className="font-medium text-3xl text-secondary border-b-2 border-gray-200 pb-4 mb-6">
                 Recent Blogs
               </h2>
